@@ -4,13 +4,27 @@ import Img from 'gatsby-image';
 import styles from '../css/index.module.css';
 import '../css/index.css';
 
-const IndexPage = props => (
-  <div class={styles.wrapper}>
-    <div class={styles.img}>
-     <Img sizes={props.data.josh.sizes} />
-    </div>
-  </div>
-)
+class IndexPage extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      debateStyle: false,
+    };
+  }
+
+  render() {
+    return (
+      <div class={styles.wrapper}>
+        <div id={styles.debate}>
+          DEBATE COACH
+        </div>
+        <div class={styles.img}>
+          <Img sizes={this.props.data.josh.sizes} />
+        </div>
+      </div>
+    )
+  }
+}
 
 export default IndexPage
 

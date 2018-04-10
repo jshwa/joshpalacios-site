@@ -5,10 +5,13 @@
    height: 100vh;
    background: #121212;
    display: flex;
-   justify-content: center;
+   justify-content: flex-start;
+   align-items: center;
+   overflow: hidden;
 }
 
 .img {
+   margin-left: 25%;
    padding: 1em;
    width: 50%;
    background: #121212;
@@ -16,4 +19,27 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
+   align-self: stretch;
+   z-index: 2;
+   transition: transform 300ms ease-in-out;
+}
+
+#debate {
+   position: absolute;
+   width: 50%;
+   padding: 10px;
+   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+   font-size: 163px;
+   font-weight: bold;
+   color: white;
+   opacity: .5;
+   transition: opacity 300ms ease-in-out;
+}
+
+#debate:hover + .img {
+   transform: translateX(60%);
+}
+
+#debate:hover {
+   opacity: 1;
 }
