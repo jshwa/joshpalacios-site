@@ -21,6 +21,9 @@ class IndexPage extends React.Component {
         <div class={styles.img}>
           <Img sizes={this.props.data.josh.sizes} />
         </div>
+        <div id={styles.dev}>
+          WEB DEVELOPER
+        </div>
       </div>
     )
   }
