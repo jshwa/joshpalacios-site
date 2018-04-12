@@ -63,6 +63,25 @@ class IndexPage extends React.Component {
             </text>
          </svg>
         </div>
+        <div id={styles.debatenav}>
+         <svg width="1000" height="600" viewBox="0 0 1000 600">
+            <text x="425" y="310" transform="rotate(30 700,300)" text-anchor="end" fill="white">
+               About
+            </text>
+               <text x="425" y="310" transform="rotate(15 700,300)" text-anchor="end" fill="white">
+               Contention 1
+            </text>
+               <text x="425" y="310" transform="rotate(0 700,300)" text-anchor="end" fill="white">
+               Coaching
+            </text>
+               <text x="425" y="310" transform="rotate(345 700,300)" text-anchor="end" fill="white">
+               Public Speaking
+            </text>
+               <text x="425" y="310" transform="rotate(330 700,300)" text-anchor="end" fill="white">
+               Contact
+            </text>
+         </svg>
+        </div>
         <div id={styles.dev}>
          <svg width="70vw" height="100vh" viewBox="-500 0 500 800" preserveAspectRatio="xMaxYMid slice">
                <text x="0" y="50" text-anchor="end" class={styles.backgroundsvg}>WEBDEVELOPERWEBDE
