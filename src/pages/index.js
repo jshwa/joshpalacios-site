@@ -24,10 +24,12 @@ class IndexPage extends React.Component {
       hoverDebate: false
    });
    }
+
   render() {
      const hidebackground = this.state.hoverDebate ? styles.hidebackground : '';
      const focustitle = this.state.hoverDebate ? styles.focustitle : '';
      const showNav = this.state.hoverDebate ? 'block' : 'none';
+     const imgPos = this.state.hoverDebate? styles.imgSlideRight : '';
 
      return (
       <div class={styles.wrapper}>
@@ -149,7 +151,7 @@ class IndexPage extends React.Component {
                </text>
             </svg>
         </div>
-        <div id={styles.img} onMouseEnter={this.mouseEnterMain}>
+        <div id={styles.img} class={`${imgPos}`} onMouseEnter={this.mouseEnterMain}>
           <Img sizes={this.props.data.josh.sizes} />
         </div>
       </div>

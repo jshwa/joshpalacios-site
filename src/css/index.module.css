@@ -72,8 +72,7 @@
    z-index: 2;
 }
 
-#debate:hover ~ #img,
-#debatenav:hover ~ #img {
+.imgSlideRight {
    transform: translateX(75%);
 }
 
