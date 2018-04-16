@@ -3,6 +3,8 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import styles from '../css/index.module.css';
 import '../css/index.css';
+import { DebateNav, DevNav } from '../components/circleNav';
+import { DebateBackground, DevBackground } from '../components/indexBackground';
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -10,6 +12,8 @@ class IndexPage extends React.Component {
     this.state = {
       hoverDebate: false,
       hoverDev: false,
+      removeDebate: false,
+      removeDev: false,
     };
   }
 
@@ -17,141 +21,65 @@ class IndexPage extends React.Component {
      this.setState({
         hoverDebate: true
      });
+     setTimeout(function(){
+      this.setState({
+         removeDev: true
+      })
+   }.bind(this), 200);
   }
 
   mouseEnterMain = () => {
    this.setState({
-      hoverDebate: false
+      hoverDebate: false,
+      hoverDev: false,
+      removeDebate: false,
+      removeDev: false
    });
    }
 
+   mouseEnterDev = () => {
+      this.setState({
+         hoverDev: true
+      });
+      setTimeout(function(){
+         this.setState({
+            removeDebate: true
+         })
+      }.bind(this), 200);
+   } 
+
   render() {
-     const hidebackground = this.state.hoverDebate ? styles.hidebackground : '';
-     const focustitle = this.state.hoverDebate ? styles.focustitle : '';
-     const showNav = this.state.hoverDebate ? 'block' : 'none';
-     const imgPos = this.state.hoverDebate? styles.imgSlideRight : '';
+     const { hoverDebate, hoverDev, removeDebate, removeDev } = this.state;
+     const hidebackground = hoverDebate || hoverDev ? styles.hidebackground : '';
+     const focustitle = hoverDebate || hoverDev ? styles.focustitle : '';
+     const slideRight = hoverDebate ? styles.imgSlideRight : '';
+     const slideLeft = hoverDev ? styles.imgSlideLeft : '';
+     const moveBack = hoverDev ? styles.moveBack : '';
+     const remove1 = removeDebate ? {display: 'none'} : '';
+     const remove2 = removeDev ? {display:'none'} : '';
 
      return (
       <div class={styles.wrapper}>
-       <div id={styles.debatenav}
-            style={`display: ${showNav}`} 
-            onMouseEnter={this.mouseEnterDebate}>
-         <svg width="300" height="600" viewBox="0 0 300 600" preserveAspectRatio="xMidYMid meet">
-            <text x="225" y="300" transform="rotate(30 500,300)" text-anchor="end" fill="white">
-               About
-            </text>
-            <text x="225" y="300" transform="rotate(15 500,300)" text-anchor="end" fill="white">
-               Contention 1
-            </text>
-            <text x="225" y="300" transform="rotate(0 500,300)" text-anchor="end" fill="white">
-               Coaching
-            </text>
-            <text x="225" y="300" transform="rotate(345 500,300)" text-anchor="end" fill="white">
-               Public Speaking
-            </text>
-            <text x="225" y="300" transform="rotate(330 500,300)" text-anchor="end" fill="white">
-               Contact
-            </text>
-         </svg>
+        {hoverDebate && <DebateNav id={styles.debatenav} />}
+        {hoverDev && <DevNav id={styles.devnav} />}
+        <div id={styles.debate} style={remove1} onMouseEnter={this.mouseEnterDebate} >
+         <DebateBackground 
+            background={styles.backgroundsvg} 
+            hide={hidebackground} 
+            title={styles.titlesvg}
+            focus={focustitle}/>
         </div>
-        <div id={styles.debate}
-             onMouseEnter={this.mouseEnterDebate} >
-         <svg width="70vw" height="100vh" viewBox="0 0 500 800" preserveAspectRatio="xMinYMid slice">
-            <text x="0" y="50" class={`${styles.backgroundsvg} ${hidebackground}`}>OACHDEBATECOACHDE
-               <animate id="scrollanim1" attributeName="x" from="-50" to="0" dur="7s" begin="0s; scrollanim2.end" />
-               <animate id="scrollanim2" attributeName="x" from="0" to="-50" dur="14s" begin="scrollanim1.end" />
-            </text>
-            <text x="0" y="120" class={`${styles.backgroundsvg} ${hidebackground}`}>DEBATECOACHDEBATE
-               <animate id="scrollanim3" attributeName="x" from="-25" to="-50" dur="10s" begin="0s; scrollanim4.end" />
-               <animate id="scrollanim4" attributeName="x" from="-50" to="-25" dur="12s" begin="scrollanim3.end" />
-            </text>
-            <text x="0" y="190" class={`${styles.backgroundsvg} ${hidebackground}`}>TECOACHDEBATECOAC
-               <animate id="scrollanim5" attributeName="x" from="0" to="-50" dur="8s" begin="0s; scrollanim6.end" />
-               <animate id="scrollanim6" attributeName="x" from="-50" to="0" dur="15s" begin="scrollanim5.end" />
-            </text>
-            <text x="0" y="260" class={`${styles.backgroundsvg} ${hidebackground}`}> HDEBATECOACHDEBAT
-               <animate id="scrollanim7" attributeName="x" from="-25" to="-50" dur="11s" begin="0s; scrollanim8.end" />
-               <animate id="scrollanim8" attributeName="x" from="-50" to="-25" dur="18s" begin="scrollanim7.end" />
-            </text>
-            <text x="0" y="330" class={`${styles.backgroundsvg} ${hidebackground}`}>ATECOACHDEBATECOA
-               <animate id="scrollanim9" attributeName="x" from="-50" to="0" dur="12s" begin="0s; scrollanim10.end" />
-               <animate id="scrollanim10" attributeName="x" from="0" to="-50" dur="19s" begin="scrollanim9.end" />
-            </text>
-            <text x="0" y="400" class={`${styles.backgroundsvg} ${hidebackground}`}>DEBATECOACHDEBATE</text>
-            <text x="0" y="400" fill="white" class={`${styles.titlesvg} ${focustitle}`}>DEBATE</text>
-            <text x="0" y="470" class={`${styles.backgroundsvg} ${hidebackground}`}>COACHDEBATECOACHD</text>
-            <text x="0" y="470" fill="white" class={`${styles.titlesvg} ${focustitle}`}>COACH</text>
-            <text x="0" y="540" class={`${`${styles.backgroundsvg} ${hidebackground}`} ${hidebackground}`}>BATECOACHDEBATECO
-               <animate id="scrollanim11" attributeName="x" from="0" to="-50" dur="7s" begin="0;scrollanim12.end" fill="freeze" />
-               <animate id="scrollanim12" attributeName="x" from="-50" to="0" dur="12s" begin="scrollanim11.end" fill="freeze" />
-            </text>
-            <text x="0" y="610" class={`${styles.backgroundsvg} ${hidebackground}`}>OACHDEBATECOACHDE
-               <animate id="scrollanim19" attributeName="x" from="-100" to="0" dur="15s" begin="0s; scrollanim20.end" />
-               <animate id="scrollanim20" attributeName="x" from="0" to="-100" dur="15s" begin="0s; scrollanim19.end" />
-            </text>
-            <text x="0" y="680" class={`${styles.backgroundsvg} ${hidebackground}`}>HDEBATECOACHDEBAT
-               <animate id="scrollanim13" attributeName="x" from="-25" to="-50" dur="7s" begin="0s; scrollanim14.end" />
-               <animate id="scrollanim14" attributeName="x" from="-50" to="-25" dur="15s" begin="scrollanim13.end" />
-            </text>
-            <text x="0" y="750" class={`${styles.backgroundsvg} ${hidebackground}`}>DEBATECOACHDEBATE
-               <animate id="scrollanim15" attributeName="x" from="-75" to="0" dur="9s" begin="0s; scrollanim16.end" />
-               <animate id="scrollanim16" attributeName="x" from="0" to="-75" dur="18s" begin="scrollanim15.end" />
-            </text>
-            <text x="0" y="820" class={`${styles.backgroundsvg} ${hidebackground}`}>ECOACHDEBATECOACH
-               <animate id="scrollanim17" attributeName="x" from="0" to="-100" dur="7s" begin="0s; scrollanim18.end" />
-               <animate id="scrollanim18" attributeName="x" from="-100" to="0" dur="10s" begin="scrollanim17.end" />
-            </text>
-         </svg>
+        <div id={styles.dev} style={remove2} onMouseEnter={this.mouseEnterDev}>
+         <DevBackground 
+            background={styles.backgroundsvg} 
+            hide={hidebackground} 
+            title={styles.titlesvg}
+            focus={focustitle}/>
         </div>
-        <div id={styles.dev}>
-         <svg width="70vw" height="100vh" viewBox="-500 0 500 800" preserveAspectRatio="xMaxYMid slice">
-               <text x="0" y="50" text-anchor="end" class={styles.backgroundsvg}>WEBDEVELOPERWEBDE
-                  <animate id="scrollanim17" attributeName="x" from="0" to="100" dur="7s" begin="0s; scrollanim18.end" />
-                  <animate id="scrollanim18" attributeName="x" from="100" to="0" dur="10s" begin="scrollanim17.end" />
-               </text>
-               <text x="0" y="120" text-anchor="end" class={styles.backgroundsvg}>EVELOPERWEBDEVELO
-                  <animate id="scrollanim15" attributeName="x" from="75" to="0" dur="9s" begin="0s; scrollanim16.end" />
-                  <animate id="scrollanim16" attributeName="x" from="0" to="75" dur="18s" begin="scrollanim15.end" />
-               </text>
-               <text x="0" y="190" text-anchor="end" class={styles.backgroundsvg}>PERWEBDEVELOPERWE
-                  <animate id="scrollanim13" attributeName="x" from="25" to="50" dur="7s" begin="0s; scrollanim14.end" />
-                  <animate id="scrollanim14" attributeName="x" from="50" to="25" dur="15s" begin="scrollanim13.end" />
-               </text>
-               <text x="0" y="260" text-anchor="end" class={styles.backgroundsvg}>LOPERWEBDEVELOPER
-                  <animate id="scrollanim9" attributeName="x" from="50" to="0" dur="12s" begin="0s; scrollanim10.end" />
-                  <animate id="scrollanim10" attributeName="x" from="0" to="50" dur="19s" begin="scrollanim9.end" />
-               </text>
-               <text x="0" y="330" text-anchor="end" class={styles.backgroundsvg}>EBDEVELOPERWEBDEV
-                  <animate id="scrollanim19" attributeName="x" from="100" to="0" dur="15s" begin="0s; scrollanim20.end" />
-                  <animate id="scrollanim20" attributeName="x" from="0" to="100" dur="15s" begin="0s; scrollanim19.end" />
-               </text>
-               <text x="0" y="400" text-anchor="end" class={styles.backgroundsvg}>ERWEBDEVELOPERWEB</text>
-               <text x="0" y="400" fill="white" text-anchor="end" class={styles.titlesvg}>WEB</text>
-               <text x="0" y="470" text-anchor="end" class={styles.backgroundsvg}>LOPERWEBDEVELOPER</text>
-               <text x="0" y="470" fill="white" text-anchor="end" class={styles.titlesvg}>DEVELOPER</text>
-               <text x="0" y="540" text-anchor="end" class={styles.backgroundsvg}>WEBDEVELOPERWEBDE
-                  <animate id="scrollanim1" attributeName="x" from="50" to="0" dur="7s" begin="0s; scrollanim2.end" />
-                  <animate id="scrollanim2" attributeName="x" from="0" to="50" dur="14s" begin="scrollanim1.end" />
-               </text>
-               <text x="0" y="610" text-anchor="end" class={styles.backgroundsvg}>RWEBDEVELOPERWEBD
-                  <animate id="scrollanim7" attributeName="x" from="25" to="50" dur="11s" begin="0s; scrollanim8.end" />
-                  <animate id="scrollanim8" attributeName="x" from="50" to="25" dur="18s" begin="scrollanim7.end" />
-               </text>
-               <text x="0" y="680" text-anchor="end" class={styles.backgroundsvg}>BDEVELOPERWEBDEVE
-                  <animate id="scrollanim11" attributeName="x" from="0" to="50" dur="7s" begin="0;scrollanim12.end" fill="freeze" />
-                  <animate id="scrollanim12" attributeName="x" from="50" to="0" dur="12s" begin="scrollanim11.end" fill="freeze" />
-               </text>
-               <text x="0" y="750" text-anchor="end" class={styles.backgroundsvg}>PERWEBDEVELOPERWE
-                  <animate id="scrollanim3" attributeName="x" from="25" to="50" dur="10s" begin="0s; scrollanim4.end" />
-                  <animate id="scrollanim4" attributeName="x" from="50" to="25" dur="12s" begin="scrollanim3.end" />
-               </text>
-               <text x="0" y="820" text-anchor="end" class={styles.backgroundsvg}>WEBDEVELOPERWEBDE
-               <animate id="scrollanim5" attributeName="x" from="25" to="50" dur="8s" begin="0s; scrollanim6.end" />
-                  <animate id="scrollanim6" attributeName="x" from="50" to="25" dur="15s" begin="scrollanim5.end" />
-               </text>
-            </svg>
-        </div>
-        <div id={styles.img} class={`${imgPos}`} onMouseEnter={this.mouseEnterMain}>
+        <div 
+          id={styles.img} 
+          class={`${slideRight} ${slideLeft}`} 
+          onMouseEnter={this.mouseEnterMain}>
           <Img sizes={this.props.data.josh.sizes} />
         </div>
       </div>
