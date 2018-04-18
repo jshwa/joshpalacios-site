@@ -16,6 +16,7 @@
    justify-self: end;
    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
    font-size: 36px;
+   visibility: hidden;
    z-index: 4;
 }
 
@@ -25,6 +26,7 @@
    justify-self: start;
    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
    font-size: 36px;
+   visibility: hidden;
    z-index: 4;
 }
 
@@ -44,7 +46,7 @@
    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
    font-size: 75px;
    color: white;
-   background: #239847;
+   background: #260b42;
    grid-column: 1 / 7;
    grid-row: 1 / span 3;
    z-index: 2;
@@ -55,8 +57,8 @@
    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
    font-size: 75px;
    color: white;
-   background: #239847;
-   grid-column: 6 / 11;
+   background: #260b42;
+   grid-column: 7 / 11;
    grid-row: 1 / span 3;
    z-index: 1;
    overflow: hidden;
