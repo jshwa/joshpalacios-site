@@ -10,75 +10,88 @@ class IndexPage extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      hoverDebate: false,
-      hoverDev: false,
-      removeDebate: false,
-      removeDev: false,
+      main: null,
+      showNav: '',
+      removeDebate: '',
+      removeDev: '',
+      hidebackground: '',
+      focustitle: '',
+      slideImg: '',
+      svgPAR: '',
+      moveUp: ''
     };
   }
 
-  mouseEnterDebate = () => {
+  componentWillMount() {
+     const par = window.innerWidth < 1100 ? 'meet' : 'slice';
      this.setState({
-        hoverDebate: true
-     });
-     setTimeout(function(){
+        svgPAR: par
+     })
+  }
+
+  mouseEnterDebate = () => {
+   this.state.main != 'debate' &&
       this.setState({
-         removeDev: true
-      })
-   }.bind(this), 200);
+         main: 'debate',
+         showNav: <DebateNav id={styles.debatenav}/>,
+         hidebackground: styles.hidebackground,
+         focustitle: styles.focustitle,
+         slideImg: styles.imgSlideRight,
+         moveUp: {zIndex: '1'},
+      });
   }
 
   mouseEnterMain = () => {
-   this.setState({
-      hoverDebate: false,
-      hoverDev: false,
-      removeDebate: false,
-      removeDev: false
-   });
-   }
+   this.state.main != null &&
+      this.setState({
+         main: null,
+         showNav: null,
+         removeDebate: '',
+         removeDev: '',
+         hidebackground: '',
+         focustitle: '',
+         slideImg:'',
+         moveUp: {zIndex: '1'},
+      });
+  }
 
    mouseEnterDev = () => {
+    this.state.main != 'dev' &&
       this.setState({
-         hoverDev: true
+         main: 'dev',
+         showNav: <DevNav id={styles.devnav} />,
+         hidebackground: styles.hidebackground,
+         focustitle: styles.focustitle,
+         slideImg: styles.imgSlideLeft,
+         moveUp: {zIndex: '3'},
       });
-      setTimeout(function(){
-         this.setState({
-            removeDebate: true
-         })
-      }.bind(this), 200);
    } 
 
   render() {
-     const { hoverDebate, hoverDev, removeDebate, removeDev } = this.state;
-     const hidebackground = hoverDebate || hoverDev ? styles.hidebackground : '';
-     const focustitle = hoverDebate || hoverDev ? styles.focustitle : '';
-     const slideRight = hoverDebate ? styles.imgSlideRight : '';
-     const slideLeft = hoverDev ? styles.imgSlideLeft : '';
-     const moveBack = hoverDev ? styles.moveBack : '';
-     const remove1 = removeDebate ? {display: 'none'} : '';
-     const remove2 = removeDev ? {display:'none'} : '';
+     const { showNav, removeDebate, removeDev, hidebackground, focustitle, slideImg, svgPAR, moveUp } = this.state;
 
      return (
       <div class={styles.wrapper}>
-        {hoverDebate && <DebateNav id={styles.debatenav} />}
-        {hoverDev && <DevNav id={styles.devnav} />}
-        <div id={styles.debate} style={remove1} onMouseEnter={this.mouseEnterDebate} >
+        {this.state.showNav}
+        <div id={styles.debate} onMouseEnter={this.mouseEnterDebate} >
          <DebateBackground 
             background={styles.backgroundsvg} 
             hide={hidebackground} 
             title={styles.titlesvg}
-            focus={focustitle}/>
+            focus={focustitle}
+            PARval={svgPAR}/>
         </div>
-        <div id={styles.dev} style={remove2} onMouseEnter={this.mouseEnterDev}>
+        <div id={styles.dev} style={moveUp} onMouseEnter={this.mouseEnterDev}>
          <DevBackground 
             background={styles.backgroundsvg} 
             hide={hidebackground} 
             title={styles.titlesvg}
-            focus={focustitle}/>
+            focus={focustitle}
+            PARval={svgPAR}/>
         </div>
         <div 
           id={styles.img} 
-          class={`${slideRight} ${slideLeft}`} 
+          class={slideImg} 
           onMouseEnter={this.mouseEnterMain}>
           <Img sizes={this.props.data.josh.sizes} />
         </div>
