@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'gatsby-link';
 
 export class DebateNav extends React.Component {
    constructor(props) {
@@ -13,26 +14,28 @@ export class DebateNav extends React.Component {
       return (
          <div id={this.props.id} style={{justifySelf: 'end'}}>
             <svg width="100%" height="100%" viewBox="0 0 300 600" preserveAspectRatio="xMidYMid meet">
-               <text x="225" y="325" transform="rotate(30 500,325)" text-anchor="end" fill="white">
-                  About
-                  <animate 
-                        id="visible" 
-                        attributeName="visibility" 
-                        from="hidden" 
-                        to="visible" 
-                        dur=".1s" 
-                        begin="indefinite" 
-                        fill="freeze"
-                        ref="visible"/>
-                     <animateTransform 
-                        id="slide1" 
-                        attributeName="transform" 
-                        type="rotate" 
-                        from="-180 500,325" 
-                        to="30 500,325" 
-                        dur="1s" 
-                        begin="visible.end" />
-               </text>
+               <Link to='/debate/about/'>
+                  <text x="225" y="325" transform="rotate(30 500,325)" text-anchor="end" fill="white">
+                     About
+                     <animate 
+                           id="visible" 
+                           attributeName="visibility" 
+                           from="hidden" 
+                           to="visible" 
+                           dur=".1s" 
+                           begin="indefinite" 
+                           fill="freeze"
+                           ref="visible"/>
+                        <animateTransform 
+                           id="slide1" 
+                           attributeName="transform" 
+                           type="rotate" 
+                           from="-180 500,325" 
+                           to="30 500,325" 
+                           dur="1s" 
+                           begin="visible.end" />
+                  </text>
+               </Link>
                <text x="225" y="325" transform="rotate(15 500,325)" text-anchor="end" fill="white">
                   Contention 1
                   <animate 
