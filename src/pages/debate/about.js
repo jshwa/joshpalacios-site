@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import styles from '../../css/about.module.css';
 
 class DebateAbout extends React.Component {
    constructor (props) {
@@ -8,7 +9,7 @@ class DebateAbout extends React.Component {
 
    render() {
       return (
-         <div>
+         <div id={styles.wrapper}>
             <p> Sup? </p>
          </div>
       )
