@@ -32,7 +32,7 @@
 
 #img {
    padding: 1em;
-   background: #121212;
+   background: radial-gradient(#121212, #000);
    box-shadow: 10px 0px 20px #000, -10px 0px 20px #000;
    transition: transform 500ms ease-in-out;
    grid-column:  4 / 8;
@@ -43,21 +43,26 @@
 }
  
 #debate {
+   background: linear-gradient(90deg, #000, #64027f);
+   background-size: 400% 100%;
+   background-position: 10% 0%;
    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
    font-size: 75px;
    color: white;
-   background: #260b42;
    grid-column: 1 / 7;
    grid-row: 1 / span 3;
    z-index: 2;
    overflow: hidden;
+   transition: background-position 1s ease-in-out;
 }
 
 #dev {
+   background: linear-gradient(270deg, #000, #191563);
+   background-size: 400% 100%;
+   background-position: 90% 0%;
    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
    font-size: 75px;
    color: white;
-   background: #260b42;
    grid-column: 7 / 11;
    grid-row: 1 / span 3;
    z-index: 1;
@@ -66,12 +71,12 @@
 }
 
 .titlesvg {
-   opacity: .5;
+   opacity: 0;
    transition: opacity 500ms ease-in-out;
 }
 
 .backgroundsvg {
-   opacity: .5;
+   opacity: 1;
    visibility: visible;
    transition: visibility 1000ms linear, opacity 1000ms ease-in-out;
 }

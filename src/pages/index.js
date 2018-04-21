@@ -18,7 +18,9 @@ class IndexPage extends React.Component {
       focustitle: '',
       slideImg: '',
       svgPAR: '',
-      moveUp: ''
+      moveUp: '',
+      debateBgndColor: '',
+      devBgndColor: '',
     };
   }
 
@@ -37,7 +39,8 @@ class IndexPage extends React.Component {
          hidebackground: styles.hidebackground,
          focustitle: styles.focustitle,
          slideImg: styles.imgSlideRight,
-         moveUp: {zIndex: '1'},
+         moveUp: {zIndex: '1', transitionDelay: "z-index 0s"},
+         debateBgndColor: {backgroundPosition: '25% 0%', transition: "background-position 3s ease-in-out"},
       });
   }
 
@@ -51,7 +54,9 @@ class IndexPage extends React.Component {
          hidebackground: '',
          focustitle: '',
          slideImg:'',
-         moveUp: {zIndex: '1'},
+         moveUp: {zIndex: '1', transitionDelay: "z-index 1s"},
+         debateBgndColor: '',
+         devBgndColor: {transition: 'background-position 1s ease-in-out, z-index 2s'}
       });
   }
 
@@ -64,16 +69,17 @@ class IndexPage extends React.Component {
          focustitle: styles.focustitle,
          slideImg: styles.imgSlideLeft,
          moveUp: {zIndex: '3'},
+         devBgndColor: {backgroundPosition: '50% 0%', transition: "background-position 3s ease-in-out"},
       });
    } 
 
   render() {
-     const { showNav, removeDebate, removeDev, hidebackground, focustitle, slideImg, svgPAR, moveUp } = this.state;
+     const { showNav, removeDebate, removeDev, hidebackground, focustitle, slideImg, svgPAR, moveUp, debateBgndColor, devBgndColor } = this.state;
 
      return (
       <div class={styles.wrapper}>
         {this.state.showNav}
-        <div id={styles.debate} onMouseEnter={this.mouseEnterDebate} >
+        <div id={styles.debate} style={debateBgndColor} onMouseEnter={this.mouseEnterDebate} >
          <DebateBackground 
             background={styles.backgroundsvg} 
             hide={hidebackground} 
@@ -81,7 +87,7 @@ class IndexPage extends React.Component {
             focus={focustitle}
             PARval={svgPAR}/>
         </div>
-        <div id={styles.dev} style={moveUp} onMouseEnter={this.mouseEnterDev}>
+        <div id={styles.dev} style={{...moveUp, ...devBgndColor}} onMouseEnter={this.mouseEnterDev}>
          <DevBackground 
             background={styles.backgroundsvg} 
             hide={hidebackground} 
@@ -89,7 +95,7 @@ class IndexPage extends React.Component {
             focus={focustitle}
             PARval={svgPAR}/>
         </div>
-        <div 
+        <div  
           id={styles.img} 
           class={slideImg} 
           onMouseEnter={this.mouseEnterMain}>

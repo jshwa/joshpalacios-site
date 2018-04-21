@@ -2,7 +2,7 @@ import React from 'react';
 
 export const DebateBackground = props => {
    return (
-      <svg width="60vw" height="100vh" viewBox="0 0 500 800" preserveAspectRatio={`xMinYMid ${props.PARval}`}>
+      <svg width="60vw" height="100vh" viewBox="0 0 550 800" preserveAspectRatio={`xMinYMid ${props.PARval}`}>
          <text x="0" y="-300" class={`${props.background} ${props.hide}`}>DEBATECOACHDEBATE
             <animate id="scrollanim39" attributeName="x" from="-75" to="0" dur="9s" begin="0s; scrollanim38.end" />
             <animate id="scrollanim38" attributeName="x" from="0" to="-75" dur="18s" begin="scrollanim39.end" />
@@ -93,7 +93,7 @@ export const DebateBackground = props => {
 
 export const DevBackground = props => {
    return (
-      <svg width="60vw" height="100%" viewBox="-500 0 500 800" preserveAspectRatio={`xMaxYMid ${props.PARval}`}>
+      <svg width="60vw" height="100%" viewBox="-550 0 550 800" preserveAspectRatio={`xMaxYMid ${props.PARval}`}>
          <text x="0" y="-300" text-anchor="end" class={`${props.background} ${props.hide}`}>WEBDEVELOPERWEBDE
             <animate id="devscrollanim31" attributeName="x" from="0" to="100" dur="7s" begin="0s; devscrollanim32.end" />
             <animate id="devscrollanim32" attributeName="x" from="100" to="0" dur="10s" begin="devscrollanim31.end" />
