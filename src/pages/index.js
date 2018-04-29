@@ -40,7 +40,7 @@ class IndexPage extends React.Component {
         <div id={styles.dev} onMouseEnter={this.mouseEnterDev} />
         <div id={styles.title}>
          <svg viewBox="0 0 80 20"  preserveAspectRatio="xMinYMin meet">
-            <text x="0" y="15">
+            <text x="80" y="15" text-anchor="end">
             {this.state.active}
             </text>
          </svg>
