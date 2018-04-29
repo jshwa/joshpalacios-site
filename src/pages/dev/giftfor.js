@@ -1,8 +1,8 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import styles from '../../css/portfolio.module.css';
+import styles from '../../css/giftfor.module.css';
 
-class Portfolio extends React.Component {
+class Giftfor extends React.Component {
    constructor(props){
       super(props);
       this.state = {
@@ -76,7 +76,7 @@ class Portfolio extends React.Component {
    }
 }
 
-export default Portfolio
+export default Giftfor
 
 export const query = graphql`
   query GiftForImageQuery {
