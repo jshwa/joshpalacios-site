@@ -155,7 +155,7 @@ export class DevNav extends React.Component {
                </a>
                <a xlinkhref="/debate/about">
                   <text x="75" y="225" transform="rotate(-15 -225,225)" text-anchor="start" fill="black">
-                     Technical Skills
+                     Projects
                      <animate 
                         id="visible2" 
                         attributeName="visibility" 
