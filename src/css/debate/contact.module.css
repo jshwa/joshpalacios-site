@@ -1,0 +1,14 @@
+#wrapper {
+   display: grid;
+   grid-template-columns: 1fr 2fr 6fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   overflow: hidden;
+}
+
+#title {
+   font-family: "HelveticaNeue-CondensedBold", Helvetica;
+   font-weight: bold;
+   opacity: .3;
+   grid-column: 1 / 4;
+   grid-row: 2 / span 1;
+}
