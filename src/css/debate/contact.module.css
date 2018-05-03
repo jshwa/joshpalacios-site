@@ -32,11 +32,10 @@
 }
 
 #wechatimg {
+   margin-left: -3em;
    grid-column: 3 / 4;
    grid-row: 3 / span 1;
-   max-width: 20%;
    align-self: end;
-   padding-bottom: 2em;
 }
 
 #emailbutton {

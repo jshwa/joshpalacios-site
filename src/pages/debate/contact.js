@@ -14,15 +14,15 @@ class Contact extends React.Component {
                </svg>
             </div>
             <div id={styles.intouch}>
-               <svg viewBox="0 0 160 20" preserveAspectRatio="xMidYMid meet">
+               <svg viewBox="0 0 150 20" preserveAspectRatio="xMidYMid meet">
                   <text x="80" y="15" text-anchor="middle" fill="#181840">
                      Want to get in touch?
                   </text>
                </svg>
             </div>
             <div id={styles.wechat}>
-               <svg viewBox="0 0 160 20" preserveAspectRatio="xMidYMid meet">
-                  <text x="80" y="15" text-anchor="middle" fill="#181840">
+               <svg viewBox="0 0 150 20" preserveAspectRatio="xMidYMid meet">
+                  <text x="70" y="15" text-anchor="middle" fill="#181840">
                      Or add me on WeChat
                   </text>
                </svg>
@@ -42,7 +42,7 @@ export default Contact
 
 export const query = graphql`
   query contactImageQuery {
-    wechat: imageSharp(id: { regex: "/wechatbw.png/"}) {
+    wechat: imageSharp(id: { regex: "/wechatid.png/"}) {
       sizes(maxWidth: 1080) {
        ...GatsbyImageSharpSizes_noBase64
       }
