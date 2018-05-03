@@ -32,7 +32,7 @@ export const query = graphql`
   query aboutImageQuery {
     shanghai: imageSharp(id: { regex: "/Shanghai.jpeg/"}) {
       sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes_noBase64
+       ...GatsbyImageSharpSizes_tracedSVG
       }
     }
   }
