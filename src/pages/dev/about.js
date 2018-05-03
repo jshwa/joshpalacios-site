@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../css/about.module.css';
+import styles from '../../css/dev/about.module.css';
 
 class Portfolio extends React.Component {
    constructor(props){

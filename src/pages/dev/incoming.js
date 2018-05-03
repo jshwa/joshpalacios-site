@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import styles from '../../css/incoming.module.css';
+import styles from '../../css/dev/incoming.module.css';
 
 class Incoming extends React.Component {
    constructor(props){

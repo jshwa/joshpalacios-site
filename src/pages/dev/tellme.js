@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import styles from '../../css/tellme.module.css';
+import styles from '../../css/dev/tellme.module.css';
 
 class Tellme extends React.Component {
    constructor(props){

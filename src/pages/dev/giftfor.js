@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import styles from '../../css/giftfor.module.css';
+import styles from '../../css/dev/giftfor.module.css';
 
 class Giftfor extends React.Component {
    constructor(props){
