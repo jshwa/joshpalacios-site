@@ -26,10 +26,14 @@
 
 #github {
    order: 2;
+   text-align: center;
+}
+
+#github a {
    font-family: "Avenir-Black", Helvetica;
    color: #FFF;
    font-size: 30px;
-   text-align: center;
+   text-decoration: none;
 }
 
 #blurb {
