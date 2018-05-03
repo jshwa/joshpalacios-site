@@ -1,8 +1,10 @@
 #wrapper {
+   height: 100vh;
    display: grid;
-   grid-template-columns: 1fr 2fr 6fr;
+   grid-template-columns: repeat (4 1fr);
    grid-template-rows: 1fr 1fr 1fr;
    overflow: hidden;
+   align-items: center;
 }
 
 #title {
@@ -11,4 +13,51 @@
    opacity: .3;
    grid-column: 1 / 4;
    grid-row: 2 / span 1;
+}
+
+#intouch {
+   font-family: "HelveticaNeue-CondensedBold", Helvetica;
+   font-weight: bold;
+   grid-column: 2 / 4;
+   grid-row: 1 / span 1;
+   padding-top: 2em;
+}
+
+#wechat {
+   font-family: "HelveticaNeue-CondensedBold", Helvetica;
+   font-weight: bold;
+   grid-column: 1 / 3;
+   grid-row: 3 / span 1;
+   padding-bottom: 2em;
+}
+
+#wechatimg {
+   grid-column: 3 / 4;
+   grid-row: 3 / span 1;
+   max-width: 20%;
+   align-self: end;
+   padding-bottom: 2em;
+}
+
+#emailbutton {
+   grid-column: 2 / 3;
+   grid-row: 2 / span 1;
+   text-align: center;
+   z-index: 2;
+}
+
+#emailbutton a{
+   padding: .5em 1.5em;
+   background: white;
+   color: #181840;
+   border-radius: 3px;
+   text-decoration: none;
+   font-family: helvetica;
+   font-weight: bold;
+   font-size: 24px;
+   border: 1px solid #181840;
+}
+
+#emailbutton a:hover {
+   opacity: .7;
 }

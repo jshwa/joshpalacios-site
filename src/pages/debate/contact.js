@@ -13,9 +13,39 @@ class Contact extends React.Component {
                   </text>
                </svg>
             </div>
+            <div id={styles.intouch}>
+               <svg viewBox="0 0 160 20" preserveAspectRatio="xMidYMid meet">
+                  <text x="80" y="15" text-anchor="middle" fill="#181840">
+                     Want to get in touch?
+                  </text>
+               </svg>
+            </div>
+            <div id={styles.wechat}>
+               <svg viewBox="0 0 160 20" preserveAspectRatio="xMidYMid meet">
+                  <text x="80" y="15" text-anchor="middle" fill="#181840">
+                     Or add me on WeChat
+                  </text>
+               </svg>
+            </div>
+            <div id={styles.wechatimg}>
+               <Img sizes={this.props.data.wechat.sizes} />
+            </div>
+            <div id={styles.emailbutton}>
+               <a href="mailto:hey@joshpalacios.com">Email Me</a>
+            </div>
          </div>
       )
    }
 }
 
 export default Contact
+
+export const query = graphql`
+  query contactImageQuery {
+    wechat: imageSharp(id: { regex: "/wechatbw.png/"}) {
+      sizes(maxWidth: 1080) {
+       ...GatsbyImageSharpSizes_noBase64
+      }
+    }
+  }
+`;

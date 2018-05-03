@@ -1,4 +1,5 @@
 #wrapper {
+   height: 100vh;
    display: grid;
    grid-template-columns: 1fr 2fr 6fr;
    grid-template-rows: 1fr 1fr 1fr;
