@@ -34,7 +34,7 @@ class Giftfor extends React.Component {
                   </svg>
                </div>
                <div id={styles.github}>
-                  Github
+                  <a href="https://github.com/jshwa/wishlist" target="_blank">Github</a>
                </div>
                <div id={styles.blurb}>
                   A Ruby on Rails web app to cultivate crowd-sourced gift guides  

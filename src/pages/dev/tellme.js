@@ -37,7 +37,7 @@ class Tellme extends React.Component {
                   </svg>
                </div>
                <div id={styles.github}>
-                  Github
+                  <a href="https://github.com/jshwa/tell-me-about-it" target="_blank">Github</a>
                </div>
                <div id={styles.blurb}>
                   Momentum-style React/Redux homepage app with Rails API back-end for encouraging blogging habit formation               </div>
