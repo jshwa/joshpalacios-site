@@ -1,15 +1,79 @@
 #wrapper {
    height: 100vh;
    display: grid;
-   grid-template-columns: 1fr 2fr 6fr;
-   grid-template-rows: 1fr 1fr 1fr;
+   grid-template-columns: 33% 1fr 33% 1fr;
+   grid-template-rows: 33% 33% 1fr;
    overflow: hidden;
 }
 
 #title {
    font-family: "HelveticaNeue-CondensedBold", Helvetica;
    font-weight: bold;
-   opacity: .3;
-   grid-column: 1 / 4;
+   opacity: .4;
+   grid-column: 1 / 5;
    grid-row: 2 / span 1;
+   z-index: 2;
+}
+
+#onstage {
+   grid-column: 2 / 5;
+   grid-row: 1 / span 3;
+   z-index: 1;
+}
+
+#blurb {
+   grid-column: 3 / 4;
+   grid-row: 1 / span 1;
+   color: white;
+   z-index: 3;
+   align-self: center;
+   font-family: "HelveticaNeue-Light"
+}
+
+#button {
+   grid-column: 1 / 2;
+   grid-row: 3 / span 1;
+   z-index: 3;
+   text-align: center;
+   align-self: end;
+   margin-bottom: 3em;
+}
+
+#button a {
+   text-decoration: none;
+   padding: 1em 2em;
+   background: #000;
+   color: #FFF;
+   border-radius: 3px;
+   font-size: 24px;
+}
+
+@media screen and (orientation: portrait) {
+   #wrapper {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 25% 25% 25% 25%;
+      align-items: center;
+   }
+
+   #title {
+      grid-column: 1 / 5;
+      grid-row: 1 / span 1;
+      z-index: 2;
+   }
+   
+   #onstage {
+      grid-column: 1 / 5;
+      grid-row: 2 / span 3;
+      z-index: 1;
+      align-self: center;
+   }
+   
+   #blurb {
+      grid-column: 1 / 4;
+      grid-row: 2 / span 1;
+      padding: 7em;
+      line-height: 2;
+   }
 }
