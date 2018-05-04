@@ -15,6 +15,9 @@ class DebateAbout extends React.Component {
                <Img sizes={this.props.data.shanghai.sizes} />
             </div>
             <div id={styles.name}>
+               <div id={styles.headshot}>
+                  <Img sizes={this.props.data.josh.sizes} />
+               </div>
                <span class={styles.firstname}>Josh</span>
                <span class={styles.lastname}>Palacios</span>
             </div>
@@ -33,6 +36,11 @@ export const query = graphql`
     shanghai: imageSharp(id: { regex: "/Shanghai.jpeg/"}) {
       sizes(maxWidth: 1080) {
        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    josh: imageSharp(id: { regex: "/headshot-circle.png/"}) {
+      sizes(maxWidth: 1080) {
+       ...GatsbyImageSharpSizes_noBase64
       }
     }
   }

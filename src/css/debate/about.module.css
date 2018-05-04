@@ -1,7 +1,7 @@
 #wrapper {
    height: 100vh;
    display: grid;
-   grid-template-rows: 1fr 1fr;
+   grid-template-rows: 50% 50%;
    grid-template-columns: 1fr;
    justify-items: center;
    overflow: hidden;
@@ -13,6 +13,11 @@
    grid-row: 1 / span 2;
    grid-column: 1 / 2;
    opacity: 0.4;
+}
+
+#headshot {
+   margin: auto;
+   width: 10em; 
 }
 
 #name {
