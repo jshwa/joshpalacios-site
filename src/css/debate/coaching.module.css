@@ -1,15 +1,147 @@
 #wrapper {
    height: 100vh;
    display: grid;
-   grid-template-columns: 1fr 2fr 6fr;
-   grid-template-rows: 1fr 1fr 1fr;
+   grid-template-columns: 13% 17% 10% 50% 10%;
+   grid-template-rows: 33% 33% 1fr;
    overflow: hidden;
+   align-items: center;
 }
 
 #title {
    font-family: "HelveticaNeue-CondensedBold", Helvetica;
    font-weight: bold;
    opacity: .3;
-   grid-column: 1 / 4;
+   grid-column: 1 / 6;
    grid-row: 2 / span 1;
+   z-index: 1;
+}
+
+#teachImg {
+   grid-column: 2 / 3;
+   grid-row: 1 / span 1;
+   -webkit-filter: drop-shadow(0 0 5px #222);
+   filter: drop-shadow(0 0 5px #222);
+   filter: brightness(50%);
+   z-index: 3;
+}
+
+#teach {
+   grid-column: 2 / 3;
+   grid-row: 1 / span 1;
+   z-index: 2;
+   font-family: "HelveticaNeue-CondensedBold", Helvetica;
+   font-weight: bold;
+   z-index: 4;
+}
+
+#teachImg:hover,
+#teach:hover + #teachImg {
+   filter: brightness(100%);
+}
+
+#teach:hover ~ #background,
+#teachImg:hover ~ #background,
+#teach:hover ~ #teachBlurb,
+#teachImg:hover ~ #teachBlurb,
+#teach:hover ~ #teachBg,
+#teachImg:hover ~ #teachBg {
+   opacity: 1;
+}
+
+#trainImg {
+   grid-column: 2 / 3;
+   grid-row: 2 / span 1;
+   -webkit-filter: drop-shadow(0 0 5px #222);
+   filter: drop-shadow(0 0 5px #222);
+   filter: brightness(50%);
+   z-index: 3;
+}
+
+#train {
+   grid-column: 2 / 3;
+   grid-row: 2 / span 1;
+   z-index: 2;
+   font-family: "HelveticaNeue-CondensedBold", Helvetica;
+   font-weight: bold;
+   z-index: 4;
+}
+
+#trainImg:hover,
+#train:hover + #trainImg {
+   filter: brightness(100%);
+}
+
+#train:hover ~ #background,
+#trainImg:hover ~ #background,
+#train:hover ~ #trainBlurb,
+#trainImg:hover ~ #trainBlurb,
+#train:hover ~ #trainBg,
+#trainImg:hover ~ #trainBg {
+   opacity: 1;
+}
+
+#competeImg {
+   grid-column: 2 / 3;
+   grid-row: 3 / span 1;
+   -webkit-filter: drop-shadow(0 0 5px #222);
+   filter: drop-shadow(0 0 5px #222);
+   filter: brightness(50%);
+   z-index: 3;
+}
+
+#compete {
+   grid-column: 2 / 3;
+   grid-row: 3 / span 1;
+   z-index: 2;
+   font-family: "HelveticaNeue-CondensedBold", Helvetica;
+   font-weight: bold;
+   z-index: 4;
+}
+
+#competeImg:hover,
+#compete:hover + #competeImg {
+   filter: brightness(100%);
+}
+
+#compete:hover ~ #background,
+#competeImg:hover ~ #background,
+#compete:hover ~ #competeBlurb,
+#competeImg:hover ~ #competeBlurb,
+#compete:hover ~ #competeBg,
+#competeImg:hover ~ #competeBg {
+   opacity: 1;
+}
+
+#background {
+   grid-column: 1 / 6;
+   grid-row: 1 / span 3;
+   height: 100vh;
+   width: 100vw;
+   background: rgba(0, 0, 0, 0.6);
+   z-index: 1;
+   opacity: 0;
+   transition: opacity 300ms ease-in-out;
+}
+
+#teachBlurb,
+#trainBlurb, 
+#competeBlurb {
+   grid-column: 4 / 5;
+   grid-row: 2 / span 1;
+   z-index: 3;
+   color: white;
+   opacity: 0;
+   transition: opacity 300ms ease-in-out;
+}
+
+#teachBg,
+#trainBg,
+#competeBg {
+   grid-column: 1 / 6;
+   grid-row: 1 / span 3;
+   align-self: start;
+   z-index: 2;
+   opacity: 0;
+   filter: brightness(50%);
+   transition: opacity 300ms ease-in-out;
 }
