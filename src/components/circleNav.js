@@ -32,7 +32,7 @@ export class DebateNav extends React.Component {
                         begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkhref="/debate/about">
+               <a xlinkhref="/debate/contention1">
                   <text x="225" y="225" transform="rotate(15 500,225)" text-anchor="end" fill="black">
                      Contention 1
                      <animate 
@@ -53,7 +53,7 @@ export class DebateNav extends React.Component {
                            begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkhref="/debate/about">
+               <a xlinkhref="/debate/coaching">
                   <text x="225" y="225" transform="rotate(0 500,225)" text-anchor="end" fill="black">
                      Coaching
                      <animate 
@@ -74,7 +74,7 @@ export class DebateNav extends React.Component {
                            begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkhref="/debate/about">
+               <a xlinkhref="/debate/speaking">
                   <text x="225" y="225" transform="rotate(-15 500,225)" text-anchor="end" fill="black">
                      Speaking
                      <animate 
@@ -95,7 +95,7 @@ export class DebateNav extends React.Component {
                            begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkhref="/debate/about">
+               <a xlinkhref="/debate/contact">
                   <text x="225" y="225" transform="rotate(-30 500,225)" text-anchor="end" fill="black">
                      Contact
                      <animate 
