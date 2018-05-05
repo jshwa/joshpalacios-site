@@ -1,0 +1,16 @@
+#homebutton {
+   position: fixed;
+   right: 25px;
+   top: 20px;
+   z-index: 1;
+}
+
+#homebutton a{
+   text-decoration: none;
+   color: rgb(83, 83, 83);
+}
+
+#homebutton a:hover {
+   color: black;
+   font-style: bold;
+}
