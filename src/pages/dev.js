@@ -7,6 +7,7 @@ import GiftFor from './dev/giftfor';
 import Incoming from './dev/incoming';
 import Contact from './dev/contact';
 import { ScrollToTopOnMount, SectionsContainer, Section } from 'react-fullpage';
+import styles from '../css/dev.module.css';
 
 class Dev extends React.Component {
    constructor(props) {
@@ -31,32 +32,37 @@ class Dev extends React.Component {
          };
 
       return (
-         <SectionsContainer  class="container" {...options} activeSection={current}>
-            <Section>
-               <About />
-            </Section>
-            <Section>
-               <TellMe 
-                  tellme={<Img sizes={this.props.data.tellme.sizes} />}
-                  tellmeoverlay={<Img sizes={this.props.data.tellmeoverlay.sizes} />}
+         <div>
+            <div id={styles.homebutton}>
+               <Link to="/">HOME</Link>
+            </div>
+            <SectionsContainer  class="container" {...options} activeSection={current}>
+               <Section>
+                  <About />
+               </Section>
+               <Section>
+                  <TellMe 
+                     tellme={<Img sizes={this.props.data.tellme.sizes} />}
+                     tellmeoverlay={<Img sizes={this.props.data.tellmeoverlay.sizes} />}
+                     />
+               </Section>
+               <Section>
+                  <GiftFor 
+                     giftfor={<Img sizes={this.props.data.giftfor.sizes} />}
+                     giftforoverlay={<Img sizes={this.props.data.giftforoverlay.sizes} />}
                   />
-            </Section>
-            <Section>
-               <GiftFor 
-                  giftfor={<Img sizes={this.props.data.giftfor.sizes} />}
-                  giftforoverlay={<Img sizes={this.props.data.giftforoverlay.sizes} />}
-               />
-            </Section>
-            <Section>
-               <Incoming 
-                  incoming={<Img sizes={this.props.data.incoming.sizes} />}
-                  incomingoverlay={<Img sizes={this.props.data.incomingoverlay.sizes} />}
-               />
-            </Section>
-            <Section>
-               <Contact />
-            </Section>
-         </SectionsContainer>
+               </Section>
+               <Section>
+                  <Incoming 
+                     incoming={<Img sizes={this.props.data.incoming.sizes} />}
+                     incomingoverlay={<Img sizes={this.props.data.incomingoverlay.sizes} />}
+                  />
+               </Section>
+               <Section>
+                  <Contact />
+               </Section>
+            </SectionsContainer>
+         </div>
       )
    }
 }
