@@ -71,6 +71,10 @@ class Giftfor extends React.Component {
                </div>
             </div>}
             <div id={styles.strip} />
+            <div id={styles.projectNo}>
+               Project
+               2 / 3
+            </div>
          </div>
       )
    }

@@ -73,6 +73,10 @@ class Tellme extends React.Component {
                </div>
             </div>}
             <div id={styles.strip} />
+            <div id={styles.projectNo}>
+               Project
+               1 / 3
+            </div>
          </div>
       )
    }
