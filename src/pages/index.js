@@ -17,14 +17,14 @@ class IndexPage extends React.Component {
     };
   }
 
-  mouseEnterDebate = () => {
+  mouseOverDebate = () => {
    this.state.active != 'Debater' &&
       this.setState({
          active: 'Debater',
       });
   }
 
-   mouseEnterDev = () => {
+   mouseOverDev = () => {
     this.state.active != 'Developer' &&
       this.setState({
          active: 'Developer',
@@ -44,8 +44,8 @@ class IndexPage extends React.Component {
          <div className={styles.wrapper} onWheel={this.handleWheel}>
             { this.state.active === "Debater" && <DebateNav id={styles.debatenav} /> }
             { this.state.active === 'Developer' && <DevNav id={styles.devnav} /> }
-            <div id={styles.debate} onMouseEnter={this.mouseEnterDebate} />
-            <div id={styles.dev} onMouseEnter={this.mouseEnterDev} />
+            <div id={styles.debate} onMouseOver={this.mouseOverDebate} />
+            <div id={styles.dev} onMouseOver={this.mouseOverDev} />
             <div id={styles.title}>
                <svg viewBox="0 0 80 20"  preserveAspectRatio="xMinYMin meet">
                   <text x="80" y="15" textAnchor="end">
