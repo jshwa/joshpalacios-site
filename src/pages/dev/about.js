@@ -2,18 +2,14 @@ import React from 'react';
 import styles from '../../css/dev/about.module.css';
 
 class About extends React.Component {
-   constructor(props){
-      super(props);
-   }
-
    render(){
       return(
          <div id={styles.wrapper}>
             <div id={styles.name}>
-               <svg viewBox="0 0 115 16"  preserveAspectRatio="xMinYMin meet">
+               <svg viewBox="115 0 115 16" preserveAspectRatio="xMinYMin meet">
                   <text x="115" y="15" text-anchor="end" >
-                     <tspan style="font-family: 'HelveticaNeue-Light'">Joshua</tspan>
-                     <tspan style="font-family: 'HelveticaNeue-Bold'">Palacios</tspan>
+                     <tspan style={{fontFamily: "'HelveticaNeue-Light'"}}>Joshua</tspan>
+                     <tspan style={{fontFamily: "'HelveticaNeue-Bold'"}}>Palacios</tspan>
                   </text>
                </svg>
             </div>
