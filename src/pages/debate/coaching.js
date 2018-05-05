@@ -1,55 +1,47 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import Link from 'gatsby-link';
 import styles from "../../css/debate/coaching.module.css";
 
 class Coaching extends React.Component {
-   constructor(props) {
-      super(props);
-      this.state = {
-         active: null,
-      };
-   }
-
    render(){
       return(
          <div id={styles.wrapper}>
             <div id={styles.title}>
-               <svg viewBox="0 0 68 13" preserveAspectRatio="xMidYMid meet">
+               <svg viewBox="33 0 68 13" preserveAspectRatio="xMidYMid meet">
                   <text x="34" y="12.5" text-anchor="middle" fill="#181840">
                      COACHING
                   </text>
                </svg>
             </div>
             <div id={styles.teach}>
-               <svg viewBox="0 0 60 13" preserveAspectRatio="xMidYMid meet">
+               <svg viewBox="20 0 60 13" preserveAspectRatio="xMidYMid meet">
                   <text x="30" y="12.5" text-anchor="middle" fill="#FFF">
                      TEACH
                   </text>
                </svg>
             </div>
             <div id={styles.teachImg}>
-               <Img sizes={this.props.data.teach.sizes}/>
+               {this.props.teach}
             </div>
             <div id={styles.train}>
-               <svg viewBox="0 0 60 13" preserveAspectRatio="xMidYMid meet">
+               <svg viewBox="20 0 60 13" preserveAspectRatio="xMidYMid meet">
                   <text x="30" y="12.5" text-anchor="middle" fill="#FFF">
                      TRAIN
                   </text>
                </svg>
             </div>
             <div id={styles.trainImg}>
-               <Img sizes={this.props.data.train.sizes} />
+               {this.props.train}
             </div>
             <div id={styles.compete}>
-               <svg viewBox="0 0 60 13" preserveAspectRatio="xMidYMid meet">
+               <svg viewBox="30 0 60 13" preserveAspectRatio="xMidYMid meet">
                   <text x="30" y="12.5" text-anchor="middle" fill="#FFF">
                      COMPETE
                   </text>
                </svg>
             </div>
             <div id={styles.competeImg}>
-               <Img sizes={this.props.data.compete.sizes} />
+               {this.props.compete}
             </div>
             <div id={styles.background} />
             <div id={styles.teachBlurb}>
@@ -62,13 +54,13 @@ class Coaching extends React.Component {
                Forage gentrify DIY, slow-carb chillwave put a bird on it leggings kinfolk drinking vinegar pug yuccie mixtape wolf prism meh. Intelligentsia adaptogen sustainable +1 poutine kogi cliche gastropub subway tile stumptown next level trust fund pabst wolf venmo. Put a bird on it flannel brunch jianbing, normcore enamel pin four loko tumeric roof party flexitarian salvia af. Poke echo park brunch, seitan bitters banjo cronut. Kogi roof party cred +1 lumbersexual celiac. Tacos retro umami blue bottle fanny pack farm-to-table organic poke. Four dollar toast lumbersexual wolf, sustainable banh mi heirloom authentic.            
             </div>
             <div id={styles.teachBg}>
-               <Img sizes={this.props.data.teachBg.sizes} />
+               {this.props.teachBg}
             </div>
             <div id={styles.trainBg}>
-               <Img sizes={this.props.data.trainBg.sizes} />
+               {this.props.trainBg}
             </div>
             <div id={styles.competeBg}>
-               <Img sizes={this.props.data.competeBg.sizes} />
+               {this.props.competeBg}
             </div>
          </div>
       )
@@ -76,38 +68,3 @@ class Coaching extends React.Component {
 }
 
 export default Coaching
-
-export const query = graphql`
-  query coachingImageQuery {
-    teach: imageSharp(id: { regex: "/teach.png/"}) {
-      sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes
-      }
-    }
-    train: imageSharp(id: { regex: "/train.png/"}) {
-      sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes
-      }
-    }
-    compete: imageSharp(id: { regex: "/compete.png/"}) {
-      sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes
-      }
-    }
-    teachBg: imageSharp(id: { regex: "/teachBg.jpg/"}) {
-       sizes(maxWidth: 1080) {
-         ...GatsbyImageSharpSizes
-       }
-    }
-    trainBg: imageSharp(id: { regex: "/trainBg.jpg/"}) {
-       sizes(maxWidth: 1080) {
-         ...GatsbyImageSharpSizes
-       }
-    }
-    competeBg: imageSharp(id: { regex: "/competeBg.jpg/"}) {
-       sizes(maxWidth: 1080) {
-         ...GatsbyImageSharpSizes
-       }
-    }
-  }
-`;

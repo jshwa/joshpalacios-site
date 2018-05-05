@@ -27,7 +27,7 @@ class Contention1 extends React.Component {
          <div id={styles.wrapper}>
             <div id={styles.desc}>
                <div id={styles.title}>
-                  <svg viewBox="0 0 110 16"  preserveAspectRatio="xMidYMid meet">
+                  <svg viewBox="49 0 110 16"  preserveAspectRatio="xMidYMid meet">
                      <text x="55" y="15" text-anchor="middle" fill="white" >
                         Contention 1
                      </text>
@@ -41,10 +41,10 @@ class Contention1 extends React.Component {
                </div>
             </div>
             <div id={styles.img}>
-               <Img sizes={this.props.data.c1.sizes} />
+               {this.props.c1}
             </div>
             <div id={styles.overlay} onClick={this.vidOn}>
-               <Img sizes={this.props.data.c1overlay.sizes}/>
+               {this.props.c1overlay}
             </div>
             { this.state.play &&
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}
@@ -65,18 +65,3 @@ class Contention1 extends React.Component {
 }
 
 export default Contention1
-
-export const query = graphql`
-  query Contention1ImageQuery {
-    c1: imageSharp(id: { regex: "/c1podcast.png/"}) {
-      sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes_noBase64
-      }
-    }
-    c1overlay: imageSharp(id: { regex: "/c1overlay.png/"}) {
-      sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes_noBase64
-      }
-    }
-  }
-`;
