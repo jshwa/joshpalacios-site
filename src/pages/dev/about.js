@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../css/dev/about.module.css';
 
-class Portfolio extends React.Component {
+class About extends React.Component {
    constructor(props){
       super(props);
    }
@@ -32,4 +32,4 @@ class Portfolio extends React.Component {
    }
 }
 
-export default Portfolio
+export default About

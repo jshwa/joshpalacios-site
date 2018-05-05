@@ -42,16 +42,16 @@ class Tellme extends React.Component {
                <div id={styles.blurb}>
                   Momentum-style React/Redux homepage app with Rails API back-end for encouraging blogging habit formation               </div>
                <div id={styles.skills1}>
-                  <span class={styles.skillBox}>JS</span>
-                  <span class={styles.skillBox}>React</span>
-                  <span class={styles.skillBox}>Redux</span>
-                  <span class={styles.skillBox}>Ruby</span>
+                  <span className={styles.skillBox}>JS</span>
+                  <span className={styles.skillBox}>React</span>
+                  <span className={styles.skillBox}>Redux</span>
+                  <span className={styles.skillBox}>Ruby</span>
                </div>
                <div id={styles.skills2}>
-                  <span class={styles.skillBox}>Rails</span>
-                  <span class={styles.skillBox}>JSON</span>
-                  <span class={`${styles.skillBox} ${styles.blank}`}></span>
-                  <span class={`${styles.skillBox} ${styles.blank}`}></span>
+                  <span className={styles.skillBox}>Rails</span>
+                  <span className={styles.skillBox}>JSON</span>
+                  <span className={`${styles.skillBox} ${styles.blank}`}></span>
+                  <span className={`${styles.skillBox} ${styles.blank}`}></span>
                </div>
             </div>
             <div id={styles.img}>
@@ -64,7 +64,7 @@ class Tellme extends React.Component {
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}
             { this.state.play &&
             <div id={styles.youtube}>
-               <div class={styles.embed_container}>
+               <div className={styles.embed_container}>
                   <iframe 
                      src="https://www.youtube.com/embed/kWSCOafIWJs?rel=0&amp;showinfo=0&amp;autoplay=1" 
                      frameborder="0" 

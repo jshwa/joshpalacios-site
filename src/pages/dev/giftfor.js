@@ -27,7 +27,7 @@ class Giftfor extends React.Component {
          <div id={styles.wrapper}>
             <div id={styles.desc}>
                <div id={styles.title}>
-                  <svg viewBox="0 0 80 16"  preserveAspectRatio="xMidYMid meet">
+                  <svg viewBox="29 0 80 16"  preserveAspectRatio="xMidYMid meet">
                      <text x="39" y="15" text-anchor="middle" fill="white" >
                         Gift For
                      </text>
@@ -40,16 +40,16 @@ class Giftfor extends React.Component {
                   A Ruby on Rails web app to cultivate crowd-sourced gift guides  
                </div>
                <div id={styles.skills1}>
-                  <span class={styles.skillBox}>Ruby</span>
-                  <span class={styles.skillBox}>JS</span>
-                  <span class={styles.skillBox}>Rails</span>
-                  <span class={styles.skillBox}>JQuery</span>
+                  <span className={styles.skillBox}>Ruby</span>
+                  <span className={styles.skillBox}>JS</span>
+                  <span className={styles.skillBox}>Rails</span>
+                  <span className={styles.skillBox}>JQuery</span>
                </div>
                <div id={styles.skills2}>
-                  <span class={styles.skillBox}>SQL</span>
-                  <span class={styles.skillBox}>OAuth</span>
-                  <span class={`${styles.skillBox} ${styles.blank}`}></span>
-                  <span class={`${styles.skillBox} ${styles.blank}`}></span>
+                  <span className={styles.skillBox}>SQL</span>
+                  <span className={styles.skillBox}>OAuth</span>
+                  <span className={`${styles.skillBox} ${styles.blank}`}></span>
+                  <span className={`${styles.skillBox} ${styles.blank}`}></span>
                </div>
             </div>
             <div id={styles.img}>
@@ -62,7 +62,7 @@ class Giftfor extends React.Component {
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}
             { this.state.play &&
             <div id={styles.youtube}>
-               <div class={styles.embed_container}>
+               <div className={styles.embed_container}>
                   <iframe 
                      src="https://www.youtube.com/embed/dEAa7JyfQ60?rel=0&amp;showinfo=0&amp;autoplay=1" 
                      frameborder="0" 

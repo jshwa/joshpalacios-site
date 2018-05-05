@@ -50,7 +50,7 @@ class Contention1 extends React.Component {
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}
             { this.state.play &&
             <div id={styles.youtube}>
-               <div class={styles.embed_container}>
+               <div className={styles.embed_container}>
                   <iframe 
                      src="https://www.youtube.com/embed/dEAa7JyfQ60?rel=0&amp;showinfo=0&amp;autoplay=1" 
                      frameborder="0" 

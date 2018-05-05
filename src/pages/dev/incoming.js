@@ -40,16 +40,16 @@ class Incoming extends React.Component {
                   Centralized tracking solution for shipments from multiple vendors using various shipping methods
                </div>
                <div id={styles.skills1}>
-                  <span class={styles.skillBox}>Ruby</span>
-                  <span class={styles.skillBox}>Sinatra</span>
-                  <span class={styles.skillBox}>Bootstrap</span>
-                  <span class={styles.skillBox}>BCrypt</span>
+                  <span className={styles.skillBox}>Sinatra</span>
+                  <span className={styles.skillBox}>Bootstrap</span>
+                  <span className={styles.skillBox}>Ruby</span>
+                  <span className={styles.skillBox}>BCrypt</span>
                </div>
                <div id={styles.skills2}>
-                  <span class={styles.skillBox}>HTML</span>
-                  <span class={styles.skillBox}>CSS</span>
-                  <span class={`${styles.skillBox} ${styles.blank}`}></span>
-                  <span class={`${styles.skillBox} ${styles.blank}`}></span>
+                  <span className={styles.skillBox}>HTML</span>
+                  <span className={styles.skillBox}>CSS</span>
+                  <span className={`${styles.skillBox} ${styles.blank}`}></span>
+                  <span className={`${styles.skillBox} ${styles.blank}`}></span>
                </div>
             </div>
             <div id={styles.img}>
@@ -62,7 +62,7 @@ class Incoming extends React.Component {
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}
             { this.state.play &&
             <div id={styles.youtube}>
-               <div class={styles.embed_container}>
+               <div className={styles.embed_container}>
                   <iframe 
                      src="https://www.youtube.com/embed/-GSodBuzSq0?rel=0&amp;showinfo=0&amp;autoplay=1" 
                      frameborder="0" 

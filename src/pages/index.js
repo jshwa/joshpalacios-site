@@ -33,7 +33,7 @@ class IndexPage extends React.Component {
      const { active } = this.state;
 
      return (
-      <div class={styles.wrapper}>
+      <div className={styles.wrapper}>
         { this.state.active === "Debater" && <DebateNav id={styles.debatenav} /> }
         { this.state.active === 'Developer' && <DevNav id={styles.devnav} /> }
         <div id={styles.debate} onMouseEnter={this.mouseEnterDebate} />
