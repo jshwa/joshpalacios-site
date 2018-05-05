@@ -10,7 +10,7 @@ export class DebateNav extends React.Component {
       return (
          <div id={this.props.id} >
             <svg width="100%" height="100%" viewBox="0 0 300 450" preserveAspectRatio="xMidYMid meet">
-               <a xlinkhref="/debate/about">
+               <a xlinkhref="/debate#about">
                   <text x="225" y="225" transform="rotate(30 500,225)" text-anchor="end" fill="black">
                      About
                      <animate 
@@ -32,7 +32,7 @@ export class DebateNav extends React.Component {
                         begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkhref="/debate/contention1">
+               <a xlinkhref="/debate#contention1">
                   <text x="225" y="225" transform="rotate(15 500,225)" text-anchor="end" fill="black">
                      Contention 1
                      <animate 
