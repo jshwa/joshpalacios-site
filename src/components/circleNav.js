@@ -10,8 +10,8 @@ export class DebateNav extends React.Component {
       return (
          <div id={this.props.id} >
             <svg width="100%" height="100%" viewBox="0 0 300 450" preserveAspectRatio="xMidYMid meet">
-               <a xlinkhref="/debate#about">
-                  <text x="225" y="225" transform="rotate(30 500,225)" text-anchor="end" fill="black">
+               <a xlinkHref="/debate#about">
+                  <text x="225" y="225" transform="rotate(30 500,225)" textAnchor="end" fill="black">
                      About
                      <animate 
                         id="visiblef1" 
@@ -32,8 +32,8 @@ export class DebateNav extends React.Component {
                         begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkhref="/debate#contention1">
-                  <text x="225" y="225" transform="rotate(15 500,225)" text-anchor="end" fill="black">
+               <a xlinkHref="/debate#contention1">
+                  <text x="225" y="225" transform="rotate(15 500,225)" textAnchor="end" fill="black">
                      Contention 1
                      <animate 
                            id="visiblef2" 
@@ -53,8 +53,8 @@ export class DebateNav extends React.Component {
                            begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkhref="/debate/coaching">
-                  <text x="225" y="225" transform="rotate(0 500,225)" text-anchor="end" fill="black">
+               <a xlinkHref="/debate#coaching">
+                  <text x="225" y="225" transform="rotate(0 500,225)" textAnchor="end" fill="black">
                      Coaching
                      <animate 
                            id="visiblef3" 
@@ -74,8 +74,8 @@ export class DebateNav extends React.Component {
                            begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkhref="/debate/speaking">
-                  <text x="225" y="225" transform="rotate(-15 500,225)" text-anchor="end" fill="black">
+               <a xlinkHref="/debate#speaking">
+                  <text x="225" y="225" transform="rotate(-15 500,225)" textAnchor="end" fill="black">
                      Speaking
                      <animate 
                            id="visiblef4" 
@@ -95,8 +95,8 @@ export class DebateNav extends React.Component {
                            begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkhref="/debate/contact">
-                  <text x="225" y="225" transform="rotate(-30 500,225)" text-anchor="end" fill="black">
+               <a xlinkHref="/debate#contact">
+                  <text x="225" y="225" transform="rotate(-30 500,225)" textAnchor="end" fill="black">
                      Contact
                      <animate 
                            id="visiblef5" 
@@ -131,8 +131,8 @@ export class DevNav extends React.Component {
       return (
          <div id={this.props.id}>
             <svg width="100%" height="100%" viewBox="0 0 300 450" preserveAspectRatio="xMinYMin meet">
-               <a xlinkhref="/debate/about">
-                  <text x="75" y="225" transform="rotate(-30 -225,225)" text-anchor="start" fill="black">
+               <a xlinkHref="/debate/about">
+                  <text x="75" y="225" transform="rotate(-30 -225,225)" textAnchor="start" fill="black">
                      About
                      <animate 
                         id="visible" 
@@ -153,8 +153,8 @@ export class DevNav extends React.Component {
                         begin="visible.end" />
                   </text>
                </a>
-               <a xlinkhref="/debate/about">
-                  <text x="75" y="225" transform="rotate(-15 -225,225)" text-anchor="start" fill="black">
+               <a xlinkHref="/debate/about">
+                  <text x="75" y="225" transform="rotate(-15 -225,225)" textAnchor="start" fill="black">
                      Projects
                      <animate 
                         id="visible2" 
@@ -174,8 +174,8 @@ export class DevNav extends React.Component {
                         begin="visible.end" />
                   </text>
                </a>
-               <a xlinkhref="/debate/about">
-                  <text x="75" y="225" transform="rotate(0 -225, 225)" text-anchor="start" fill="black">
+               <a xlinkHref="/debate/about">
+                  <text x="75" y="225" transform="rotate(0 -225, 225)" textAnchor="start" fill="black">
                      Portfolio
                      <animate 
                         id="visible3" 
@@ -195,8 +195,8 @@ export class DevNav extends React.Component {
                         begin="visible.end" />
                   </text>
                </a>
-               <a xlinkhref="/debate/about">
-                  <text x="75" y="225" transform="rotate(15 -225,225)" text-anchor="start" fill="black">
+               <a xlinkHref="/debate/about">
+                  <text x="75" y="225" transform="rotate(15 -225,225)" textAnchor="start" fill="black">
                      Resume
                      <animate 
                         id="visible4" 
@@ -216,8 +216,8 @@ export class DevNav extends React.Component {
                         begin="visible.end" />               
                   </text>
                </a>
-               <a xlinkhref="/debate/about">
-                  <text x="75" y="225" transform="rotate(30 -225,225)" text-anchor="start" fill="black">
+               <a xlinkHref="/debate/about">
+                  <text x="75" y="225" transform="rotate(30 -225,225)" textAnchor="start" fill="black">
                      Contact
                      <animate 
                         id="visible5" 
