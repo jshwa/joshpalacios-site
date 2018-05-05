@@ -1,13 +1,10 @@
 import React from 'react';
-import Link, { navigateTo } from 'gatsby-link';
-import Img from 'gatsby-image';
 import DebateAbout from './debate/about';
 import Coaching from './debate/coaching';
 import Speaking from './debate/speaking';
 import Contention1 from './debate/contention1';
 import Contact from './debate/contact';
 import { ScrollToTopOnMount, SectionsContainer, Section } from 'react-fullpage';
-import styles from '../css/debate.module.css';
 
 
 class Debate extends React.Component {
@@ -39,12 +36,10 @@ class Debate extends React.Component {
       return (
          <SectionsContainer  class="container" {...options} activeSection={current}>
             <Section>
-               <div onWheel={this.handleWheel}>
                <DebateAbout
                   shanghai={this.props.data.shanghai}
                   joshcircle={this.props.data.joshcircle}
                />
-               </div>
             </Section>
             <Section>
                <Coaching
