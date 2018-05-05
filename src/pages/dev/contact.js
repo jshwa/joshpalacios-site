@@ -5,7 +5,7 @@ class Contact extends React.Component {
       return (
          <div>
             <div>
-               
+               Get in touch
             </div>
          </div>
       )

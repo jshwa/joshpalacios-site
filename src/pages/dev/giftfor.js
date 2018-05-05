@@ -53,10 +53,10 @@ class Giftfor extends React.Component {
                </div>
             </div>
             <div id={styles.img}>
-               <Img sizes={this.props.data.giftfor.sizes} />
+               {this.props.giftfor}
             </div>
             <div id={styles.overlay} onClick={this.vidOn}>
-               <Img sizes={this.props.data.overlay.sizes}/>
+               {this.props.giftforoverlay}
             </div>
             { this.state.play &&
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}
@@ -78,17 +78,3 @@ class Giftfor extends React.Component {
 
 export default Giftfor
 
-export const query = graphql`
-  query GiftForImageQuery {
-    giftfor: imageSharp(id: { regex: "/giftforComp.png/"}) {
-      sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes_noBase64
-      }
-    }
-    overlay: imageSharp(id: { regex: "/compPlayOverlay.png/"}) {
-      sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes_noBase64
-      }
-    }
-  }
-`;

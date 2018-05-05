@@ -27,8 +27,8 @@ class Tellme extends React.Component {
          <div id={styles.wrapper}>
             <div id={styles.desc}>
                <div id={styles.title}>
-                  <svg viewBox="0 0 80 32"  preserveAspectRatio="xMidYMid meet">
-                     <text x="39" y="15" text-anchor="middle" fill="white" >
+                  <svg viewBox="30 0 80 32"  preserveAspectRatio="xMidYMid meet">
+                     <text x="44" y="15" text-anchor="middle" fill="white" >
                         Tell Me
                      </text>
                      <text x="39" y="30" text-anchor="middle" fill="white" >
@@ -55,10 +55,10 @@ class Tellme extends React.Component {
                </div>
             </div>
             <div id={styles.img}>
-               <Img sizes={this.props.data.tellme.sizes} />
+               {this.props.tellme}
             </div>
             <div id={styles.overlay} onClick={this.vidOn}>
-               <Img sizes={this.props.data.tellmeoverlay.sizes} />
+               {this.props.tellmeoverlay}
             </div>
             { this.state.play &&
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}
@@ -79,18 +79,3 @@ class Tellme extends React.Component {
 }
 
 export default Tellme
-
-export const query = graphql`
-  query TellMeImageQuery {
-    tellme: imageSharp(id: { regex: "/tellMeGraphic.png/"}) {
-      sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes_noBase64
-      }
-    }
-    tellmeoverlay: imageSharp(id: { regex: "/tellMeOverlay.png/"}) {
-      sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes_noBase64
-      }
-    }
-  }
-`;
