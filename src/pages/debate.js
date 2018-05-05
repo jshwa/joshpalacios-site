@@ -1,10 +1,12 @@
 import React from 'react';
+import Link from 'gatsby-link';
 import DebateAbout from './debate/about';
 import Coaching from './debate/coaching';
 import Speaking from './debate/speaking';
 import Contention1 from './debate/contention1';
 import Contact from './debate/contact';
 import { ScrollToTopOnMount, SectionsContainer, Section } from 'react-fullpage';
+import styles from '../css/debate.module.css';
 
 
 class Debate extends React.Component {
@@ -34,7 +36,11 @@ class Debate extends React.Component {
          };
 
       return (
-         <SectionsContainer  class="container" {...options} activeSection={current}>
+         <div>
+         <div id={styles.homebutton}>
+            <Link to="/">HOME</Link>
+          </div>
+         <SectionsContainer  class="container" {...options} activeSection={current}>            
             <Section>
                <DebateAbout
                   shanghai={this.props.data.shanghai}
@@ -68,6 +74,7 @@ class Debate extends React.Component {
                />
             </Section>
          </SectionsContainer>
+         </div>
       )
    }
 }
