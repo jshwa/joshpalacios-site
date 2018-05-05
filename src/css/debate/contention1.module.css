@@ -5,36 +5,53 @@
    height: 100vh;
    display: grid;
    grid-template-columns: 1fr 5fr 1fr 3fr 1fr;
-   grid-template-rows: .5fr .5fr 2.5fr .5fr .5fr;
+   grid-template-rows: .5fr 17% 2.5fr 17% .5fr;
    overflow: hidden;
 }
 
-#desc {
-   margin: 1em 0;
-   grid-column: 2 / 3;
-   grid-row: 3 / span 1;
+#topbar {
+   grid-column: 2 / 6;
+   grid-row: 2 / span 1;
+   background: #181840;
+   opacity: 0.9;
    z-index: 1;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
+}
+
+#bottombar {
+   grid-column: 1 / 5;
+   grid-row: 4 / span 1;
+   background: #181840;
+   opacity: 0.9;
+   z-index: 1;
 }
 
 #title {
-   order: 1;
-   font-family: "Avenir-Black", Helvetica;
+   font-family: "HelveticaNeue-CondensedBold", Helvetica;
+   font-weight: bold;
+   opacity: .3;
+   grid-column: 1 / 6;
+   grid-row: 3 / span 1;
+   align-self: center;
 }
 
 #blurb {
-   order: 2;
+   padding: 0 2em;
+   grid-column: 2 / 3;
+   grid-row: 2 / span 1;
    font-family: "Avenir-Roman", helvetica;
    color: #FFF;
    font-size: 20px;
    text-align: center;
+   align-self: center;
+   z-index: 2;
 }
 
 #c1button {
-   order: 3;
+   grid-column: 2 / 3;
+   grid-row: 4 / span 1;
    text-align: center;
+   align-self: center;
+   z-index: 2;
 }
 
 #c1button a {

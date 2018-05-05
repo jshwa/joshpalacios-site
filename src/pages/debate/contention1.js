@@ -25,26 +25,27 @@ class Contention1 extends React.Component {
    render(){
       return(
          <div id={styles.wrapper}>
-            <div id={styles.desc}>
-               <div id={styles.title}>
-                  <svg viewBox="49 0 110 16"  preserveAspectRatio="xMidYMid meet">
-                     <text x="55" y="15" text-anchor="middle" fill="white" >
-                        Contention 1
-                     </text>
-                  </svg>
-               </div>
-               <div id={styles.blurb}>
-                  A Ruby on Rails web app to cultivate crowd-sourced gift guides  
-               </div>
-               <div id={styles.c1button}>
-                  <a href="http://contention1.com" target="_blank">Visit the Site</a>
-               </div>
+            <div id={styles.topbar} />
+            <div id={styles.blurb}>
+               A Ruby on Rails web app to cultivate crowd-sourced gift guides  
             </div>
+            <div id={styles.c1button}>
+               <a href="http://contention1.com" target="_blank">Visit the Site</a>
+            </div>
+            <div id={styles.bottombar} />
             <div id={styles.img}>
-               {this.props.c1}
+               <Img
+                  title="Contention 1 Podcast"
+                  alt="Listen to the Contention 1 Podcast on iTunes"
+                  sizes={this.props.c1.sizes}
+               />
             </div>
             <div id={styles.overlay} onClick={this.vidOn}>
-               {this.props.c1overlay}
+               <Img
+                  title="Play a sample"
+                  alt="Play a Sample"
+                  sizes={this.props.c1overlay.sizes}
+               />
             </div>
             { this.state.play &&
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}
@@ -53,12 +54,18 @@ class Contention1 extends React.Component {
                <div className={styles.embed_container}>
                   <iframe 
                      src="https://www.youtube.com/embed/dEAa7JyfQ60?rel=0&amp;showinfo=0&amp;autoplay=1" 
-                     frameborder="0" 
+                     frameBorder="0" 
                      allow="autoplay; encrypted-media" 
                      allowfullscreen />
                </div>
             </div>}
-            <div id={styles.strip} />
+            <div id={styles.title}>
+               <svg viewBox="0 0 92 13" preserveAspectRatio="xMidYMid meet">
+                  <text x="47" y="12" textAnchor="middle" fill="#181840">
+                     CONTENTION1
+                  </text>
+               </svg>
+            </div>
          </div>
       )
    }
