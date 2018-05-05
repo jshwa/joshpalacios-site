@@ -1,12 +1,11 @@
 import React from 'react';
-import {Link, navigateTo} from 'gatsby-link';
 import styles from "../../css/debate/about.module.css";
 import Img from 'gatsby-image';
 
 class DebateAbout extends React.Component {
    render() {
       return (
-         <div id={styles.wrapper} >
+         <div id={styles.wrapper}>
             <div id={styles.bgimg}>
                <Img
                   title="Shanghai"
