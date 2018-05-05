@@ -6,8 +6,8 @@ class About extends React.Component {
       return(
          <div id={styles.wrapper}>
             <div id={styles.name}>
-               <svg viewBox="115 0 115 16" preserveAspectRatio="xMinYMin meet">
-                  <text x="115" y="15" text-anchor="end" >
+               <svg viewBox="0 0 115 16" preserveAspectRatio="xMinYMin meet">
+                  <text x="115" y="15" textAnchor="end" >
                      <tspan style={{fontFamily: "'HelveticaNeue-Light'"}}>Joshua</tspan>
                      <tspan style={{fontFamily: "'HelveticaNeue-Bold'"}}>Palacios</tspan>
                   </text>

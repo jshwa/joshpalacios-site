@@ -27,8 +27,8 @@ class Giftfor extends React.Component {
          <div id={styles.wrapper}>
             <div id={styles.desc}>
                <div id={styles.title}>
-                  <svg viewBox="29 0 80 16"  preserveAspectRatio="xMidYMid meet">
-                     <text x="39" y="15" text-anchor="middle" fill="white" >
+                  <svg viewBox="0 0 80 16"  preserveAspectRatio="xMidYMid meet">
+                     <text x="39" y="15" textAnchor="middle" fill="white" >
                         Gift For
                      </text>
                   </svg>
@@ -65,7 +65,7 @@ class Giftfor extends React.Component {
                <div className={styles.embed_container}>
                   <iframe 
                      src="https://www.youtube.com/embed/dEAa7JyfQ60?rel=0&amp;showinfo=0&amp;autoplay=1" 
-                     frameborder="0" 
+                     frameBorder="0" 
                      allow="autoplay; encrypted-media" 
                      allowfullscreen />
                </div>

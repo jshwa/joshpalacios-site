@@ -27,11 +27,11 @@ class Tellme extends React.Component {
          <div id={styles.wrapper}>
             <div id={styles.desc}>
                <div id={styles.title}>
-                  <svg viewBox="30 0 80 32"  preserveAspectRatio="xMidYMid meet">
-                     <text x="44" y="15" text-anchor="middle" fill="white" >
+                  <svg viewBox="0 0 80 32"  preserveAspectRatio="xMidYMid meet">
+                     <text x="39" y="15" textAnchor="middle" fill="white" >
                         Tell Me
                      </text>
-                     <text x="39" y="30" text-anchor="middle" fill="white" >
+                     <text x="39" y="30" textAnchor="middle" fill="white" >
                         About It
                      </text>
                   </svg>
@@ -67,7 +67,7 @@ class Tellme extends React.Component {
                <div className={styles.embed_container}>
                   <iframe 
                      src="https://www.youtube.com/embed/kWSCOafIWJs?rel=0&amp;showinfo=0&amp;autoplay=1" 
-                     frameborder="0" 
+                     frameBorder="0" 
                      allow="autoplay; encrypted-media" 
                      allowfullscreen />
                </div>

@@ -27,8 +27,8 @@ class Incoming extends React.Component {
          <div id={styles.wrapper}>
             <div id={styles.desc}>
                <div id={styles.title}>
-                  <svg viewBox="39 0 80 16"  preserveAspectRatio="xMidYMid meet">
-                     <text x="42" y="12" text-anchor="middle" fill="white" >
+                  <svg viewBox="0 0 80 16"  preserveAspectRatio="xMidYMid meet">
+                     <text x="42" y="12" textAnchor="middle" fill="white" >
                         Incoming!
                      </text>
                   </svg>
@@ -65,7 +65,7 @@ class Incoming extends React.Component {
                <div className={styles.embed_container}>
                   <iframe 
                      src="https://www.youtube.com/embed/-GSodBuzSq0?rel=0&amp;showinfo=0&amp;autoplay=1" 
-                     frameborder="0" 
+                     frameBorder="0" 
                      allow="autoplay; encrypted-media" 
                      allowfullscreen />
                </div>
