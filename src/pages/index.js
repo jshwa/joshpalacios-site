@@ -31,7 +31,7 @@ class IndexPage extends React.Component {
       });
    } 
 
-   handleScroll = e => {
+   handleWheel = e => {
      if (e.deltaY >= 10) {
         this.state.active === "Debater" ? navigateTo('/debate') : navigateTo('/dev')
      }
