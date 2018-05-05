@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import Link, { navigateTo } from 'gatsby-link';
 import Img from 'gatsby-image';
 import DebateAbout from './debate/about';
 import Coaching from './debate/coaching';
@@ -16,6 +16,10 @@ class Debate extends React.Component {
       this.state = {
         current: 0,
       }
+    }
+
+    handleScroll = e => {
+      console.log(e.deltaY)
     }
 
    render() {
@@ -35,35 +39,37 @@ class Debate extends React.Component {
       return (
          <SectionsContainer  class="container" {...options} activeSection={current}>
             <Section>
+               <div onWheel={this.handleWheel}>
                <DebateAbout
-                  shanghai={<Img sizes={this.props.data.shanghai.sizes} />}
-                  josh={<Img sizes={this.props.data.josh.sizes} />}
+                  shanghai={this.props.data.shanghai}
+                  joshcircle={this.props.data.joshcircle}
                />
+               </div>
             </Section>
             <Section>
                <Coaching
-                  teach={<Img sizes={this.props.data.teach.sizes}/>}
-                  train={<Img sizes={this.props.data.train.sizes}/>}
-                  compete={<Img sizes={this.props.data.compete.sizes}/>}
-                  teachBg={<Img sizes={this.props.data.teachBg.sizes}/>}
-                  trainBg={<Img sizes={this.props.data.trainBg.sizes}/>}
-                  competeBg={<Img sizes={this.props.data.competeBg.sizes}/>}
+                  teach={this.props.data.teach}
+                  train={this.props.data.train}
+                  compete={this.props.data.compete}
+                  teachBg={this.props.data.teachBg}
+                  trainBg={this.props.data.trainBg}
+                  competeBg={this.props.data.competeBg}
                />
             </Section>
             <Section>
                <Speaking
-                  onStage= {<Img sizes={this.props.data.onStage.sizes} imgStyle={{height: '100vh'}} />}
+                  onStage={this.props.data.onStage}
                />
             </Section>
             <Section>
                <Contention1
-                  c1={<Img sizes={this.props.data.c1.sizes} />}
-                  c1overlay={<Img sizes={this.props.data.c1overlay.sizes} />}
+                  c1={this.props.data.c1}
+                  c1overlay={this.props.data.c1overlay}
                />
             </Section>
             <Section>
                <Contact 
-                  wechat={<Img sizes={this.props.data.wechat.sizes} />}
+                  wechat={this.props.data.wechat}
                />
             </Section>
          </SectionsContainer>
@@ -74,13 +80,13 @@ class Debate extends React.Component {
 export default Debate
 
 export const query = graphql`
-  query debateImageQuery {
+  query DebateImageQuery {
     shanghai: imageSharp(id: { regex: "/Shanghai.jpeg/"}) {
       sizes(maxWidth: 1080) {
        ...GatsbyImageSharpSizes_tracedSVG
       }
     }
-    josh: imageSharp(id: { regex: "/headshot-circle.png/"}) {
+    joshcircle: imageSharp(id: { regex: "/joshpalacios.png/"}) {
       sizes(maxWidth: 1080) {
        ...GatsbyImageSharpSizes_noBase64
       }
