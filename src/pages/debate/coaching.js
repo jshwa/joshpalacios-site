@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 import styles from "../../css/debate/coaching.module.css";
 
 class Coaching extends React.Component {
@@ -7,41 +8,53 @@ class Coaching extends React.Component {
       return(
          <div id={styles.wrapper}>
             <div id={styles.title}>
-               <svg viewBox="33 0 68 13" preserveAspectRatio="xMidYMid meet">
-                  <text x="34" y="12.5" text-anchor="middle" fill="#181840">
+               <svg viewBox="0 0 68 13" preserveAspectRatio="xMidYMid meet">
+                  <text x="34" y="12.5" textAnchor="middle" fill="#181840">
                      COACHING
                   </text>
                </svg>
             </div>
             <div id={styles.teach}>
-               <svg viewBox="20 0 60 13" preserveAspectRatio="xMidYMid meet">
-                  <text x="30" y="12.5" text-anchor="middle" fill="#FFF">
+               <svg viewBox="0 0 60 13" preserveAspectRatio="xMidYMid meet">
+                  <text x="30" y="12.5" textAnchor="middle" fill="#FFF">
                      TEACH
                   </text>
                </svg>
             </div>
             <div id={styles.teachImg}>
-               {this.props.teach}
+               <Img
+                  title="Teach Debate"
+                  alt="Josh Teaching"
+                  sizes={this.props.teach.sizes}
+               />
             </div>
             <div id={styles.train}>
-               <svg viewBox="20 0 60 13" preserveAspectRatio="xMidYMid meet">
-                  <text x="30" y="12.5" text-anchor="middle" fill="#FFF">
+               <svg viewBox="0 0 60 13" preserveAspectRatio="xMidYMid meet">
+                  <text x="30" y="12.5" textAnchor="middle" fill="#FFF">
                      TRAIN
                   </text>
                </svg>
             </div>
             <div id={styles.trainImg}>
-               {this.props.train}
+               <Img
+                  title="Train for Competitions"
+                  alt="Practice Debates"
+                  sizes={this.props.train.sizes}
+               />
             </div>
             <div id={styles.compete}>
-               <svg viewBox="30 0 60 13" preserveAspectRatio="xMidYMid meet">
-                  <text x="30" y="12.5" text-anchor="middle" fill="#FFF">
+               <svg viewBox="0 0 60 13" preserveAspectRatio="xMidYMid meet">
+                  <text x="30" y="12.5" textAnchor="middle" fill="#FFF">
                      COMPETE
                   </text>
                </svg>
             </div>
             <div id={styles.competeImg}>
-               {this.props.compete}
+               <Img
+                  title="Compete in Tournaments"
+                  alt="Winning Competitions"
+                  sizes={this.props.compete.sizes}
+               />
             </div>
             <div id={styles.background} />
             <div id={styles.teachBlurb}>
@@ -54,13 +67,25 @@ class Coaching extends React.Component {
                Forage gentrify DIY, slow-carb chillwave put a bird on it leggings kinfolk drinking vinegar pug yuccie mixtape wolf prism meh. Intelligentsia adaptogen sustainable +1 poutine kogi cliche gastropub subway tile stumptown next level trust fund pabst wolf venmo. Put a bird on it flannel brunch jianbing, normcore enamel pin four loko tumeric roof party flexitarian salvia af. Poke echo park brunch, seitan bitters banjo cronut. Kogi roof party cred +1 lumbersexual celiac. Tacos retro umami blue bottle fanny pack farm-to-table organic poke. Four dollar toast lumbersexual wolf, sustainable banh mi heirloom authentic.            
             </div>
             <div id={styles.teachBg}>
-               {this.props.teachBg}
+               <Img
+               title="Teaching Debate"
+               alt="Bringing debaters together"
+               sizes={this.props.teachBg.sizes}
+               />
             </div>
             <div id={styles.trainBg}>
-               {this.props.trainBg}
+               <Img
+               title="Preparing for Debates"
+               alt="My Debaters in the prep room at St Regis"
+               sizes={this.props.trainBg.sizes}
+               />
             </div>
             <div id={styles.competeBg}>
-               {this.props.competeBg}
+               <Img
+               title="Competing at Harvard"
+               alt="My Debaters Competing at Harvard"
+               sizes={this.props.competeBg.sizes}
+               />
             </div>
          </div>
       )

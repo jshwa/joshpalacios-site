@@ -1,17 +1,26 @@
 import React from 'react';
 import {Link, navigateTo} from 'gatsby-link';
 import styles from "../../css/debate/about.module.css";
+import Img from 'gatsby-image';
 
 class DebateAbout extends React.Component {
    render() {
       return (
          <div id={styles.wrapper} >
             <div id={styles.bgimg}>
-               {this.props.shanghai}
+               <Img
+                  title="Shanghai"
+                  alt="The Three Sisters of Shanghai"
+                  sizes={this.props.shanghai.sizes}
+               />
             </div>
             <div id={styles.name}>
                <div id={styles.headshot}>
-                  {this.props.josh}
+                  <Img
+                     title="Josh Palacios"
+                     alt="Josh Palacios"
+                     sizes={this.props.joshcircle.sizes}
+                  />
                </div>
                <span className={styles.firstname}>Josh</span>
                <span className={styles.lastname}>Palacios</span>
