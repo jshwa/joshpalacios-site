@@ -25,7 +25,7 @@ class Debate extends React.Component {
       const { current } = this.state
       const options = {
          sectionClassName:     'section',
-         anchors:              ['about', 'coaching', 'speaking', 'contention1', 'contact'],
+         anchors:              ['about', 'coaching', 'contention1', 'speaking', 'contact'],
          scrollBar:            false,
          navigation:           true,
          verticalAlign:        true,
@@ -37,43 +37,43 @@ class Debate extends React.Component {
 
       return (
          <div>
-         <div id={styles.homebutton}>
-            <Link to="/">HOME</Link>
-          </div>
-         <SectionsContainer  class="container" {...options} activeSection={current}>            
-            <Section>
-               <DebateAbout
-                  shanghai={this.props.data.shanghai}
-                  joshcircle={this.props.data.joshcircle}
-               />
-            </Section>
-            <Section>
-               <Coaching
-                  teach={this.props.data.teach}
-                  train={this.props.data.train}
-                  compete={this.props.data.compete}
-                  teachBg={this.props.data.teachBg}
-                  trainBg={this.props.data.trainBg}
-                  competeBg={this.props.data.competeBg}
-               />
-            </Section>
-            <Section>
-               <Speaking
-                  onStage={this.props.data.onStage}
-               />
-            </Section>
-            <Section>
-               <Contention1
-                  c1={this.props.data.c1}
-                  c1overlay={this.props.data.c1overlay}
-               />
-            </Section>
-            <Section>
-               <Contact 
-                  wechat={this.props.data.wechat}
-               />
-            </Section>
-         </SectionsContainer>
+            <div id={styles.homebutton}>
+               <Link to="/">HOME</Link>
+            </div>
+            <SectionsContainer  class="container" {...options} activeSection={current}>            
+               <Section>
+                  <DebateAbout
+                     shanghai={this.props.data.shanghai}
+                     joshcircle={this.props.data.joshcircle}
+                  />
+               </Section>
+               <Section>
+                  <Coaching
+                     teach={this.props.data.teach}
+                     train={this.props.data.train}
+                     compete={this.props.data.compete}
+                     teachBg={this.props.data.teachBg}
+                     trainBg={this.props.data.trainBg}
+                     competeBg={this.props.data.competeBg}
+                  />
+               </Section>
+               <Section>
+                  <Contention1
+                     c1={this.props.data.c1}
+                     c1overlay={this.props.data.c1overlay}
+                  />
+               </Section>
+               <Section>
+                  <Speaking
+                     onStage={this.props.data.onStage}
+                  />
+               </Section>
+               <Section>
+                  <Contact 
+                     wechat={this.props.data.wechat}
+                  />
+               </Section>
+            </SectionsContainer>
          </div>
       )
    }

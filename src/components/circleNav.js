@@ -32,9 +32,9 @@ export class DebateNav extends React.Component {
                         begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkHref="/debate#contention1">
+               <a xlinkHref="/debate#coaching">
                   <text x="225" y="225" transform="rotate(15 500,225)" textAnchor="end" fill="black">
-                     Contention 1
+                     Coaching
                      <animate 
                            id="visiblef2" 
                            attributeName="visibility" 
@@ -53,9 +53,9 @@ export class DebateNav extends React.Component {
                            begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkHref="/debate#coaching">
+               <a xlinkHref="/debate#contention1">
                   <text x="225" y="225" transform="rotate(0 500,225)" textAnchor="end" fill="black">
-                     Coaching
+                     Contention 1
                      <animate 
                            id="visiblef3" 
                            attributeName="visibility" 
