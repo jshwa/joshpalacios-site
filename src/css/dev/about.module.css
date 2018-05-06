@@ -11,6 +11,25 @@
    grid-template-rows: 1fr 1fr 4fr 1fr;
 }
 
+#texas {
+   margin-top: 2em;
+   grid-column: 1 / 5;
+   grid-row: 1 / span 2;
+}
+
+.path {
+   stroke-width: 1;
+ }
+ 
+ @keyframes dash {
+   from {
+     stroke-dashoffset: 4000;
+   }
+   to {
+     stroke-dashoffset: 0;
+   }
+ }
+
 #name {
    grid-column: 3 / 7;
    grid-row: 4 / span 1;
