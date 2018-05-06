@@ -1,20 +1,13 @@
 import React from 'react';
-import styles from '../../css/dev/contact.module.css';
+import styles from '../../css/dev/blog.module.css';
 
-class DevContact extends React.Component {
+class Blog extends React.Component {
    render(){
       return(
          <div id={styles.wrapper}>
             <div id={styles.main} />
             <div id={styles.poly} />
-            <div id={styles.sidebar} />           
-            <div id={styles.debate}>
-               <svg viewBox="0 0 67 16" preserveAspectRatio="xMinYMin meet">
-                  <text x="2" y="15" textAnchor="start" fill="#FFF">
-                    Contact
-                  </text>
-               </svg>
-            </div>
+            <div id={styles.sidebar} />
             <div id={styles.img}>
 
             </div>
@@ -27,4 +20,4 @@ class DevContact extends React.Component {
    }
 }
 
-export default DevContact
+export default Blog
