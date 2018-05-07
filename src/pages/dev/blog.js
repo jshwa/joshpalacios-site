@@ -1,20 +1,32 @@
 import React from 'react';
+import Img from 'gatsby-image';
 import styles from '../../css/dev/blog.module.css';
 
 class Blog extends React.Component {
    render(){
       return(
          <div id={styles.wrapper}>
-            <div id={styles.main} />
-            <div id={styles.poly} />
+            <div id={styles.title}>
+               <svg width="100%" height="100%" viewBox="0 0 50 19"  preserveAspectRatio="xMidYMid meet">
+                  <text x="25" y="14" textAnchor="middle" fill="#000" >
+                     Blog
+                  </text>
+               </svg>
+            </div>
             <div id={styles.sidebar} />
-            <div id={styles.img}>
-
+            <div id={styles.subtitle}>
+               <svg viewBox="0 0 180 16"  preserveAspectRatio="xMidYMid meet">
+                  <text x="90" y="12" textAnchor="middle" fill="#000" >
+                     What I'm reading now:
+                  </text>
+               </svg>
             </div>
-            <div id={styles.desc}>
-               Lorem ipsum dolor amet coloring book vape normcore pickled, green juice edison bulb mumblecore farm-to-table before they sold out meh chicharrones yuccie sartorial chambray paleo. Biodiesel chia craft beer, microdosing la croix poke yr shoreditch before they sold out. Flexitarian palo santo tumblr gluten-free, salvia ugh raclette woke chambray stumptown try-hard. 
+            <div id={styles.blog1}>
             </div>
-            <div id={styles.bottomcorner} />
+            <div id={styles.blog2}>
+            </div>
+            <div id={styles.blog3}>
+            </div>
          </div>
       )
    }
