@@ -6,8 +6,8 @@ import '../css/index.css';
 import { DebateNav, DevNav } from '../components/circleNav';
 import { DebateBackground, DevBackground } from '../components/indexBackground';
 import { DebateDesc, DevDesc } from '../components/indexDesc';
-import Debate from './debate';
-import Dev from './dev';
+import Debater from './debater';
+import Developer from './developer';
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -33,7 +33,7 @@ class IndexPage extends React.Component {
 
    handleWheel = e => {
      if (e.deltaY >= 10) {
-        this.state.active === "Debater" ? navigateTo('/debate') : navigateTo('/dev')
+        this.state.active === "Debater" ? navigateTo('/debater') : navigateTo('/developer')
      }
    }
 
