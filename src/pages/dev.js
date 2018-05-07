@@ -5,6 +5,8 @@ import About from './dev/about';
 import TellMe from './dev/tellme';
 import GiftFor from './dev/giftfor';
 import Incoming from './dev/incoming';
+import TechDebate from './dev/techdebate';
+import Blog from './dev/blog';
 import Contact from './dev/contact';
 import { ScrollToTopOnMount, SectionsContainer, Section } from 'react-fullpage';
 import styles from '../css/dev.module.css';
@@ -21,7 +23,7 @@ class Dev extends React.Component {
       const { current } = this.state
       const options = {
          sectionClassName:     'section',
-         anchors:              ['about', 'coaching', 'speaking', 'contention1', 'contact'],
+         anchors:              ['about', 'coaching', 'speaking', 'contention1', 'techanddebate', 'blog', 'contact'],
          scrollBar:            false,
          navigation:           true,
          verticalAlign:        true,
@@ -38,7 +40,9 @@ class Dev extends React.Component {
             </div>
             <SectionsContainer  class="container" {...options} activeSection={current}>
                <Section>
-                  <About />
+                  <About 
+                     josh={this.props.data.joshp}
+                  />
                </Section>
                <Section>
                   <TellMe 
@@ -59,6 +63,14 @@ class Dev extends React.Component {
                   />
                </Section>
                <Section>
+                  <TechDebate 
+                     debatetech={this.props.data.debatetech}
+                  />
+               </Section>
+               <Section>
+                  <Blog />
+               </Section>
+               <Section>
                   <Contact />
                </Section>
             </SectionsContainer>
@@ -71,6 +83,11 @@ export default Dev
 
 export const query = graphql`
   query DevImageQuery {
+   joshp: imageSharp(id: { regex: "/joshp.jpg/"}) {
+      sizes(maxWidth: 1080) {
+       ...GatsbyImageSharpSizes
+      }
+    }
     tellme: imageSharp(id: { regex: "/tellMeGraphic.png/"}) {
       sizes(maxWidth: 1080) {
        ...GatsbyImageSharpSizes_noBase64
@@ -98,7 +115,12 @@ export const query = graphql`
     }
     incomingoverlay: imageSharp(id: { regex: "/incomingOverlay.png/"}) {
       sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes_noBase64
+         ...GatsbyImageSharpSizes_noBase64
+      }
+    }
+    debatetech: imageSharp(id: { regex: "/debatetech.png/"}) {
+      sizes(maxWidth: 1080) {
+         ...GatsbyImageSharpSizes_noBase64
       }
     }
   }
