@@ -3,7 +3,7 @@
    width: 100vw;
    display: grid;
    grid-template-columns: 20% 20% 20% 20% 20%;
-   grid-template-rows: 17% 17% 33% 16% 14% 3%;
+   grid-template-rows: 12% 12% 52% 12% 12%;
    background: #1C1B20;
    z-index: 0;
    overflow: hidden;
@@ -26,15 +26,21 @@
 
 #poly {
    grid-column: 2 / 6;
-   grid-row: 1 / span 6;
-   background: #1C1B20;
+   grid-row: 3 / span 1;
+   background: #181840;
    transform: skewY(10deg);
-   transform-origin: 0;
+   transform-origin: 35%;
+   overflow: hidden;
+}
+
+#poly img {
+   transform: skewY(-10deg) translateY(-20%);
 }
 
 #tech {
    grid-column: 1 / 2;
-   grid-row: 2 / span 1;
+   grid-row: 3 / span 1;
+   align-self: start;
    font-family: "HelveticaNeue-CondensedBold";
    z-index: 15;
 }
@@ -42,17 +48,20 @@
 #debate {
    margin: 0;
    grid-column: 2 / 4;
-   grid-row: 2 / span 1;
+   grid-row: 3 / span 1;
+   align-self: start;
    font-family: "HelveticaNeue-CondensedBold";
    z-index: 15;
 }
 
 #desc {
-   grid-column: 3 / 5;
-   grid-row: 3 / span 1;
-   color: white;
-   align-self: center;
+   padding-right: 2em;
+   grid-column: 4 / 6;
+   grid-row: 1 / span 2;
+   align-self: end;
    z-index: 15;
+   color: #616060;
+   font-family: "Avenir";
 }
 
 #bottomcorner {

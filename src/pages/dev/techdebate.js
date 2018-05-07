@@ -1,4 +1,5 @@
 import React from 'react';
+import Img from 'gatsby-image';
 import styles from '../../css/dev/techdebate.module.css';
 
 class TechDebate extends React.Component {
@@ -6,11 +7,18 @@ class TechDebate extends React.Component {
       return(
          <div id={styles.wrapper}>
             <div id={styles.main} />
-            <div id={styles.poly} />
+            <div id={styles.poly}>
+               <Img
+                  title="Tech and Debate"
+                  alt="Competitive Debate is beginning to make use of modern technology"
+                  sizes={this.props.debatetech.sizes}
+                  imgStyle={{maxHeight: "100%"}}
+               />
+            </div>
             <div id={styles.sidebar} />
             <div id={styles.tech}>
                <svg viewBox="0 0 33 16" preserveAspectRatio="xMinYMin meet">
-                  <text x="2" y="15" textAnchor="start" fill="#000" >
+                  <text x="2" y="15" textAnchor="start" fill="#181840" >
                      Tech
                   </text>
                </svg>
