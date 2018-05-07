@@ -39,7 +39,6 @@
  
 #debate {
    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
-   font-size: 75px;
    grid-column: 1 / 6;
    grid-row: 1 / span 3;
    z-index: 2;
@@ -49,7 +48,6 @@
 
 #dev {
    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
-   font-size: 75px;
    grid-column: 6 / 11;
    grid-row: 1 / span 3;
    z-index: 1;
