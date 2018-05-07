@@ -8,7 +8,7 @@ class Blog extends React.Component {
          <div id={styles.wrapper}>
             <div id={styles.title}>
                <svg width="100%" height="100%" viewBox="0 0 50 19"  preserveAspectRatio="xMidYMid meet">
-                  <text x="25" y="14" textAnchor="middle" fill="#000" >
+                  <text x="25" y="14" textAnchor="middle" fill="#121212" >
                      Blog
                   </text>
                </svg>
@@ -16,7 +16,7 @@ class Blog extends React.Component {
             <div id={styles.sidebar} />
             <div id={styles.subtitle}>
                <svg viewBox="0 0 180 16"  preserveAspectRatio="xMidYMid meet">
-                  <text x="90" y="12" textAnchor="middle" fill="#000" >
+                  <text x="90" y="12" textAnchor="middle" fill="#121212" >
                      What I'm reading now:
                   </text>
                </svg>
