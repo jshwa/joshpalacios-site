@@ -10,7 +10,7 @@ export class DebateNav extends React.Component {
       return (
          <div id={this.props.id} >
             <svg width="100%" height="100%" viewBox="0 0 300 450" preserveAspectRatio="xMidYMid meet">
-               <a xlinkHref="/debate#about">
+               <a xlinkHref="/debater#about">
                   <text x="225" y="225" transform="rotate(30 500,225)" textAnchor="end" fill="black">
                      About
                      <animate 
@@ -32,7 +32,7 @@ export class DebateNav extends React.Component {
                         begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkHref="/debate#coaching">
+               <a xlinkHref="/debater#coaching">
                   <text x="225" y="225" transform="rotate(15 500,225)" textAnchor="end" fill="black">
                      Coaching
                      <animate 
@@ -53,7 +53,7 @@ export class DebateNav extends React.Component {
                            begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkHref="/debate#contention1">
+               <a xlinkHref="/debater#contention1">
                   <text x="225" y="225" transform="rotate(0 500,225)" textAnchor="end" fill="black">
                      Contention 1
                      <animate 
@@ -74,7 +74,7 @@ export class DebateNav extends React.Component {
                            begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkHref="/debate#speaking">
+               <a xlinkHref="/debater#speaking">
                   <text x="225" y="225" transform="rotate(-15 500,225)" textAnchor="end" fill="black">
                      Speaking
                      <animate 
@@ -95,7 +95,7 @@ export class DebateNav extends React.Component {
                            begin="visiblef1.end" />
                   </text>
                </a>
-               <a xlinkHref="/debate#contact">
+               <a xlinkHref="/debater#contact">
                   <text x="225" y="225" transform="rotate(-30 500,225)" textAnchor="end" fill="black">
                      Contact
                      <animate 
@@ -131,7 +131,7 @@ export class DevNav extends React.Component {
       return (
          <div id={this.props.id}>
             <svg width="100%" height="100%" viewBox="0 0 300 450" preserveAspectRatio="xMinYMin meet">
-               <a xlinkHref="/debate/about">
+               <a xlinkHref="/developer#about">
                   <text x="75" y="225" transform="rotate(-30 -225,225)" textAnchor="start" fill="black">
                      About
                      <animate 
@@ -153,7 +153,7 @@ export class DevNav extends React.Component {
                         begin="visible.end" />
                   </text>
                </a>
-               <a xlinkHref="/debate/about">
+               <a xlinkHref="/developer#tellme">
                   <text x="75" y="225" transform="rotate(-15 -225,225)" textAnchor="start" fill="black">
                      Projects
                      <animate 
@@ -174,9 +174,9 @@ export class DevNav extends React.Component {
                         begin="visible.end" />
                   </text>
                </a>
-               <a xlinkHref="/debate/about">
+               <a xlinkHref="/developer#techanddebate">
                   <text x="75" y="225" transform="rotate(0 -225, 225)" textAnchor="start" fill="black">
-                     Portfolio
+                     Tech &amp; Debate
                      <animate 
                         id="visible3" 
                         attributeName="visibility" 
@@ -195,9 +195,9 @@ export class DevNav extends React.Component {
                         begin="visible.end" />
                   </text>
                </a>
-               <a xlinkHref="/debate/about">
+               <a xlinkHref="/developer#blog">
                   <text x="75" y="225" transform="rotate(15 -225,225)" textAnchor="start" fill="black">
-                     Resume
+                     Blog
                      <animate 
                         id="visible4" 
                         attributeName="visibility" 
@@ -216,7 +216,7 @@ export class DevNav extends React.Component {
                         begin="visible.end" />               
                   </text>
                </a>
-               <a xlinkHref="/debate/about">
+               <a xlinkHref="/developer#contact">
                   <text x="75" y="225" transform="rotate(30 -225,225)" textAnchor="start" fill="black">
                      Contact
                      <animate 

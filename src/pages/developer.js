@@ -11,7 +11,7 @@ import Contact from './dev/contact';
 import { ScrollToTopOnMount, SectionsContainer, Section } from 'react-fullpage';
 import styles from '../css/dev.module.css';
 
-class Dev extends React.Component {
+class Developer extends React.Component {
    constructor(props) {
       super(props)
       this.state = {
@@ -23,7 +23,7 @@ class Dev extends React.Component {
       const { current } = this.state
       const options = {
          sectionClassName:     'section',
-         anchors:              ['about', 'coaching', 'speaking', 'contention1', 'techanddebate', 'blog', 'contact'],
+         anchors:              ['about', 'tellme', 'giftfor', 'incoming', 'techanddebate', 'blog', 'contact'],
          scrollBar:            false,
          navigation:           true,
          verticalAlign:        true,
@@ -79,7 +79,7 @@ class Dev extends React.Component {
    }
 }
 
-export default Dev
+export default Developer
 
 export const query = graphql`
   query DevImageQuery {

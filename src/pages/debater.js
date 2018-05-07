@@ -9,7 +9,7 @@ import { ScrollToTopOnMount, SectionsContainer, Section } from 'react-fullpage';
 import styles from '../css/debate.module.css';
 
 
-class Debate extends React.Component {
+class Debater extends React.Component {
    constructor(props) {
       super(props)
       this.state = {
@@ -79,7 +79,7 @@ class Debate extends React.Component {
    }
 }
 
-export default Debate
+export default Debater
 
 export const query = graphql`
   query DebateImageQuery {
