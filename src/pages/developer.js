@@ -7,7 +7,7 @@ import GiftFor from './dev/giftfor';
 import Incoming from './dev/incoming';
 import TechDebate from './dev/techdebate';
 import Blog from './dev/blog';
-import Contact from './dev/contact';
+import DevContact from './dev/contact';
 import { ScrollToTopOnMount, SectionsContainer, Section } from 'react-fullpage';
 import styles from '../css/dev.module.css';
 
@@ -71,7 +71,7 @@ class Developer extends React.Component {
                   <Blog />
                </Section>
                <Section>
-                  <Contact />
+                  <DevContact />
                </Section>
             </SectionsContainer>
          </div>
