@@ -4,24 +4,17 @@ import styles from '../../css/dev/contact.module.css';
 class DevContact extends React.Component {
    render(){
       return(
-         <div id={styles.wrapper}>
-            <div id={styles.main} />
-            <div id={styles.poly} />
-            <div id={styles.sidebar} />           
-            <div id={styles.debate}>
+         <div id={styles.wrapper}>          
+            <div id={styles.contact}>
                <svg viewBox="0 0 67 16" preserveAspectRatio="xMinYMin meet">
-                  <text x="2" y="15" textAnchor="start" fill="#FFF">
+                  <text x="9" y="15" textAnchor="center" fill="#121212">
                     Contact
                   </text>
                </svg>
             </div>
-            <div id={styles.img}>
-
+            <div id={styles.button}>
+               <a href="mailto:hey@joshpalacios.com">Email Me.</a>
             </div>
-            <div id={styles.desc}>
-               Lorem ipsum dolor amet coloring book vape normcore pickled, green juice edison bulb mumblecore farm-to-table before they sold out meh chicharrones yuccie sartorial chambray paleo. Biodiesel chia craft beer, microdosing la croix poke yr shoreditch before they sold out. Flexitarian palo santo tumblr gluten-free, salvia ugh raclette woke chambray stumptown try-hard. 
-            </div>
-            <div id={styles.bottomcorner} />
          </div>
       )
    }
