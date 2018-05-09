@@ -15,7 +15,8 @@ class Speaking extends React.Component {
                </svg>
             </div>
             <div id={styles.blurb}>
-               Lorem ipsum dolor amet coloring book vape normcore pickled, green juice edison bulb mumblecore farm-to-table before they sold out meh chicharrones yuccie sartorial chambray paleo. Biodiesel chia craft beer, microdosing la croix poke yr shoreditch before they sold out. Flexitarian palo santo tumblr gluten-free, salvia ugh raclette woke chambray stumptown try-hard.             </div>
+               In the last 6 years I’ve had the opportunity to share my ideas and passions with crowds across China. I’ve spoken at events ranging from smaller, student organized seminars to the full auditoriums of the Shanghai Regional and China National tournaments. I jump at the chance to reach more people at once with a larger crowd, but a smaller, interactive, intimate group will be more engaging and exciting every time. I’d love to come speak to your group.
+            </div>
             <div id={styles.onstage}>
                <Img
                   title="Josh Speaking at a Tournament"

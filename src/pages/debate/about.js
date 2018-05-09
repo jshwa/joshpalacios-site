@@ -25,7 +25,7 @@ class DebateAbout extends React.Component {
                <span className={styles.lastname}>Palacios</span>
             </div>
             <div id={styles.desc}>
-               Lorem ipsum dolor amet coloring book vape normcore pickled, green juice edison bulb mumblecore farm-to-table before they sold out meh chicharrones yuccie sartorial chambray paleo. Biodiesel chia craft beer, microdosing la croix poke yr shoreditch before they sold out. Flexitarian palo santo tumblr gluten-free, salvia ugh raclette woke chambray stumptown try-hard. 
+            I love building new things. In the nearly 15 years I’ve been debating and coaching debate, I’ve been fortunate to help build new debate programs both at home and abroad. In 2012 I moved to Shanghai as one of the founding coaches of the National Speech and Debate Association in China. Since then I’ve cultivated the growth of debate in China to over 100 tournaments yearly, with tens of thousands of debaters competing across the country. 
             </div>
          </div>
       )

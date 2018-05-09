@@ -27,7 +27,7 @@ class Contention1 extends React.Component {
          <div id={styles.wrapper}>
             <div id={styles.topbar} />
             <div id={styles.blurb}>
-               A Ruby on Rails web app to cultivate crowd-sourced gift guides  
+               Contention 1 is China’s first debate podcast, hosted by Josh Palacios and James Durkee. A debaters first resource for inspiration and evidence for debate topics in China.
             </div>
             <div id={styles.c1button}>
                <a href="http://contention1.com" target="_blank">Visit the Site</a>
