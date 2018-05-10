@@ -1,9 +1,12 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import styles from '../../css/dev/about.module.css';
+import animateStyles from '../../css/animate.module.css';
 
 class About extends React.Component {
    render(){
+      const fadeIn = this.props.active ? animateStyles.fadeIn : "";
+
       return(
          <div id={styles.wrapper}>
             <div id={styles.texas}>
@@ -34,22 +37,22 @@ class About extends React.Component {
             <div id={styles.name}>
                <svg viewBox="0 0 115 16" preserveAspectRatio="xMinYMin meet">
                   <text x="115" y="15" textAnchor="end" fill="#000" opacity=".1" >
-                     <tspan style={{fontFamily: "'HelveticaNeue-Light'"}}>Josh</tspan>
-                     <tspan style={{fontFamily: "'HelveticaNeue-Bold'"}}>Palacios</tspan>
+                     <tspan style={{fontFamily: "HelveticaNeue-Light"}}>Josh</tspan>
+                     <tspan style={{fontFamily: "HelveticaNeue", fontWeight:"bold"}}>Palacios</tspan>
                   </text>
                </svg>
             </div>
             <div id={styles.title}>
                <svg viewBox="0 0 80 16"  preserveAspectRatio="xMinYMin meet">
-                  <text x="0" y="15" fill="#FFF" opacity=".5" >
+                  <text x="0" y="15" fill="#FFF">
                      <tspan>ABOUT</tspan>
                   </text>
                </svg>
             </div>
-            <div id={styles.about}>
-               Lorem ipsum dolor amet coloring book vape normcore pickled, green juice edison bulb mumblecore farm-to-table before they sold out meh chicharrones yuccie sartorial chambray paleo. Biodiesel chia craft beer, microdosing la croix poke yr shoreditch before they sold out. Flexitarian palo santo tumblr gluten-free, salvia ugh raclette woke chambray stumptown try-hard. 
+            <div id={styles.about} className={fadeIn}>
+               I’m a newly established resident of the great city of Houston, and a recent graduate of the Flatiron School. Over 15 years ago I learned HTML and CSS to create my own websites (I must have made a new geocities site every week). The web was fascinating to me then, but today it's mind-blowing. I’m currently enjoying React and it’s many off-shoots, like Preact and (with this site) GatsbyJS for front-end development, and I still like the convention over configuration approach of Ruby on Rails, and the super-friendly syntax of Ruby for back-end.
             </div>
-            <div id={styles.img}>
+            <div id={styles.img} className={fadeIn}>
                <Img
                   title="Josh Palacios"
                   alt="Josh Palacios"
