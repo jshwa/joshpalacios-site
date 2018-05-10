@@ -1,10 +1,22 @@
+@font-face {
+   font-family: 'HelveticaNeue-CondensedBold';
+   src:  url('../fonts/HelveticaNeue-CondensedBold.woff2') format('woff2'),
+         url('../fonts/HelveticaNeue-CondensedBold.woff') format('woff');
+ }
+
+@font-face {
+   font-family: "Avenir";
+   src:  url('../fonts/Avenir.woff2') format('woff2'),
+         url('../fonts/Avenir.woff') format('woff');
+ }
+
 html, body {
    margin: 0;
    padding: 0;
    height: 100%;
    background: white;
    color: black;
-   font-family: Helvetica;
+   font-family: "Avenir";
 }
 
 #___gatsby, [data-reactroot] {
