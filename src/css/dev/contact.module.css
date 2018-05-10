@@ -17,11 +17,23 @@
    align-self: center;
    text-align: center;
    font-size: 24px;
+   border-radius: 3px;
+   top: 0px;
+   left: 0px;
+   transition: all 300ms;
+   position: relative;
 }
 
 #button a {
    text-decoration: none;
    color: #FFF;
+   display: block;
+}
+
+#button:hover {
+   top: -4px;
+   left: -4px;
+   box-shadow: 2px 2px white, 4px 4px black;
 }
 
 #contact {
@@ -31,3 +43,4 @@
    font-weight: bold;   
    align-self: end;
 }
+

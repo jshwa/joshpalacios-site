@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from '../../css/dev/contact.module.css';
+import animateStyles from '../../css/animate.module.css';
 
 class DevContact extends React.Component {
    render(){
+      const fadeIn = this.props.active ? animateStyles.fadeIn : "";
+
       return(
          <div id={styles.wrapper}>          
             <div id={styles.contact}>
@@ -12,7 +15,7 @@ class DevContact extends React.Component {
                   </text>
                </svg>
             </div>
-            <div id={styles.button}>
+            <div id={styles.button} className={fadeIn}>
                <a href="mailto:hey@joshpalacios.com">Email Me.</a>
             </div>
          </div>
