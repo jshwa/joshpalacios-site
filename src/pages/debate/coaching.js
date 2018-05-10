@@ -4,52 +4,64 @@ import Img from 'gatsby-image';
 import styles from "../../css/debate/coaching.module.css";
 
 class Coaching extends React.Component {
+   constructor(props) {
+      super(props);
+   };
+
+   componentDidMount() {
+      console.log("mounted")
+   }
+
    render(){
+      const active1 = this.props.active ? styles.active1 : ""
+      const active2 = this.props.active ? styles.active2 : ""
+      const active3 = this.props.active ? styles.active3 : ""
+
       return(
          <div id={styles.wrapper}>
             <div id={styles.title}>
                <svg viewBox="0 0 68 13" preserveAspectRatio="xMidYMid meet">
-                  <text x="34" y="12.5" textAnchor="middle" fill="#181840">
+                  <text x="34" y="12.5" textAnchor="middle" fill="#000">
                      COACHING
                   </text>
                </svg>
             </div>
-            <div id={styles.teach}>
+            <div id={styles.teach} className={active1}>
                <svg viewBox="0 0 60 13" preserveAspectRatio="xMidYMid meet">
                   <text x="30" y="12.5" textAnchor="middle" fill="#FFF">
                      TEACH
                   </text>
                </svg>
             </div>
-            <div id={styles.teachImg}>
-               <Img
-                  title="Teach Debate"
-                  alt="Josh Teaching"
-                  sizes={this.props.teach.sizes}
-               />
-            </div>
-            <div id={styles.train}>
+            <div id={styles.teachImg} className={active1}>
+                  <Img
+                     title="Teach Debate"
+                     alt="Josh Teaching"
+                     sizes={this.props.teach.sizes}
+                  />
+               </div>
+            <div id={styles.train} className={active2}>
                <svg viewBox="0 0 60 13" preserveAspectRatio="xMidYMid meet">
                   <text x="30" y="12.5" textAnchor="middle" fill="#FFF">
                      TRAIN
                   </text>
                </svg>
             </div>
-            <div id={styles.trainImg}>
+            <div id={styles.trainImg} className={active2}>
                <Img
                   title="Train for Competitions"
                   alt="Practice Debates"
                   sizes={this.props.train.sizes}
                />
             </div>
-            <div id={styles.compete}>
+            <div id={styles.compete} className={active3}>
                <svg viewBox="0 0 60 13" preserveAspectRatio="xMidYMid meet">
                   <text x="30" y="12.5" textAnchor="middle" fill="#FFF">
                      COMPETE
                   </text>
                </svg>
             </div>
-            <div id={styles.competeImg}>
+            <div id={styles.competeImg} className={active3}>
                <Img
                   title="Compete in Tournaments"
                   alt="Winning Competitions"
