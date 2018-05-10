@@ -35,6 +35,12 @@ class Debater extends React.Component {
          scrollCallback: (states) => this.setState({current: states.activeSection})
          };
 
+      const aboutActive = current === 0 ? true : false;
+      const coachingActive = current === 1 ? true : false;
+      const c1Active = current === 2 ? true : false;
+      const speakingActive = current === 3 ? true : false;
+      const contactActive = current === 4 ? true : false;
+
       return (
          <div>
             <div id={styles.homebutton}>
@@ -43,12 +49,14 @@ class Debater extends React.Component {
             <SectionsContainer  class="container" {...options} activeSection={current}>            
                <Section>
                   <DebateAbout
+                     active={aboutActive}
                      shanghai={this.props.data.shanghai}
                      joshcircle={this.props.data.joshcircle}
                   />
                </Section>
                <Section>
                   <Coaching
+                     active={coachingActive}
                      teach={this.props.data.teach}
                      train={this.props.data.train}
                      compete={this.props.data.compete}
@@ -59,17 +67,20 @@ class Debater extends React.Component {
                </Section>
                <Section>
                   <Contention1
+                     active={c1Active}
                      c1={this.props.data.c1}
                      c1overlay={this.props.data.c1overlay}
                   />
                </Section>
                <Section>
                   <Speaking
+                     active={speakingActive}
                      onStage={this.props.data.onStage}
                   />
                </Section>
                <Section>
                   <Contact 
+                     active={contactActive}
                      wechat={this.props.data.wechat}
                   />
                </Section>
