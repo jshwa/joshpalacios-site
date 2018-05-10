@@ -10,7 +10,7 @@
 #title {
    font-family: "HelveticaNeue-CondensedBold", Helvetica;
    font-weight: bold;
-   opacity: .3;
+   opacity: 1;
    grid-column: 1 / 6;
    grid-row: 2 / span 1;
    z-index: 1;
@@ -19,9 +19,8 @@
 #teachImg {
    grid-column: 2 / 3;
    grid-row: 1 / span 1;
-   -webkit-filter: drop-shadow(0 0 5px #222);
-   filter: drop-shadow(0 0 5px #222);
-   filter: brightness(50%);
+   -webkit-filter: drop-shadow(0 0 5px #222) brightness(50%) grayscale(100%);
+   filter: drop-shadow(0 0 5px #222) brightness(50%) grayscale(100%);
    z-index: 3;
 }
 
@@ -51,9 +50,8 @@
 #trainImg {
    grid-column: 2 / 3;
    grid-row: 2 / span 1;
-   -webkit-filter: drop-shadow(0 0 5px #222);
-   filter: drop-shadow(0 0 5px #222);
-   filter: brightness(50%);
+   -webkit-filter: drop-shadow(0 0 5px #222) brightness(50%) grayscale(100%);
+   filter: drop-shadow(0 0 5px #222) brightness(50%) grayscale(100%);
    z-index: 3;
 }
 
@@ -83,9 +81,8 @@
 #competeImg {
    grid-column: 2 / 3;
    grid-row: 3 / span 1;
-   -webkit-filter: drop-shadow(0 0 5px #222);
-   filter: drop-shadow(0 0 5px #222);
-   filter: brightness(50%);
+   -webkit-filter: drop-shadow(0 0 5px #222) brightness(50%) grayscale(100%);
+   filter: drop-shadow(0 0 5px #222) brightness(50%) grayscale(100%);
    z-index: 3;
 }
 
@@ -123,14 +120,42 @@
    transition: opacity 300ms ease-in-out;
 }
 
-#teachBlurb,
-#trainBlurb, 
-#competeBlurb {
-   grid-column: 4 / 5;
+#teachBlurb {
+   margin-left: 2em;
+   padding: 1em 4em;
+   grid-column: 3 / 6;
+   grid-row: 1 / span 1;
+   z-index: 3;
+   color: white;
+   opacity: 0;
+   background: rgb(0, 0, 0, 0.8);
+   line-height: 2em;
+   transition: opacity 300ms ease-in-out;
+}
+
+#trainBlurb {
+   margin-left: 2em;
+   padding: 1em 4em;
+   grid-column: 3 / 6;
    grid-row: 2 / span 1;
    z-index: 3;
    color: white;
    opacity: 0;
+   background: rgb(0, 0, 0, 0.8);
+   line-height: 2em;
+   transition: opacity 300ms ease-in-out;
+}
+
+#competeBlurb {
+   margin-left: 2em;
+   padding: 1em 4em;
+   grid-column: 3 / 6;
+   grid-row: 3 / span 1;
+   z-index: 3;
+   color: white;
+   opacity: 0;
+   background: rgb(0, 0, 0, 0.8);
+   line-height: 2em;
    transition: opacity 300ms ease-in-out;
 }
 
@@ -142,6 +167,86 @@
    align-self: start;
    z-index: 2;
    opacity: 0;
-   filter: brightness(50%);
+   filter: brightness(100%);
    transition: opacity 300ms ease-in-out;
+}  
+
+
+.active1 {
+   -webkit-animation: slideInRight 500ms 200ms ease-in-out;
+   -moz-animation: slideInRight 500ms 200ms ease-in-out;
+   -o-animation: slideInRight 500ms 200ms ease-in-out;
+   animation: slideInRight 500ms 200ms ease-in-out;
+   -webkit-animation-fill-mode: both;
+   -moz-animation-fill-mode: both;
+   -o-animation-fill-mode: both;
+   animation-fill-mode: both;
 }
+
+.active2 {
+   -webkit-animation: slideInRight 500ms 300ms ease-in-out;
+   -moz-animation: slideInRight 500ms 300ms ease-in-out;
+   -o-animation: slideInRight 500ms 300ms ease-in-out;
+   animation: slideInRight 500ms 300ms ease-in-out;
+   -webkit-animation-fill-mode: both;
+   -moz-animation-fill-mode: both;
+   -o-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+.active3 {
+   -webkit-animation: slideInRight 500ms 400ms ease-in-out;
+   -moz-animation: slideInRight 500ms 400ms ease-in-out;
+   -o-animation: slideInRight 500ms 400ms ease-in-out;
+   animation: slideInRight 500ms 400ms ease-in-out;
+   -webkit-animation-fill-mode: both;
+   -moz-animation-fill-mode: both;
+   -o-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInRight {
+   from {
+     transform: translate3d(-200%, 0, 0);
+     visibility: hidden;
+   }
+ 
+   to {
+     transform: translate3d(0, 0, 0);
+     visibility: visible;
+   }
+ }
+@-moz-keyframes slideInRight {
+   from {
+     transform: translate3d(-200%, 0, 0);
+     visibility: hidden;
+   }
+ 
+   to {
+     transform: translate3d(0, 0, 0);
+     visibility: visible;
+   }
+ }
+@-o-keyframes slideInRight {
+   from {
+     transform: translate3d(-200%, 0, 0);
+     visibility: hidden;
+   }
+ 
+   to {
+     transform: translate3d(0, 0, 0);
+     visibility: visible;
+   }
+ }
+@keyframes slideInRight {
+   from {
+     transform: translate3d(-200%, 0, 0);
+     visibility: hidden;
+   }
+ 
+   to {
+     transform: translate3d(0, 0, 0);
+     visibility: visible;
+   }
+ }
+ 
