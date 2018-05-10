@@ -11,7 +11,7 @@
 
 @-webkit-keyframes fadeIn {
    from {
-      opacity: 0;
+      opacity: 0.01;
       visibility: hidden;
    }
    
@@ -22,7 +22,7 @@
 }
 @-moz-keyframes fadeIn {
    from {
-      opacity: 0;
+      opacity: 0.01;
       visibility: hidden;
    }
    
@@ -33,7 +33,7 @@
 }
 @-o-keyframes fadeIn {
    from {
-      opacity: 0;
+      opacity: 0.01;
       visibility: hidden;
    }
    
@@ -44,7 +44,7 @@
 }
 @keyframes fadeIn {
    from {
-      opacity: 0;
+      opacity: 0.01;
       visibility: hidden;
    }
    
@@ -59,17 +59,6 @@
    -moz-animation: slideInRight 800ms 200ms ease-in-out;
    -o-animation: slideInRight 800ms 200ms ease-in-out;
    animation: slideInRight 800ms 200ms ease-in-out;
-   -webkit-animation-fill-mode: both;
-   -moz-animation-fill-mode: both;
-   -o-animation-fill-mode: both;
-   animation-fill-mode: both;
-}
-
-.slideInLeft {
-   -webkit-animation: slideInLeft 800ms 200ms ease-in-out;
-   -moz-animation: slideInLeft 800ms 200ms ease-in-out;
-   -o-animation: slideInLeft 800ms 200ms ease-in-out;
-   animation: slideInLeft 800ms 200ms ease-in-out;
    -webkit-animation-fill-mode: both;
    -moz-animation-fill-mode: both;
    -o-animation-fill-mode: both;
@@ -121,6 +110,17 @@
    }
 }
 
+.slideInLeft {
+   -webkit-animation: slideInLeft 800ms 200ms ease-in-out;
+   -moz-animation: slideInLeft 800ms 200ms ease-in-out;
+   -o-animation: slideInLeft 800ms 200ms ease-in-out;
+   animation: slideInLeft 800ms 200ms ease-in-out;
+   -webkit-animation-fill-mode: both;
+   -moz-animation-fill-mode: both;
+   -o-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
 @-webkit-keyframes slideInLeft {
    from {
       transform: translate3d(200%, 0, 0);
@@ -162,6 +162,66 @@
    
    to {
       transform: translate3d(0, 0, 0);
+      visibility: visible;
+   }
+}
+
+.slideInAngle {
+   -webkit-animation: slideInAngle 800ms 200ms ease-in-out;
+   -moz-animation: slideInAngle 800ms 200ms ease-in-out;
+   -o-animation: slideInLAngle800ms 200ms ease-in-out;
+   animation: slideInAngle 800ms 200ms ease-in-out;
+   -webkit-animation-fill-mode: both;
+   -moz-animation-fill-mode: both;
+   -o-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInAngle {
+   from {
+      transform: translate3d(200%, 100%, 0) skewY(10deg);
+      visibility: hidden;
+   }
+   
+   to {
+      transform: translate3d(0, 0, 0) skewY(10deg);
+      transform-origin: 35%;
+      visibility: visible;
+   }
+}
+@-moz-keyframes slideInAngle {
+   from {
+      transform: translate3d(200%, 100%, 0) skewY(10deg);
+      visibility: hidden;
+   }
+   
+   to {
+      transform: translate3d(0, 0, 0) skewY(10deg);
+      transform-origin: 35%;
+      visibility: visible;
+   }
+}
+@-o-keyframes slideInAngle {
+   from {
+      transform: translate3d(200%, 100%, 0) skewY(10deg);
+      visibility: hidden;
+   }
+   
+   to {
+      transform: translate3d(0, 0, 0) skewY(10deg);
+      transform-origin: 35%;
+      visibility: visible;
+   }
+}
+@keyframes slideInAngle {
+   from {
+      transform: translate3d(200%, 100%, 0) skewY(10deg);
+      visibility: hidden;
+   }
+   
+   to {
+      transform: translate3d(0, 0, 0) skewY(10deg);
+      transform-origin: 35%;
       visibility: visible;
    }
 }

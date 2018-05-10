@@ -3,19 +3,10 @@
    width: 100vw;
    display: grid;
    grid-template-columns: 20% 20% 20% 20% 20%;
-   grid-template-rows: 12% 12% 52% 12% 12%;
-   background: #1C1B20;
+   grid-template-rows: 20% 1fr 350px 1fr 20%;
+   background: #FFF;
    z-index: 0;
    overflow: hidden;
-}
-
-#sidebar {
-   grid-column: 1 / 2;
-   grid-row: 1 / span 6;
-   background: #FFF;
-   transform: skewY(10deg);
-   transform-origin: 100%;
-   z-index: 0;
 }
 
 #main {
@@ -57,15 +48,10 @@
 #desc {
    padding-right: 2em;
    grid-column: 4 / 6;
-   grid-row: 1 / span 2;
-   align-self: end;
+   grid-row: 2 / span 2;
+   align-self: start;
+   text-align: right;
    z-index: 15;
    color: #616060;
    font-family: "Avenir";
-}
-
-#bottomcorner {
-   grid-column: 1 / 2;
-   grid-row: 6 / span 1;
-   background: #1C1B20;
 }

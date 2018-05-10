@@ -1,13 +1,17 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import styles from '../../css/dev/techdebate.module.css';
+import animateStyles from '../../css/animate.module.css';
 
 class TechDebate extends React.Component {
    render(){
+      const fadeIn = this.props.active ? animateStyles.fadeIn : "";
+      const slideInAngle= this.props.active ? animateStyles.slideInAngle : "";
+      
       return(
          <div id={styles.wrapper}>
             <div id={styles.main} />
-            <div id={styles.poly}>
+            <div id={styles.poly} className={slideInAngle}>
                <Img
                   title="Tech and Debate"
                   alt="Competitive Debate is beginning to make use of modern technology"
@@ -15,7 +19,6 @@ class TechDebate extends React.Component {
                   imgStyle={{maxHeight: "100%"}}
                />
             </div>
-            <div id={styles.sidebar} />
             <div id={styles.tech}>
                <svg viewBox="0 0 33 16" preserveAspectRatio="xMinYMin meet">
                   <text x="2" y="15" textAnchor="start" fill="#181840" >
@@ -30,13 +33,9 @@ class TechDebate extends React.Component {
                   </text>
                </svg>
             </div>
-            <div id={styles.img}>
-
+            <div id={styles.desc} className={fadeIn}>
+            I believe that tech, at its best, makes things faster, easier, and more efficient, and it’s been doing that in debate for some time, albeit slowly (ironically). Web apps are making it easier to run large tournaments (like those spread over multiple campuses, days and events) with a smaller staff making debate more accessible for students everywhere.
             </div>
-            <div id={styles.desc}>
-               Lorem ipsum dolor amet coloring book vape normcore pickled, green juice edison bulb mumblecore farm-to-table before they sold out meh chicharrones yuccie sartorial chambray paleo. Biodiesel chia craft beer, microdosing la croix poke yr shoreditch before they sold out. Flexitarian palo santo tumblr gluten-free, salvia ugh raclette woke chambray stumptown try-hard. 
-            </div>
-            <div id={styles.bottomcorner} />
          </div>
       )
    }
