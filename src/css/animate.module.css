@@ -55,10 +55,10 @@
 }
 
 .slideInRight {
-   -webkit-animation: slideInRight 800ms 200ms ease-in-out;
-   -moz-animation: slideInRight 800ms 200ms ease-in-out;
-   -o-animation: slideInRight 800ms 200ms ease-in-out;
-   animation: slideInRight 800ms 200ms ease-in-out;
+   -webkit-animation: slideInRight 500ms 200ms ease-in-out;
+   -moz-animation: slideInRight 500ms 200ms ease-in-out;
+   -o-animation: slideInRight 500ms 200ms ease-in-out;
+   animation: slideInRight 500ms 200ms ease-in-out;
    -webkit-animation-fill-mode: both;
    -moz-animation-fill-mode: both;
    -o-animation-fill-mode: both;
@@ -67,7 +67,7 @@
 
 @-webkit-keyframes slideInRight {
    from {
-      transform: translate3d(-200%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
       visibility: hidden;
    }
    
@@ -78,7 +78,7 @@
 }
 @-moz-keyframes slideInRight {
    from {
-      transform: translate3d(-200%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
       visibility: hidden;
    }
    
@@ -89,7 +89,7 @@
 }
 @-o-keyframes slideInRight {
    from {
-      transform: translate3d(-200%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
       visibility: hidden;
    }
    
@@ -100,7 +100,7 @@
 }
 @keyframes slideInRight {
    from {
-      transform: translate3d(-200%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
       visibility: hidden;
    }
    
@@ -111,10 +111,10 @@
 }
 
 .slideInLeft {
-   -webkit-animation: slideInLeft 800ms 200ms ease-in-out;
-   -moz-animation: slideInLeft 800ms 200ms ease-in-out;
-   -o-animation: slideInLeft 800ms 200ms ease-in-out;
-   animation: slideInLeft 800ms 200ms ease-in-out;
+   -webkit-animation: slideInLeft 500ms 200ms ease-in-out;
+   -moz-animation: slideInLeft 500ms 200ms ease-in-out;
+   -o-animation: slideInLeft 500ms 200ms ease-in-out;
+   animation: slideInLeft 500ms 200ms ease-in-out;
    -webkit-animation-fill-mode: both;
    -moz-animation-fill-mode: both;
    -o-animation-fill-mode: both;
@@ -123,7 +123,7 @@
 
 @-webkit-keyframes slideInLeft {
    from {
-      transform: translate3d(200%, 0, 0);
+      transform: translate3d(100%, 0, 0);
       visibility: hidden;
    }
    
@@ -134,7 +134,7 @@
 }
 @-moz-keyframes slideInLeft {
    from {
-      transform: translate3d(200%, 0, 0);
+      transform: translate3d(100%, 0, 0);
       visibility: hidden;
    }
    
@@ -145,7 +145,7 @@
 }
 @-o-keyframes slideInLeft {
    from {
-      transform: translate3d(200%, 0, 0);
+      transform: translate3d(100%, 0, 0);
       visibility: hidden;
    }
    
@@ -156,7 +156,7 @@
 }
 @keyframes slideInLeft {
    from {
-      transform: translate3d(200%, 0, 0);
+      transform: translate3d(100%, 0, 0);
       visibility: hidden;
    }
    
@@ -179,7 +179,7 @@
 
 @-webkit-keyframes slideInAngle {
    from {
-      transform: translate3d(200%, 100%, 0) skewY(10deg);
+      transform: translate3d(100%, 100%, 0) skewY(10deg);
       visibility: hidden;
    }
    
@@ -191,7 +191,7 @@
 }
 @-moz-keyframes slideInAngle {
    from {
-      transform: translate3d(200%, 100%, 0) skewY(10deg);
+      transform: translate3d(100%, 100%, 0) skewY(10deg);
       visibility: hidden;
    }
    
@@ -203,7 +203,7 @@
 }
 @-o-keyframes slideInAngle {
    from {
-      transform: translate3d(200%, 100%, 0) skewY(10deg);
+      transform: translate3d(100%, 100%, 0) skewY(10deg);
       visibility: hidden;
    }
    
@@ -215,7 +215,7 @@
 }
 @keyframes slideInAngle {
    from {
-      transform: translate3d(200%, 100%, 0) skewY(10deg);
+      transform: translate3d(100%, 100%, 0) skewY(10deg);
       visibility: hidden;
    }
    
