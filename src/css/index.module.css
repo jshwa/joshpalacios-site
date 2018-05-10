@@ -5,11 +5,12 @@
    height: 100vh;
    display: grid;
    grid-template-columns: repeat(10, 1fr);
-   grid-template-rows: minmax(60px, 30vh) max-content auto;
+   grid-template-rows: minmax(60px, 30vh) max-content 25%;
    overflow: hidden;
 }
 
 #debatenav {
+   height: 80%;
    grid-column: 1 / 5;
    grid-row: 1 / span 2;
    justify-self: end;
@@ -21,6 +22,7 @@
 }
 
 #devnav {
+   height: 80%;
    grid-column: 7 / 11;
    grid-row: 1 / span 2;
    justify-self: start;
@@ -58,7 +60,7 @@
    grid-column: 6 / 11;
    grid-row: 3 / span 1;
    align-self: end;
-   font-family: "HelveticaNeue", Helvetica;
+   font-family: "HelveticaNeue-CondensedBold", Helvetica;
    font-weight: bold;
 }
 
