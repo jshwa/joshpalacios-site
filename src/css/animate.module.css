@@ -1,0 +1,167 @@
+.fadeIn {
+   -webkit-animation: fadeIn 800ms 200ms ease-in-out;
+   -moz-animation: fadeIn 800ms 200ms ease-in-out;
+   -o-animation: fadeIn 800ms 200ms ease-in-out;
+   animation: fadeIn 800ms 200ms ease-in-out;
+   -webkit-animation-fill-mode: both;
+   -moz-animation-fill-mode: both;
+   -o-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+   from {
+      opacity: 0;
+      visibility: hidden;
+   }
+   
+   to {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+@-moz-keyframes fadeIn {
+   from {
+      opacity: 0;
+      visibility: hidden;
+   }
+   
+   to {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+@-o-keyframes fadeIn {
+   from {
+      opacity: 0;
+      visibility: hidden;
+   }
+   
+   to {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      visibility: hidden;
+   }
+   
+   to {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+
+.slideInRight {
+   -webkit-animation: slideInRight 800ms 200ms ease-in-out;
+   -moz-animation: slideInRight 800ms 200ms ease-in-out;
+   -o-animation: slideInRight 800ms 200ms ease-in-out;
+   animation: slideInRight 800ms 200ms ease-in-out;
+   -webkit-animation-fill-mode: both;
+   -moz-animation-fill-mode: both;
+   -o-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+.slideInLeft {
+   -webkit-animation: slideInLeft 800ms 200ms ease-in-out;
+   -moz-animation: slideInLeft 800ms 200ms ease-in-out;
+   -o-animation: slideInLeft 800ms 200ms ease-in-out;
+   animation: slideInLeft 800ms 200ms ease-in-out;
+   -webkit-animation-fill-mode: both;
+   -moz-animation-fill-mode: both;
+   -o-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInRight {
+   from {
+      transform: translate3d(-200%, 0, 0);
+      visibility: hidden;
+   }
+   
+   to {
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+   }
+}
+@-moz-keyframes slideInRight {
+   from {
+      transform: translate3d(-200%, 0, 0);
+      visibility: hidden;
+   }
+   
+   to {
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+   }
+}
+@-o-keyframes slideInRight {
+   from {
+      transform: translate3d(-200%, 0, 0);
+      visibility: hidden;
+   }
+   
+   to {
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+   }
+}
+@keyframes slideInRight {
+   from {
+      transform: translate3d(-200%, 0, 0);
+      visibility: hidden;
+   }
+   
+   to {
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+   }
+}
+
+@-webkit-keyframes slideInLeft {
+   from {
+      transform: translate3d(200%, 0, 0);
+      visibility: hidden;
+   }
+   
+   to {
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+   }
+}
+@-moz-keyframes slideInLeft {
+   from {
+      transform: translate3d(200%, 0, 0);
+      visibility: hidden;
+   }
+   
+   to {
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+   }
+}
+@-o-keyframes slideInLeft {
+   from {
+      transform: translate3d(200%, 0, 0);
+      visibility: hidden;
+   }
+   
+   to {
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+   }
+}
+@keyframes slideInLeft {
+   from {
+      transform: translate3d(200%, 0, 0);
+      visibility: hidden;
+   }
+   
+   to {
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+   }
+}
