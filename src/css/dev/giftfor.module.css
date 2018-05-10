@@ -5,7 +5,7 @@
    height: 100vh;
    display: grid;
    grid-template-columns: .5fr 1fr 2.5fr .5fr 4fr 1fr .5fr;
-   grid-template-rows: .5fr .5fr 2.5fr .5fr .5fr;
+   grid-template-rows: 20% 1fr max-content 1fr 20%;
 }
 
 #desc {
@@ -36,6 +36,7 @@
 }
 
 #blurb {
+   margin: .5em 0 .25em;
    order: 3;
    font-family: "Avenir-Roman", helvetica;
    color: #FFF;
@@ -67,7 +68,7 @@
    text-align: center;
    border: 1px solid white;
    padding: 0 1em;
-   margin: 0 .25em;
+   margin: .25em .25em;
 }
 
 .blank {

@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import styles from '../../css/dev/incoming.module.css';
+import animateStyles from '../../css/animate.module.css';
 
 class Incoming extends React.Component {
    constructor(props){
@@ -23,9 +24,12 @@ class Incoming extends React.Component {
    }
 
    render(){
+      const slideInLeft = this.props.active ? animateStyles.slideInLeft : "";
+      const fadeIn = this.props.active ? animateStyles.fadeIn : "";
+
       return(
          <div id={styles.wrapper}>
-            <div id={styles.desc}>
+            <div id={styles.desc} className={fadeIn}>
                <div id={styles.title}>
                   <svg viewBox="0 0 80 16"  preserveAspectRatio="xMidYMid meet">
                      <text x="42" y="12" textAnchor="middle" fill="white" >
@@ -45,18 +49,20 @@ class Incoming extends React.Component {
                   <span className={styles.skillBox}>Ruby</span>
                   <span className={styles.skillBox}>BCrypt</span>
                </div>
-               <div id={styles.skills2}>
-                  <span className={styles.skillBox}>HTML</span>
-                  <span className={styles.skillBox}>CSS</span>
-                  <span className={`${styles.skillBox} ${styles.blank}`}></span>
-                  <span className={`${styles.skillBox} ${styles.blank}`}></span>
-               </div>
             </div>
-            <div id={styles.img}>
-               {this.props.incoming}
+            <div id={styles.img} className={slideInLeft}>
+               <Img
+                  title="Incoming App"
+                  alt="Incoming App: A tracking system for your packages"
+                  sizes={this.props.incoming.sizes}
+               />
             </div>
-            <div id={styles.overlay} onClick={this.vidOn}>
-               {this.props.incomingoverlay}
+            <div id={styles.overlay} className={slideInLeft} onClick={this.vidOn}>
+               <Img
+                  title="Watch the Incoming App Demo"
+                  alt="Play the Incoming App demo on YouTube"
+                  sizes={this.props.incomingoverlay.sizes}
+               />
             </div>
             { this.state.play &&
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}

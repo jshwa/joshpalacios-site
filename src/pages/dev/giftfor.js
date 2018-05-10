@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import styles from '../../css/dev/giftfor.module.css';
+import animateStyles from '../../css/animate.module.css';
 
 class Giftfor extends React.Component {
    constructor(props){
@@ -23,9 +24,12 @@ class Giftfor extends React.Component {
    }
 
    render(){
+      const slideInLeft = this.props.active ? animateStyles.slideInLeft : "";
+      const fadeIn = this.props.active ? animateStyles.fadeIn : "";
+
       return(
          <div id={styles.wrapper}>
-            <div id={styles.desc}>
+            <div id={styles.desc} className={fadeIn}>
                <div id={styles.title}>
                   <svg viewBox="0 0 80 16"  preserveAspectRatio="xMidYMid meet">
                      <text x="39" y="15" textAnchor="middle" fill="white" >
@@ -52,11 +56,19 @@ class Giftfor extends React.Component {
                   <span className={`${styles.skillBox} ${styles.blank}`}></span>
                </div>
             </div>
-            <div id={styles.img}>
-               {this.props.giftfor}
+            <div id={styles.img} className={fadeIn}>
+               <Img
+                  title="GiftFor App"
+                  alt="The GiftFor App: Crowd-sourced gift guides"
+                  sizes={this.props.giftfor.sizes}
+               />
             </div>
             <div id={styles.overlay} onClick={this.vidOn}>
-               {this.props.giftforoverlay}
+               <Img
+                  title="Watch the Demo"
+                  alt="Play the Demo on YouTube"
+                  sizes={this.props.giftforoverlay.sizes}
+               />
             </div>
             { this.state.play &&
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}
