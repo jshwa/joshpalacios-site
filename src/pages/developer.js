@@ -32,6 +32,14 @@ class Developer extends React.Component {
          arrowNavigation:      true,
          scrollCallback: (states) => this.setState({current: states.activeSection})
          };
+      
+      const aboutActive = this.state.current === 0 ? true : false;
+      const tellmeActive = this.state.current === 1 ? true : false;
+      const giftforActive = this.state.current === 2 ? true : false;
+      const incomingActive = this.state.current === 3 ? true : false;
+      const techdebateActive = this.state.current === 4 ? true : false;
+      const blogActive = this.state.current === 5 ? true : false;
+      const contactActive = this.state.current === 6 ? true : false;
 
       return (
          <div>
@@ -40,38 +48,50 @@ class Developer extends React.Component {
             </div>
             <SectionsContainer  class="container" {...options} activeSection={current}>
                <Section>
-                  <About 
+                  <About
+                     active={aboutActive} 
                      josh={this.props.data.joshp}
                   />
                </Section>
                <Section>
                   <TellMe 
-                     tellme={<Img sizes={this.props.data.tellme.sizes} />}
-                     tellmeoverlay={<Img sizes={this.props.data.tellmeoverlay.sizes} />}
+                     active={tellmeActive}
+                     tellme={this.props.data.tellme}
+                     tellmeoverlay={this.props.data.tellmeoverlay}
                      />
                </Section>
                <Section>
                   <GiftFor 
-                     giftfor={<Img sizes={this.props.data.giftfor.sizes} />}
-                     giftforoverlay={<Img sizes={this.props.data.giftforoverlay.sizes} />}
+                     active={giftforActive}
+                     giftfor={this.props.data.giftfor}
+                     giftforoverlay={this.props.data.giftforoverlay}
                   />
                </Section>
                <Section>
                   <Incoming 
-                     incoming={<Img sizes={this.props.data.incoming.sizes} />}
-                     incomingoverlay={<Img sizes={this.props.data.incomingoverlay.sizes} />}
+                     active={incomingActive}
+                     incoming={this.props.data.incoming}
+                     incomingoverlay={this.props.data.incomingoverlay}
                   />
                </Section>
                <Section>
                   <TechDebate 
+                     active={techdebateActive}
                      debatetech={this.props.data.debatetech}
                   />
                </Section>
                <Section>
-                  <Blog />
+                  <Blog 
+                     active={blogActive}
+                     gilbertson={this.props.data.gilbertson}
+                     urban={this.props.data.urban}
+                     pudding={this.props.data.pudding}
+                  />
                </Section>
                <Section>
-                  <DevContact />
+                  <DevContact 
+                     active={contactActive}
+                  />
                </Section>
             </SectionsContainer>
          </div>
@@ -119,6 +139,21 @@ export const query = graphql`
       }
     }
     debatetech: imageSharp(id: { regex: "/debatetech.png/"}) {
+      sizes(maxWidth: 1080) {
+         ...GatsbyImageSharpSizes_noBase64
+      }
+    }
+    gilbertson: imageSharp(id: { regex: "/gilbertson.png/"}) {
+      sizes(maxWidth: 1080) {
+         ...GatsbyImageSharpSizes_noBase64
+      }
+    }
+    urban: imageSharp(id: { regex: "/urban.png/"}) {
+      sizes(maxWidth: 1080) {
+         ...GatsbyImageSharpSizes_noBase64
+      }
+    }
+    pudding: imageSharp(id: { regex: "/pudding.png/"}) {
       sizes(maxWidth: 1080) {
          ...GatsbyImageSharpSizes_noBase64
       }
