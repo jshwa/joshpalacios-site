@@ -18,7 +18,7 @@ export class DebateNav extends React.Component {
                         attributeName="visibility" 
                         from="hidden" 
                         to="visible" 
-                        dur=".01s" 
+                        dur="1ms" 
                         begin="0s" 
                         fill="freeze"
                         ref="visible" />
@@ -40,7 +40,7 @@ export class DebateNav extends React.Component {
                            attributeName="visibility" 
                            from="hidden" 
                            to="visible" 
-                           dur=".1s" 
+                           dur="1ms" 
                            begin="visiblef1.end" 
                            fill="freeze"/>
                         <animateTransform 
@@ -61,7 +61,7 @@ export class DebateNav extends React.Component {
                            attributeName="visibility" 
                            from="hidden" 
                            to="visible" 
-                           dur=".1s" 
+                           dur="1ms" 
                            begin="visiblef1.end" 
                            fill="freeze"/>
                         <animateTransform 
@@ -82,7 +82,7 @@ export class DebateNav extends React.Component {
                            attributeName="visibility" 
                            from="hidden" 
                            to="visible" 
-                           dur=".1s" 
+                           dur="1ms" 
                            begin="visiblef1.end" 
                            fill="freeze"/>
                         <animateTransform 
@@ -103,7 +103,7 @@ export class DebateNav extends React.Component {
                            attributeName="visibility" 
                            from="hidden" 
                            to="visible" 
-                           dur=".1s" 
+                           dur="1ms" 
                            begin="visiblef1.end" 
                            fill="freeze"/>
                         <animateTransform 
@@ -139,7 +139,7 @@ export class DevNav extends React.Component {
                         attributeName="visibility" 
                         from="hidden" 
                         to="visible" 
-                        dur=".01s" 
+                        dur="1ms" 
                         begin="0s" 
                         fill="freeze"
                         ref="visible"/>
@@ -161,7 +161,7 @@ export class DevNav extends React.Component {
                         attributeName="visibility" 
                         from="hidden" 
                         to="visible" 
-                        dur=".1s" 
+                        dur="1ms" 
                         begin="visible.end" 
                         fill="freeze"/>
                      <animateTransform 
@@ -182,7 +182,7 @@ export class DevNav extends React.Component {
                         attributeName="visibility" 
                         from="hidden" 
                         to="visible" 
-                        dur=".1s" 
+                        dur="1ms" 
                         begin="visible.end" 
                         fill="freeze"/>                
                      <animateTransform 
@@ -203,7 +203,7 @@ export class DevNav extends React.Component {
                         attributeName="visibility" 
                         from="hidden" 
                         to="visible" 
-                        dur=".1s" 
+                        dur="1ms" 
                         begin="visible.end" 
                         fill="freeze"/>
                      <animateTransform 
@@ -224,7 +224,7 @@ export class DevNav extends React.Component {
                         attributeName="visibility" 
                         from="hidden" 
                         to="visible" 
-                        dur=".1s" 
+                        dur="1ms" 
                         begin="visible.end" 
                         fill="freeze"/>               
                      <animateTransform 
