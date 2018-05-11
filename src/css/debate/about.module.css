@@ -2,7 +2,7 @@
    height: 100vh;
    display: grid;
    grid-template-rows: 60% 40%;
-   grid-template-columns: 1fr;
+   grid-template-columns: 100%;
    justify-items: center;
    overflow: hidden;
    z-index: -1;
@@ -46,4 +46,34 @@
    grid-column: 1 / 2;
    align-self: start;
    z-index: 1;
+}
+
+@media only screen and (max-width: 1050px) {
+
+   #wrapper {
+      grid-template-rows: 40% 60%;
+   }
+
+   #bgimg {
+      grid-row: 1 / span 2;
+      opacity: 0.3;
+   }
+
+   .gatsby-image-wrapper {
+      height: 100%;
+   }
+
+   .firstname {
+      font-size: 62px;
+   }
+
+   .lastname {
+      font-size: 62px;
+   }
+
+   #desc {
+      margin: 0 3em;
+      font-size: 18px;
+      align-self: center;
+   }
 }
