@@ -44,3 +44,17 @@
    align-self: end;
 }
 
+@media only screen and (max-width: 1050px) {
+   #wrapper {
+      grid-template-columns: 1fr 50% 1fr;
+      grid-template-rows: 15% 70% 15%;
+   }
+
+   #button {
+      grid-row: 2 / span 1;
+   }
+
+   #contact {
+      grid-row: 3 / span 1;
+   }
+}

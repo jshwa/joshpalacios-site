@@ -4,7 +4,7 @@
    width: 100vw;
    height: 100vh;
    display: grid;
-   grid-template-columns: .5fr 1fr 2.5fr .5fr 4fr 1fr .5fr;
+   grid-template-columns: .5fr 1fr 25% .5fr 40% 1fr .5fr;
    grid-template-rows: 20% 1fr max-content 1fr 20%;
    overflow:hidden;
 }
@@ -152,3 +152,40 @@
    width: 100%; 
    height: 100%; 
    }
+
+@media only screen and (max-width: 1050px) {
+   #wrapper {
+      grid-template-columns: 5% 30% 60% 5%;
+      grid-template-rows: 50% 50%;
+   }
+
+   #desc {
+      grid-column: 2 / 4;
+      grid-row: 1 / span 2;
+   }
+
+   .skillBox {
+      display: block;
+      margin: 1em;
+   }
+
+   #skills1 {
+      margin: 0;
+      padding:0;
+   }
+   
+   #skills2 {
+      margin-top: -2em;
+   }
+
+   #img { 
+      grid-column: 3 / 4;
+      grid-row: 2 / span 1;
+      align-self: start;
+   }
+
+   #strip {
+      grid-column: 1 / 5;
+      grid-row: 1 / span 5;
+   }
+}

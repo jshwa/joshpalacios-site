@@ -9,11 +9,6 @@
    overflow: hidden;
 }
 
-#main {
-   grid-column: 2 / 6;
-   grid-row: 1 / span 6;
-   background: #FFF;
-}
 
 #poly {
    grid-column: 2 / 6;
@@ -54,4 +49,53 @@
    z-index: 15;
    color: #616060;
    font-family: "Avenir";
+}
+
+#techdebate {
+   display: none;
+}
+
+@media only screen and (max-width: 1050px) {
+
+   #wrapper {
+      background: #181840;
+      grid-template-rows: 30% 1fr 30% 1fr 20%;
+   }
+
+   #poly {
+      grid-column: 1 / 6;
+      grid-row: 1 / span 2;
+      transform: skewY(0deg);
+      transform-origin: 0%;
+      align-self: end;
+   }
+
+   #desc {
+      padding: 10px;
+      grid-column: 1 / 6;
+      grid-row: 3 / span 1;
+      color: white;
+      align-self: end;
+      text-align: center;
+   }
+   
+   #poly img {
+      transform: skewY(0deg) translateY(0%);
+   }
+
+   #debate {
+      display: none;
+   }
+   
+   #tech {
+      display: none;
+   }
+
+   #techdebate {
+      display: block;
+      grid-column: 2 / 6;
+      grid-row: 5 / span 1;
+      align-self: end;
+      font-family: "HelveticaNeue-CondensedBold";
+   }
 }
