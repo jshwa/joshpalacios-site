@@ -43,6 +43,7 @@ class Contention1 extends React.Component {
                   title="Contention 1 Podcast"
                   alt="Listen to the Contention 1 Podcast on iTunes"
                   sizes={this.props.c1.sizes}
+                  imgStyle={{objectFit: "contain"}}
                />
             </div>
             <div id={styles.overlay} onClick={this.vidOn}>
