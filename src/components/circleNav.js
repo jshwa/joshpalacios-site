@@ -130,7 +130,7 @@ export class DevNav extends React.Component {
    render () {
       return (
          <div id={this.props.id}>
-            <svg width="100%" height="100%" viewBox="0 0 300 450" preserveAspectRatio="xMinYMin meet">
+            <svg width="100%" height="100%" viewBox="0 0 300 450" preserveAspectRatio="xMidYMid meet">
                <a xlinkHref="/developer#about">
                   <text x="75" y="225" transform="rotate(-30 -225,225)" textAnchor="start" fill="black">
                      About
