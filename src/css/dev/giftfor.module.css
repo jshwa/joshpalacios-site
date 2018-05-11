@@ -207,6 +207,10 @@
       grid-column: 2 / 4;
       grid-row: 2 / span 2; 
       z-index: 4;
-      align-self: center;
+      text-align: center;
+   }
+
+   #projectNo {
+      display: none;
    }
 }
