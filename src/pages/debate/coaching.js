@@ -62,6 +62,7 @@ class Coaching extends React.Component {
                   title="Compete in Tournaments"
                   alt="Winning Competitions"
                   sizes={this.props.compete.sizes}
+                  imgStyle={{ObjectPosition: "80% 50%"}}
                />
             </div>
             <div id={styles.background} />
