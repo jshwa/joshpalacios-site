@@ -8,10 +8,6 @@ class Coaching extends React.Component {
       super(props);
    };
 
-   componentDidMount() {
-      console.log("mounted")
-   }
-
    render(){
       const active1 = this.props.active ? styles.active1 : ""
       const active2 = this.props.active ? styles.active2 : ""
