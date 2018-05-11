@@ -3,7 +3,7 @@
    width: 100vw;
    display: grid;
    grid-template-columns: 20% 20% 20% 20% 20%;
-   grid-template-rows: 20% 1fr 350px 1fr 20%;
+   grid-template-rows: 10% 1fr 350px 1fr 10%;
    background: #FFF;
    z-index: 0;
    overflow: hidden;

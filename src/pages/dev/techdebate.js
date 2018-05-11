@@ -16,7 +16,6 @@ class TechDebate extends React.Component {
                   title="Tech and Debate"
                   alt="Competitive Debate is beginning to make use of modern technology"
                   sizes={this.props.debatetech.sizes}
-                  imgStyle={{maxHeight: "100%"}}
                />
             </div>
             <div id={styles.tech}>
