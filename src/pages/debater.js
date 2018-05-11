@@ -28,7 +28,7 @@ class Debater extends React.Component {
          anchors:              ['about', 'coaching', 'contention1', 'speaking', 'contact'],
          scrollBar:            false,
          navigation:           true,
-         verticalAlign:        true,
+         verticalAlign:        false,
          sectionPaddingTop:    '0px',
          sectionPaddingBottom: '0px',
          arrowNavigation:      true,
