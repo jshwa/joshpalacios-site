@@ -81,7 +81,7 @@ class Tellme extends React.Component {
                      src="https://www.youtube.com/embed/kWSCOafIWJs?rel=0&amp;showinfo=0&amp;autoplay=1" 
                      frameBorder="0" 
                      allow="autoplay; encrypted-media" 
-                     allowfullscreen />
+                     allowFullScreen />
                </div>
             </div>}
             <div id={styles.strip} />
