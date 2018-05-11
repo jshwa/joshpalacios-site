@@ -44,7 +44,7 @@
    align-self: end;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1050px) and (orientation: portrait) {
    #wrapper {
       grid-template-columns: 1fr 50% 1fr;
       grid-template-rows: 15% 70% 15%;

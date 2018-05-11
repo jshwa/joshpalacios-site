@@ -150,7 +150,7 @@
    height: 100%; 
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1050px) and (orientation: portrait){
    #wrapper {
       grid-template-columns: 5% 30% 60% 5%;
       grid-template-rows: 10% 40% 40% 10%;

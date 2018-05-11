@@ -55,7 +55,7 @@
    display: none;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1050px) and (orientation: portrait){
 
    #wrapper {
       background: #181840;

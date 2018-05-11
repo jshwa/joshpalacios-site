@@ -2,7 +2,7 @@
    height: 100vh;
    display: grid;
    grid-template-columns: 13% 17% 10% 50% 10%;
-   grid-template-rows: 33% 33% 1fr;
+   grid-template-rows: 33% 33% 34%;
    overflow: hidden;
    align-items: center;
 }
@@ -247,7 +247,7 @@
    }
  }
  
- @media only screen and (max-width: 1050px) {
+ @media only screen and (max-width: 1050px) and (orientation: portrait) {
    #wrapper {
       grid-template-columns: 10% 50% 5% 30% 5%;
       grid-template-rows: 33% 33% 34%;

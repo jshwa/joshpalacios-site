@@ -2,7 +2,7 @@
    height: 100vh;
    display: grid;
    grid-template-columns: 33% 1fr 33% 1fr;
-   grid-template-rows: 33% 33% 1fr;
+   grid-template-rows: 33% 33% 34%;
    overflow: hidden;
 }
 
@@ -59,7 +59,7 @@
    left: -4px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (orientation: portrait) {
    #wrapper {
       grid-template-columns: 25% 25% 25% 25%;
       grid-template-rows: 25% 25% 25% 25%;
