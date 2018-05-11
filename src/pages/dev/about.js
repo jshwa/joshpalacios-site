@@ -35,8 +35,8 @@ class About extends React.Component {
                </svg>
             </div>
             <div id={styles.name}>
-               <svg viewBox="0 0 115 16" preserveAspectRatio="xMinYMin meet">
-                  <text x="115" y="15" textAnchor="end" fill="#000" opacity=".1" >
+               <svg viewBox="0 0 100 16" preserveAspectRatio="xMinYMin meet">
+                  <text x="100" y="15" textAnchor="end" fill="#000" opacity=".2" >
                      <tspan style={{fontFamily: "HelveticaNeue-Light"}}>Josh</tspan>
                      <tspan style={{fontFamily: "HelveticaNeue", fontWeight:"bold"}}>Palacios</tspan>
                   </text>

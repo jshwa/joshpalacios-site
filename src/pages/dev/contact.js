@@ -9,8 +9,8 @@ class DevContact extends React.Component {
       return(
          <div id={styles.wrapper}>          
             <div id={styles.contact}>
-               <svg viewBox="0 0 80 16" preserveAspectRatio="xMinYMin meet">
-                  <text x="80" y="15" textAnchor="end" fill="#121212">
+               <svg viewBox="0 0 62 16" preserveAspectRatio="xMinYMin meet">
+                  <text x="62" y="15" textAnchor="end" fill="#121212">
                     Contact
                   </text>
                </svg>
