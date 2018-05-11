@@ -43,6 +43,7 @@
 .blogTitle a {
    text-decoration: none;
    color: black;
+   font-size: 18px;
 }
 
 .blogSource {
@@ -88,7 +89,7 @@
 
 @media only screen and (max-width: 1050px) {
    #wrapper {
-      grid-template-columns: 28% 2% 55% 15%;
+      grid-template-columns: 30% 10% 45% 15%;
       grid-template-rows: 10% 23% 23% 23% 21%;
    }
 
@@ -97,6 +98,7 @@
       grid-row: 5 / span 1;
       text-align: right;
       align-self: end;
+      max-height: 100%;
    }
 
    #subtitle {
