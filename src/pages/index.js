@@ -39,24 +39,25 @@ class IndexPage extends React.Component {
 
   render() {
      const { active } = this.state;
+     const debateImgClass = active === '' ? '' : styles.slideRight;
 
      return (
          <div className={styles.wrapper} onWheel={this.handleWheel}>
-            { this.state.active === "Debater" && <DebateNav id={styles.debatenav} /> }
-            { this.state.active === 'Developer' && <DevNav id={styles.devnav} /> }
+            { active === "Debater" && <DebateNav id={styles.debatenav} /> }
+            { active === 'Developer' && <DevNav id={styles.devnav} /> }
             <div id={styles.debate} onMouseOver={this.mouseOverDebate} />
             <div id={styles.dev} onMouseOver={this.mouseOverDev} />
             <div id={styles.title}>
-               <svg viewBox="0 0 80 20"  preserveAspectRatio="xMinYMin meet">
-                  <text x="80" y="15" textAnchor="end">
-                  {this.state.active}
+               <svg viewBox="0 0 65 20" preserveAspectRatio="xMinYMin meet">
+                  <text x="65" y="15" textAnchor="end">
+                  {active}
                   </text>
                </svg>
             </div>
-            { this.state.active === "Debater" && <DebateDesc id={styles.debateDesc} /> }
-            { this.state.active === "Developer" && <DevDesc id={styles.devDesc} /> }
+            { active === "Debater" && <DebateDesc id={styles.debateDesc} /> }
+            { active === "Developer" && <DevDesc id={styles.devDesc} /> }
             <div id={styles.img}>
-               { this.state.active === 'Developer' ? <Img sizes={this.props.data.joshFlipped.sizes} /> : <Img sizes={this.props.data.josh.sizes} /> }
+               { active === 'Developer' ? <Img sizes={this.props.data.joshFlipped.sizes} className={styles.slideLeft}/> : <Img sizes={this.props.data.josh.sizes} className={debateImgClass}/> }
             </div>
          </div>
       )
