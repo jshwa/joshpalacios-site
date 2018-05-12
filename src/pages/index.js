@@ -4,7 +4,6 @@ import Img from 'gatsby-image';
 import styles from '../css/index.module.css';
 import '../css/index.css';
 import { DebateNav, DevNav } from '../components/circleNav';
-import { DebateBackground, DevBackground } from '../components/indexBackground';
 import { DebateDesc, DevDesc } from '../components/indexDesc';
 import Debater from './debater';
 import Developer from './developer';

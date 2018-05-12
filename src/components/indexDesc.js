@@ -11,7 +11,7 @@ export const DebateDesc = props => {
 export const DevDesc = props => {
    return (
      <div id={props.id}>
-      I create engaging, useful and exciting applications for the web. And I love using my skills as force-multiplier in projects like debate.     
-     </div>
+      I build user-centric, performant web applications with JavaScript and Ruby. I love bringing my skills to bear on projects that change the way people interact with technology.     
+      </div>
    )
 }

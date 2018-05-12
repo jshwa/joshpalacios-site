@@ -104,3 +104,32 @@
       font-size: 18px;
    }
 }
+
+@media only screen and (max-width: 920px) and (orientation: landscape) {
+   #title {
+      opacity: 0.4;
+   }
+
+   #blurb {
+      grid-row: 1 / span 2;
+      padding: 1em;
+   }
+
+   #button a {
+      padding: 1em;
+      font-size: 18px;
+   }
+}
+
+@media only screen and (max-width: 580px) and (orientation: landscape) {
+   #blurb {
+      grid-row: 1 / span 3;
+      padding: 1em;
+   }
+
+   #button a {
+      padding: 1em;
+      font-size: 16px;
+   }
+
+}

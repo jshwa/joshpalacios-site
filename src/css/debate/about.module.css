@@ -77,3 +77,36 @@
       align-self: center;
    }
 }
+
+@media only screen and (max-width: 920px) and (orientation: landscape) {
+   
+   #headshot {
+      width: 150px;
+   }
+   
+   .firstname,
+   .lastname {
+      font-size: 75px;
+   }
+   
+   #desc {
+      font-size: 18px;
+   }
+}
+
+@media only screen and (max-width: 580px) and (orientation: landscape) {
+
+   #headshot {
+      width: 110px;
+   }
+
+   .firstname,
+   .lastname {
+      font-size: 50px;
+   }
+
+   #desc {
+      font-size: 14px;
+   }
+
+}
