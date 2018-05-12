@@ -99,3 +99,25 @@
       font-family: "HelveticaNeue-CondensedBold";
    }
 }
+
+@media only screen and (max-width: 920px) and (orientation: landscape) {
+   #wrapper {
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-rows: 5% 5% 55% 1fr 15%;
+   }
+
+   #desc {
+      grid-column: 1 / 4;
+      grid-row: 3 / span 3;
+      align-self: end;
+      font-size: 14px;
+      padding: 1em;
+      text-align: center;
+   }
+}
+
+@media only screen and (max-width: 580px) and (orientation: landscape) {
+   #desc {
+      font-size: 12px;
+   }
+}

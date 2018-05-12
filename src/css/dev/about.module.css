@@ -8,7 +8,7 @@
    overflow: hidden;
    display: grid;
    grid-template-columns: 10% 40% 10% 40%;
-   grid-template-rows: 20% 1fr max-content 1fr 20%;
+   grid-template-rows: 1fr 1fr max-content 1fr 1fr;
 }
 
 #texas {
@@ -136,5 +136,38 @@
    #strip {
       grid-column: 1 / 5;
       grid-row: 1 / span 5;
+   }
+}
+
+@media only screen and (max-width: 920px) and (orientation: landscape) {
+   #wrapper {
+      grid-template-columns: 10% 40% 10% 40%;
+      grid-template-rows: 5% 1fr 80% 1fr 5%;
+   }
+
+   #title {
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 2;
+      align-self: start;
+   }
+
+   #img { 
+      transform: translateX(15%);
+   }
+
+   #about {
+      grid-column: 1 / 4;
+      z-index: 2; 
+   }
+
+   #strip {
+      grid-column: 1 / 5;
+      grid-row: 1 / span 5;
+   }
+}
+
+@media only screen and (max-width: 580px) and (orientation: landscape) {
+   #about {
+      font-size: 14px;
    }
 }

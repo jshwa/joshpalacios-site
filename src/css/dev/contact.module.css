@@ -52,9 +52,42 @@
 
    #button {
       grid-row: 2 / span 1;
+      top: -4px;
+      left: -4px;
+      box-shadow: 2px 2px white, 4px 4px black;
    }
 
    #contact {
       grid-row: 3 / span 1;
    }
 }
+
+@media only screen and (max-width: 920px) and (orientation: landscape) {
+   #wrapper {
+      grid-template-columns: 1fr 30% 1fr;
+      grid-template-rows: 13% 70% 17%;
+   }
+
+   #button {
+      grid-row: 2 / span 1;
+      top: -4px;
+      left: -4px;
+      box-shadow: 2px 2px white, 4px 4px black;
+   }
+
+   #contact {
+      grid-row: 3 / span 1;
+   }
+ }
+ 
+ @media only screen and (max-width: 580px) and (orientation: landscape) {
+   #wrapper {
+      grid-template-columns: 1fr 35% 1fr;
+      grid-template-rows: 13% 70% 17%;
+   }
+
+   #button {
+      padding: 1em .75em;
+      font-size: 20px;
+   }
+ }
