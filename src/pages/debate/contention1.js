@@ -44,6 +44,8 @@ class Contention1 extends React.Component {
                   alt="Listen to the Contention 1 Podcast on iTunes"
                   sizes={this.props.c1.sizes}
                   imgStyle={{objectFit: "contain"}}
+                  outerWrapperClassName={styles.imageWrapper}
+                  className={styles.imageWrapper}
                />
             </div>
             <div id={styles.overlay} onClick={this.vidOn}>

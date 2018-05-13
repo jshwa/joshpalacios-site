@@ -13,6 +13,7 @@ class DebateAbout extends React.Component {
                   title="Shanghai"
                   alt="The Three Sisters of Shanghai"
                   sizes={this.props.shanghai.sizes}
+                  className={styles.imageWrapper}
                />
             </div>
             <div id={styles.name}>

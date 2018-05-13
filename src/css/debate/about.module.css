@@ -55,12 +55,9 @@
    }
 
    #bgimg {
+      width: 100%;
       grid-row: 1 / span 2;
       opacity: 0.3;
-   }
-
-   .gatsby-image-wrapper {
-      height: 100%;
    }
 
    .firstname {
@@ -75,6 +72,10 @@
       margin: 0 3em;
       font-size: 18px;
       align-self: center;
+   }
+
+   .imageWrapper {
+      height: 100vh;
    }
 }
 

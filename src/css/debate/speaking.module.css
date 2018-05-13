@@ -59,7 +59,7 @@
    left: -4px;
 }
 
-@media screen and (orientation: portrait) and (orientation: portrait) {
+@media screen and (max-width: 1050px) and (orientation: portrait) {
    #wrapper {
       grid-template-columns: 25% 25% 25% 25%;
       grid-template-rows: 25% 25% 25% 25%;

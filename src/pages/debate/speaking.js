@@ -25,7 +25,7 @@ class Speaking extends React.Component {
                   title="Josh Speaking at a Tournament"
                   alt="Delivering the Opening at the Shanghai Regional"
                   sizes={this.props.onStage.sizes}
-                  imgStyle={{height: '100vh'}} 
+                  style={{height: '100vh'}} 
                />
             </div>
             <div id={styles.button} className={fadeIn}>
