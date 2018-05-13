@@ -1,13 +1,15 @@
 @font-face {
    font-family: 'HelveticaNeue-CondensedBold';
    src:  url('../fonts/HelveticaNeue-CondensedBold.woff2') format('woff2'),
-         url('../fonts/HelveticaNeue-CondensedBold.woff') format('woff');
+         url('../fonts/HelveticaNeue-CondensedBold.woff') format('woff'),
+         url('../fonts/HelveticaNeue-CondensedBold.ttf') format('truetype');
  }
 
 @font-face {
    font-family: "Avenir";
    src:  url('../fonts/Avenir.woff2') format('woff2'),
-         url('../fonts/Avenir.woff') format('woff');
+         url('../fonts/Avenir.woff') format('woff'),
+         url('../fonts/Avenir.ttf') format('truetype');
  }
 
 html, body {
