@@ -2,12 +2,14 @@ import React from 'react';
 import Link, { navigateTo } from 'gatsby-link';
 import Img from 'gatsby-image';
 import Helmet from 'react-helmet';
+import Josh from '../img/JoshLogoCircle.png'
 import styles from '../css/index.module.css';
 import '../css/index.css';
 import { DebateNav, DevNav } from '../components/circleNav';
 import { DebateDesc, DevDesc } from '../components/indexDesc';
 import Debater from './debater';
 import Developer from './developer';
+import faviconApple from '../img/favicons/apple-touch-icon.png'
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -40,12 +42,16 @@ class IndexPage extends React.Component {
   render() {
      const { active } = this.state;
      const debateImgClass = active === '' ? '' : styles.slideRight;
-
+     const image = `https://joshpalacios.com${Josh}`
      return (
          <div className={styles.wrapper} onWheel={this.handleWheel}>
             <Helmet defaultTitle={`Josh Palacios | Full Stack Web Developer & Debate Coach`}>
                <meta name="og:site_name" content="Josh Palacios" />
                <meta name="description" content="Josh Palacios is a Full Stack Web Developer and Debate Coach based in Houston, Texas" />
+               <meta property="og:title" content="Josh Palacios" />
+               <meta property="og:image" content={image}/>
+               <meta property="og:description" content="Josh Palacios is a Full Stack Web Developer and Debate Coach based in Houston, Texas" />
+               <meta property="og:url" content="https://joshpalacios.com" />
                <link
                   rel="canonical"
                   href={`https://joshpalacios.com`}
