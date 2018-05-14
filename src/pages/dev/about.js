@@ -53,11 +53,11 @@ class About extends React.Component {
                I’m a newly established resident of the great city of Houston, and a recent graduate of the Flatiron School. Over 15 years ago I learned HTML and CSS to create my own websites (I must have made a new geocities site every week). The web was fascinating to me then, but today it's mind-blowing. I’m currently enjoying React and it’s many off-shoots, like Preact and (with this site) GatsbyJS for front-end development, and I still like the convention over configuration approach of Ruby on Rails, and the super-friendly syntax of Ruby for back-end.
             </div>
             <div id={styles.img} className={fadeIn}>
-               <Img
+               {this.props.josh && <Img
                   title="Josh Palacios"
                   alt="Josh Palacios"
                   sizes={this.props.josh.sizes}
-               />
+               />}
             </div>
             <div id={styles.strip} />
          </div>

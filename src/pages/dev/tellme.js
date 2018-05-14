@@ -59,18 +59,18 @@ class Tellme extends React.Component {
                </div>
             </div>
             <div id={styles.img} className={slideInLeft}>
-               <Img
+               {this.props.tellme && <Img
                   title="Tell Me About It App"
                   alt="Tell Me About It App"
                   sizes={this.props.tellme.sizes}
-               />
+               />}
             </div>
             <div id={styles.overlay} className={slideInLeft} onClick={this.vidOn}>
-               <Img
+               {this.props.tellmeoverlay && <Img
                   title="Watch the Demo"
                   alt="Demo of Tell Me About It App"
                   sizes={this.props.tellmeoverlay.sizes}
-               />
+               />}
             </div>
             { this.state.play &&
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}

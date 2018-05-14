@@ -9,20 +9,20 @@ class DebateAbout extends React.Component {
       return (
          <div id={styles.wrapper}>
             <div id={styles.bgimg}>
-               <Img
+               {this.props.shanghai && <Img
                   title="Shanghai"
                   alt="The Three Sisters of Shanghai"
                   sizes={this.props.shanghai.sizes}
                   className={styles.imageWrapper}
-               />
+               />}
             </div>
             <div id={styles.name}>
                <div id={styles.headshot} className={fadeIn}>
-                  <Img
+                  {this.props.joshcircle && <Img
                      title="Josh Palacios"
                      alt="Josh Palacios"
                      sizes={this.props.joshcircle.sizes}
-                  />
+                  />}
                </div>
                <span className={styles.firstname}>Josh</span>
                <span className={styles.lastname}>Palacios</span>

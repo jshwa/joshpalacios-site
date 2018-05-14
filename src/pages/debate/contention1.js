@@ -39,21 +39,21 @@ class Contention1 extends React.Component {
             </div>
             <div id={styles.bottombar} className={slideInRight}/>
             <div id={styles.img} className={slideInLeft}>
-               <Img
+               {this.props.c1 && <Img
                   title="Contention 1 Podcast"
                   alt="Listen to the Contention 1 Podcast on iTunes"
                   sizes={this.props.c1.sizes}
                   imgStyle={{objectFit: "contain"}}
                   outerWrapperClassName={styles.imageWrapper}
                   className={styles.imageWrapper}
-               />
+               />}
             </div>
             <div id={styles.overlay} onClick={this.vidOn}>
-               <Img
+               {this.props.c1overlay && <Img
                   title="Play a sample"
                   alt="Play a Sample"
                   sizes={this.props.c1overlay.sizes}
-               />
+               />}
             </div>
             { this.state.play &&
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}

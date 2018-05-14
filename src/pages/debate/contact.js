@@ -33,11 +33,11 @@ class Contact extends React.Component {
                </svg>
             </div>
             <div id={styles.wechatimg} className={slideInLeft}>
-               <Img
+               {this.props.wechat && <Img
                   title="Add Josh on WeChat"
                   alt="Josh's WeChat ID: joshpalacios"
                   sizes={this.props.wechat.sizes}
-               />
+               />}
             </div>
             <div id={styles.emailbutton} className={fadeIn}>
                <a href="mailto:hey@joshpalacios.com">Email Me</a>

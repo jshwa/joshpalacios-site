@@ -51,18 +51,18 @@ class Incoming extends React.Component {
                </div>
             </div>
             <div id={styles.img} className={slideInLeft}>
-               <Img
+               {this.props.incoming && <Img
                   title="Incoming App"
                   alt="Incoming App: A tracking system for your packages"
                   sizes={this.props.incoming.sizes}
-               />
+               />}
             </div>
             <div id={styles.overlay} className={slideInLeft} onClick={this.vidOn}>
-               <Img
+               {this.props.incomingoverlay && <Img
                   title="Watch the Incoming App Demo"
                   alt="Play the Incoming App demo on YouTube"
                   sizes={this.props.incomingoverlay.sizes}
-               />
+               /> }
             </div>
             { this.state.play &&
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}

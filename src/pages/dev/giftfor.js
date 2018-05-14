@@ -57,18 +57,18 @@ class Giftfor extends React.Component {
                </div>
             </div>
             <div id={styles.img} className={fadeIn}>
-               <Img
+            {this.props.giftfor && <Img
                   title="GiftFor App"
                   alt="The GiftFor App: Crowd-sourced gift guides"
                   sizes={this.props.giftfor.sizes}
-               />
+               />}
             </div>
             <div id={styles.overlay} onClick={this.vidOn}>
-               <Img
+               {this.props.giftforoverlay && <Img
                   title="Watch the Demo"
                   alt="Play the Demo on YouTube"
                   sizes={this.props.giftforoverlay.sizes}
-               />
+               />}
             </div>
             { this.state.play &&
             <div id={styles.youtube_wrapper} onClick={this.vidOff}/>}

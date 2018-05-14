@@ -26,11 +26,11 @@ class Blog extends React.Component {
             <div id={styles.blog1} className={fadeIn}>
                <div className={styles.blogImg}>
                   <a href="https://pudding.cool/2017/03/music-history/" target="_blank">
-                     <Img
+                     {this.props.pudding && <Img
                         title="How Music Taste Evolved"
                         alt="How Music Taste Evolved"
                         sizes={this.props.pudding.sizes}
-                     />
+                     />}
                   </a>
                </div>
                <div className={styles.blogTitle}>
@@ -43,11 +43,11 @@ class Blog extends React.Component {
             <div id={styles.blog2} className={fadeIn}>
                <div className={styles.blogImg}>
                   <a href="https://waitbutwhy.com/2018/04/picking-career.html" target="_blank">
-                     <Img
+                     {this.props.urban && <Img
                         title="How to Pick a Career by Tim Urban"
                         alt="How to Pick a Career by Tim Urban"
                         sizes={this.props.urban.sizes}
-                     />
+                     />}
                   </a>
                </div>
                <div className={styles.blogTitle}>
@@ -60,11 +60,11 @@ class Blog extends React.Component {
             <div id={styles.blog3} className={fadeIn}>
                <div className={styles.blogImg}>
                   <a href="https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5" target="_blank">
-                     <Img
+                     {this.props.gilbertson && <Img
                         title="I’m harvesting credit card numbers by David Gilbertson"
                         alt="I’m harvesting credit card numbers by David Gilbertson"
                         sizes={this.props.gilbertson.sizes}
-                     />
+                     />}
                   </a>
                </div>
                <div className={styles.blogTitle}>

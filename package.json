@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.241",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "gatsby": "^1.9.260",
     "gatsby-cli": "^1.1.51",
     "gatsby-image": "^1.0.43",
     "gatsby-link": "^1.6.39",
@@ -16,7 +17,9 @@
     "gatsby-transformer-sharp": "^1.6.22",
     "npm": "^6.0.1",
     "react-fullpage": "^0.1.18",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "sharp": "^0.19.1",
+    "webpack": "^1.15.0"
   },
   "keywords": [
     "gatsby"

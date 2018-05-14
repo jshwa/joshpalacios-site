@@ -30,11 +30,11 @@ class Coaching extends React.Component {
                </svg>
             </div>
             <div id={styles.teachImg} className={active1}>
-                  <Img
+                  {this.props.teach && <Img
                      title="Teach Debate"
                      alt="Josh Teaching"
                      sizes={this.props.teach.sizes}
-                  />
+                  />}
                </div>
             <div id={styles.train} className={active2}>
                <svg viewBox="0 0 60 13" preserveAspectRatio="xMidYMid meet">
@@ -44,11 +44,11 @@ class Coaching extends React.Component {
                </svg>
             </div>
             <div id={styles.trainImg} className={active2}>
-               <Img
+               {this.props.train && <Img
                   title="Train for Competitions"
                   alt="Practice Debates"
                   sizes={this.props.train.sizes}
-               />
+               />}
             </div>
             <div id={styles.compete} className={active3}>
                <svg viewBox="0 0 60 13" preserveAspectRatio="xMidYMid meet">
@@ -58,12 +58,12 @@ class Coaching extends React.Component {
                </svg>
             </div>
             <div id={styles.competeImg} className={active3}>
-               <Img
+               {this.props.compete && <Img
                   title="Compete in Tournaments"
                   alt="Winning Competitions"
                   sizes={this.props.compete.sizes}
                   imgStyle={{ObjectPosition: "80% 50%"}}
-               />
+               />}
             </div>
             <div id={styles.background} />
             <div id={styles.teachBlurb}>
@@ -76,25 +76,25 @@ class Coaching extends React.Component {
                Let’s face it: research is boring. What isn’t boring is traveling the world and meeting (and debating) other smart, ambitious students. I’ve taken debaters to Beijing, Hangzhou, Nanjing, Ningbo, Shenzhen, Chengdu and as far as Seoul, Stanford, CA (where we placed 2nd in Public Forum at Stanford University) and Cambridge, MA (where we placed 2nd in the International Division Public Forum at Harvard University). There are a wealth of reasons to debate – developing your logical, critical and conceptual thinking are foremost – but getting to travel to new places and meeting new people are not only valuable, but fun!
             </div>
             <div id={styles.teachBg}>
-               <Img
+               {this.props.teachBg && <Img
                title="Teaching Debate"
                alt="Bringing debaters together"
                sizes={this.props.teachBg.sizes}
-               />
+               />}
             </div>
             <div id={styles.trainBg}>
-               <Img
+               {this.props.trainBg && <Img
                title="Preparing for Debates"
                alt="My Debaters in the prep room at St Regis"
                sizes={this.props.trainBg.sizes}
-               />
+               />}
             </div>
             <div id={styles.competeBg}>
-               <Img
+               {this.props.competeBg && <Img
                title="Competing at Harvard"
                alt="My Debaters Competing at Harvard"
                sizes={this.props.competeBg.sizes}
-               />
+               />}
             </div>
          </div>
       )

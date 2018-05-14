@@ -12,11 +12,11 @@ class TechDebate extends React.Component {
          <div id={styles.wrapper}>
             <div id={styles.main} />
             <div id={styles.poly} className={slideInAngle}>
-               <Img
+               {this.props.debatetech && <Img
                   title="Tech and Debate"
                   alt="Competitive Debate is beginning to make use of modern technology"
                   sizes={this.props.debatetech.sizes}
-               />
+               />}
             </div>
             <div id={styles.tech}>
                <svg viewBox="0 0 33 16" preserveAspectRatio="xMinYMin meet">
