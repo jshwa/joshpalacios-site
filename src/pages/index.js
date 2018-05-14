@@ -43,7 +43,7 @@ class IndexPage extends React.Component {
 
      return (
          <div className={styles.wrapper} onWheel={this.handleWheel}>
-            <Helmet defaultTitle={`Josh Palacios | Full Stack Web Developer`}>
+            <Helmet defaultTitle={`Josh Palacios | Full Stack Web Developer & Debate Coach`}>
                <meta name="og:site_name" content="Josh Palacios" />
                <meta name="description" content="Josh Palacios is a Full Stack Web Developer and Debate Coach based in Houston, Texas" />
                <link
