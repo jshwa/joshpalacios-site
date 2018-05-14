@@ -1,5 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import Helmet from 'react-helmet';
 import styles from '../../css/dev/techdebate.module.css';
 import animateStyles from '../../css/animate.module.css';
 
@@ -10,6 +11,12 @@ class TechDebate extends React.Component {
       
       return(
          <div id={styles.wrapper}>
+            <Helmet
+               title="Tech and Debate"
+               meta={[
+                  { name: "description", content: "Josh uses technology to effect positive change in debate." },
+               ]}
+            />
             <div id={styles.main} />
             <div id={styles.poly} className={slideInAngle}>
                {this.props.debatetech && <Img
