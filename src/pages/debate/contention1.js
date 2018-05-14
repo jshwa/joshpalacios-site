@@ -1,5 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import Helmet from 'react-helmet';
 import styles from '../../css/debate/contention1.module.css';
 import animateStyles from '../../css/animate.module.css';
 
@@ -30,6 +31,12 @@ class Contention1 extends React.Component {
 
       return(
          <div id={styles.wrapper}>
+         <Helmet
+               title="Contention 1"
+               meta={[
+                  { name: "description", content: "Contention 1 is an award-winning debate podcast about debate in China." },
+               ]}
+            />
             <div id={styles.topbar} className={slideInLeft} />
             <div id={styles.blurb} className={slideInLeft}>
                Contention 1 is China’s first debate podcast, hosted by Josh Palacios and James Durkee. A debaters first resource for inspiration and evidence for debate topics in China.
