@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import styles from "../../css/debate/about.module.css";
 import Img from 'gatsby-image';
 import animateStyles from '../../css/animate.module.css'
@@ -9,12 +8,6 @@ class DebateAbout extends React.Component {
       const fadeIn = this.props.active ? animateStyles.fadeIn : "";
       return (
          <div id={styles.wrapper}>
-         <Helmet
-               title="Josh Palacios | Debate Coach"
-               meta={[
-                  { name: "description", content: "Josh Palacios is an American debater who coached in Shanghai, China." },
-               ]}
-            />
             <div id={styles.bgimg}>
                {this.props.shanghai && <Img
                   title="Shanghai"

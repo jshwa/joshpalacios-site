@@ -1,6 +1,5 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import Helmet from 'react-helmet';
 import styles from "../../css/debate/contact.module.css";
 import animateStyles from "../../css/animate.module.css";
 
@@ -12,12 +11,6 @@ class Contact extends React.Component {
 
       return(
          <div id={styles.wrapper}>
-            <Helmet
-               title="Josh Palacios | Debate Coach"
-               meta={[
-                  { name: "description", content: "Josh wants to work with you, get in touch." },
-               ]}
-            />
             <div id={styles.title}>
                <svg viewBox="0 0 68 13" preserveAspectRatio="xMidYMid meet">
                   <text x="34" y="12" textAnchor="middle" fill="#000">

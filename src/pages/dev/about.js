@@ -1,6 +1,5 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import Helmet from 'react-helmet';
 import styles from '../../css/dev/about.module.css';
 import animateStyles from '../../css/animate.module.css';
 
@@ -10,12 +9,6 @@ class About extends React.Component {
 
       return(
          <div id={styles.wrapper}>
-            <Helmet
-               title="About Josh Palacios"
-               meta={[
-                  { name: "description", content: "Josh Palacios is a full stack web developer focused on JavaScript and Ruby, based in Houston, Texas." },
-               ]}
-            />
             <div id={styles.texas}>
                <svg width="100%" height="100%" x="0px" y="0px"
                   viewBox="0 0 1280 1024" xmlSpace="preserve">

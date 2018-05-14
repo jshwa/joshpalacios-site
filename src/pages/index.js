@@ -1,7 +1,6 @@
 import React from 'react';
 import Link, { navigateTo } from 'gatsby-link';
 import Img from 'gatsby-image';
-import Helmet from 'react-helmet';
 import styles from '../css/index.module.css';
 import '../css/index.css';
 import { DebateNav, DevNav } from '../components/circleNav';
@@ -43,12 +42,6 @@ class IndexPage extends React.Component {
 
      return (
          <div className={styles.wrapper} onWheel={this.handleWheel}>
-            <Helmet
-               title="Josh Palacios | Full Stack Web Developer"
-               meta={[
-                  { name: "description", content: "Full Stack Web Developer and Debate Coach based in Houston, Texas." },
-               ]}
-            />
             { active === "Debater" && <DebateNav id={styles.debatenav} /> }
             { active === 'Developer' && <DevNav id={styles.devnav} /> }
             <div id={styles.debate} onMouseOver={this.mouseOverDebate} />

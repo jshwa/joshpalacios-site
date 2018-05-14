@@ -1,7 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
 import styles from "../../css/debate/speaking.module.css"
 import animateStyles from "../../css/animate.module.css"
 
@@ -11,12 +10,6 @@ class Speaking extends React.Component {
 
       return(
          <div id={styles.wrapper}>
-            <Helmet
-               title="Speaking"
-               meta={[
-                  { name: "description", content: "Josh Palacios enjoys speaking to groups about education, debate, and technology." },
-               ]}
-            />
             <div id={styles.title}>
                <svg viewBox="0 0 68 13" preserveAspectRatio="xMidYMid meet">
                   <text x="34" y="12" textAnchor="middle" fill="#000">

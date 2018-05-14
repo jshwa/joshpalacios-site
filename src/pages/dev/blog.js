@@ -1,6 +1,5 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import Helmet from 'react-helmet';
 import styles from '../../css/dev/blog.module.css';
 import animateStyles from '../../css/animate.module.css';
 
@@ -10,12 +9,6 @@ class Blog extends React.Component {
 
       return(
          <div id={styles.wrapper}>
-            <Helmet
-               title="Blog"
-               meta={[
-                  { name: "description", content: "Recent articles that Josh is reading now." },
-               ]}
-            />
             <div id={styles.title}>
                <svg width="100%" height="100%" viewBox="0 0 29 15"  preserveAspectRatio="xMidYMid meet">
                   <text x="0" y="12" textAnchor="start" fill="#121212" >

@@ -1,6 +1,5 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import Helmet from 'react-helmet';
 import styles from '../../css/dev/incoming.module.css';
 import animateStyles from '../../css/animate.module.css';
 
