@@ -11,7 +11,7 @@ class About extends React.Component {
       return(
          <div id={styles.wrapper}>
             <Helmet
-               title="About Josh Palacios"
+               title="About"
                meta={[
                   { name: "description", content: "Josh Palacios is a full stack web developer focused on JavaScript and Ruby, based in Houston, Texas." },
                ]}

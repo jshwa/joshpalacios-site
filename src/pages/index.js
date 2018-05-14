@@ -43,12 +43,15 @@ class IndexPage extends React.Component {
 
      return (
          <div className={styles.wrapper} onWheel={this.handleWheel}>
-            <Helmet
-               title="Josh Palacios | Full Stack Web Developer"
-               meta={[
-                  { name: "description", content: "Full Stack Web Developer and Debate Coach based in Houston, Texas." },
-               ]}
-            />
+            <Helmet defaultTitle={`Josh Palacios | Full Stack Web Developer`}>
+               <meta name="og:site_name" content="Josh Palacios" />
+               <meta name="description" content="Josh Palacios is a Full Stack Web Developer and Debate Coach based in Houston, Texas" />
+               <link
+                  rel="canonical"
+                  href={`https://joshpalacios.com`}
+               />
+               <html lang="en" />
+            </Helmet>
             { active === "Debater" && <DebateNav id={styles.debatenav} /> }
             { active === 'Developer' && <DevNav id={styles.devnav} /> }
             <div id={styles.debate} onMouseOver={this.mouseOverDebate} />

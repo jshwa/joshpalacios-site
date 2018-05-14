@@ -15,7 +15,7 @@ class Contact extends React.Component {
             <Helmet
                title="Josh Palacios | Debate Coach"
                meta={[
-                  { name: "description", content: "Josh wants to work with you, get in touch." },
+                  { name: "description", content: "Josh Palacios is an American debate coach who has helped build debate programs across China" },
                ]}
             />
             <div id={styles.title}>
