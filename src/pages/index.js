@@ -19,6 +19,11 @@ class IndexPage extends React.Component {
     };
   }
 
+  componentDidMount() {
+   const isChrome = !!window.chrome && !!window.chrome.webstore && navigator.userAgent.toLowerCase().indexOf('googlebot') === -1;
+   this.isSafari = !isChrome && navigator.userAgent.toLowerCase().indexOf('safari') !== -1;
+  }
+
   mouseOverDebate = () => {
    this.state.active != 'Debater' &&
       this.setState({
@@ -43,6 +48,7 @@ class IndexPage extends React.Component {
      const { active } = this.state;
      const debateImgClass = active === '' ? '' : styles.slideRight;
      const image = `https://joshpalacios.com${Josh}`
+
      return (
          <div className={styles.wrapper} onWheel={this.handleWheel}>
             <Helmet defaultTitle={`Josh Palacios | Full Stack Web Developer & Debate Coach`}>
@@ -58,10 +64,10 @@ class IndexPage extends React.Component {
                />
                <html lang="en" />
             </Helmet>
-            { active === "Debater" && <DebateNav id={styles.debatenav} /> }
-            { active === 'Developer' && <DevNav id={styles.devnav} /> }
-            <div id={styles.debate} onMouseOver={this.mouseOverDebate} />
-            <div id={styles.dev} onMouseOver={this.mouseOverDev} />
+            { active === "Debater" && <DebateNav id={styles.debatenav} isSafari={this.isSafari}/> }
+            { active === 'Developer' && <DevNav id={styles.devnav} isSafari={this.isSafari}/> }
+            <div id={styles.debate} onMouseOver={this.mouseOverDebate} onClick={this.mouseOverDebate} />
+            <div id={styles.dev} onMouseOver={this.mouseOverDev} onClick={this.mouseOverDev} />
             <div id={styles.title}>
                <svg viewBox="0 0 65 20" preserveAspectRatio="xMinYMin meet">
                   <text x="65" y="15" textAnchor="end">

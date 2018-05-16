@@ -2,13 +2,10 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 export class DebateNav extends React.Component {
-   constructor(props) {
-      super(props);
-   }
-
    render () {
+      const visible = this.props.isSafari ? 'visible' : 'hidden';
       return (
-         <div id={this.props.id} >
+         <div id={this.props.id} style={{visibility: visible}} >
             <svg width="100%" height="100%" viewBox="0 0 300 450" preserveAspectRatio="xMidYMid meet">
                <a xlinkHref="/debater#about">
                   <text x="225" y="225" transform="rotate(30 500,225)" textAnchor="end" fill="black">
@@ -123,13 +120,10 @@ export class DebateNav extends React.Component {
 }
 
 export class DevNav extends React.Component {
-   constructor(props) {
-      super(props);
-   }
-
    render () {
+      const visible = this.props.isSafari ? 'visible' : 'hidden';
       return (
-         <div id={this.props.id}>
+         <div id={this.props.id} style={{visibility: visible}}>
             <svg width="100%" height="100%" viewBox="0 0 300 450" preserveAspectRatio="xMidYMid meet">
                <a xlinkHref="/developer#about">
                   <text x="75" y="225" transform="rotate(-30 -225,225)" textAnchor="start" fill="black">
