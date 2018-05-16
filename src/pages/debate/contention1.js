@@ -60,6 +60,9 @@ class Contention1 extends React.Component {
                   title="Play a sample"
                   alt="Play a Sample"
                   sizes={this.props.c1overlay.sizes}
+                  imgStyle={{objectFit: "contain"}}
+                  outerWrapperClassName={styles.imageWrapper}
+                  className={styles.imageWrapper}
                />}
             </div>
             { this.state.play &&

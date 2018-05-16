@@ -61,6 +61,7 @@
 
 @media screen and (max-width: 1050px) and (orientation: portrait) {
    #wrapper {
+      height: 100%;
       grid-template-columns: 25% 25% 25% 25%;
       grid-template-rows: 25% 25% 25% 25%;
       align-items: center;
@@ -106,6 +107,10 @@
 }
 
 @media only screen and (max-width: 920px) and (orientation: landscape) {
+   #wrapper {
+      height: 100%;
+   }
+   
    #title {
       opacity: 0.4;
    }

@@ -46,6 +46,7 @@
 
 @media only screen and (max-width: 1050px) and (orientation: portrait) {
    #wrapper {
+      height: 100%;
       grid-template-columns: 1fr 50% 1fr;
       grid-template-rows: 15% 70% 15%;
    }
@@ -64,6 +65,7 @@
 
 @media only screen and (max-width: 920px) and (orientation: landscape) {
    #wrapper {
+      height: 100%;
       grid-template-columns: 1fr 30% 1fr;
       grid-template-rows: 13% 70% 17%;
    }

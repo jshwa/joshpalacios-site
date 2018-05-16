@@ -4,6 +4,8 @@ import favicon32 from './img/favicons/favicon-32x32.png'
 import favicon16 from './img/favicons/favicon-16x16.png'
 import safariPinned from './img/favicons/safari-pinned-tab.svg'
 import faviconICO from './img/favicons/favicon.ico'
+import Josh from './img/JoshLogoCircle.png'
+
 
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
@@ -16,6 +18,7 @@ if (process.env.NODE_ENV === `production`) {
 
 module.exports = class HTML extends React.Component {
   render() {
+    const image = `https://joshpalacios.com${Josh}`
     let css
     if (process.env.NODE_ENV === `production`) {
       css = (
@@ -40,6 +43,10 @@ module.exports = class HTML extends React.Component {
           <link rel="mask-icon" href={safariPinned} color="#121212" />
           <link rel="shortcut icon" href={faviconICO} />
           <meta name="msapplication-TileColor" content="#603cba" />
+          <meta property="og:title" content="Josh Palacios" />
+          <meta property="og:image" content={image}/>
+          <meta property="og:description" content="Josh Palacios is a Full Stack Web Developer and Debate Coach based in Houston, Texas" />
+          <meta property="og:url" content="https://joshpalacios.com" />
           {this.props.headComponents}
           {css}
         </head>

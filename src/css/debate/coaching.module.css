@@ -249,6 +249,7 @@
  
  @media only screen and (max-width: 1050px) and (orientation: portrait) {
    #wrapper {
+      height: 100%;
       grid-template-columns: 10% 50% 5% 30% 5%;
       grid-template-rows: 33% 33% 34%;
    }
@@ -300,11 +301,10 @@
 
    #teachBg,
    #trainBg,
-   #competeBg {
-      height: 100%;
+   #competeBg,
+   .gatsby-image-wrapper {
       grid-column: 1 / 6;
       grid-row: 1 / span 3;
-      align-self: start;
       z-index: 2;
       opacity: 0;
       filter: brightness(100%);
@@ -313,6 +313,9 @@
  }
 
  @media only screen and (max-width: 920px) and (orientation: landscape) {
+    #wrapper {
+       height: 100%;
+    }
    
    #teachBlurb,
    #trainBlurb,
@@ -327,7 +330,7 @@
 }
 
 @media only screen and (max-width: 580px) and (orientation: landscape) {
-   
+
    #teachBlurb,
    #trainBlurb,
    #competeBlurb {

@@ -5,10 +5,6 @@ import Img from 'gatsby-image';
 import styles from "../../css/debate/coaching.module.css";
 
 class Coaching extends React.Component {
-   constructor(props) {
-      super(props);
-   };
-
    render(){
       const active1 = this.props.active ? styles.active1 : ""
       const active2 = this.props.active ? styles.active2 : ""
@@ -87,6 +83,7 @@ class Coaching extends React.Component {
                title="Teaching Debate"
                alt="Bringing debaters together"
                sizes={this.props.teachBg.sizes}
+               style={{height: '100vh'}}
                />}
             </div>
             <div id={styles.trainBg}>
@@ -94,6 +91,7 @@ class Coaching extends React.Component {
                title="Preparing for Debates"
                alt="My Debaters in the prep room at St Regis"
                sizes={this.props.trainBg.sizes}
+               style={{height: '100vh'}}
                />}
             </div>
             <div id={styles.competeBg}>
@@ -101,6 +99,7 @@ class Coaching extends React.Component {
                title="Competing at Harvard"
                alt="My Debaters Competing at Harvard"
                sizes={this.props.competeBg.sizes}
+               style={{height: '100vh'}}
                />}
             </div>
          </div>
