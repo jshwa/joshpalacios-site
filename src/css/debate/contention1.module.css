@@ -181,6 +181,12 @@
    }
 }
 
+@media only screen and (max-width: 750px) and (orientation: portrait){
+   #blurb {
+      font-size: 1em;
+   }
+}
+
 @media only screen and (max-width: 920px) and (orientation: landscape) {
    #wrapper {
       height: 100%;
