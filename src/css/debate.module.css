@@ -20,3 +20,10 @@
    color: black;
    font-style: bold;
 }
+
+.nav {
+   position: fixed;
+   right: 1px;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
