@@ -23,13 +23,6 @@ class Debater extends React.Component {
 
    render() {
       const { current } = this.state
-      let nav = {
-            position: 'fixed',
-            zIndex: '10',
-            right: '20px',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
-      }
       const options = {
          sectionClassName:     'section',
          anchors:              ['about', 'coaching', 'contention1', 'speaking', 'contact'],
