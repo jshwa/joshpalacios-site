@@ -26,6 +26,8 @@
 #github {
    order: 2;
    text-align: center;
+   color: #FFF;
+   font-size: 30px;
 }
 
 #github a {
@@ -154,65 +156,117 @@
    #wrapper {
       height: 100%;
       grid-template-columns: 5% 30% 60% 5%;
-      grid-template-rows: 10% 40% 40% 10%;
+      grid-template-rows: 50% 50%;
    }
 
    #desc {
       grid-column: 2 / 4;
-      grid-row: 2 / span 2;
+      grid-row: 1 / span 2;
+      justify-content: center;
+   }
+
+   #blurb {
+      padding-right: 1em;
+      font-size: 32px;
+   }
+
+   #github a {
+      font-size: 40px;
+   }
+
+   #github {
+      margin: .5em 0;
    }
 
    .skillBox {
       display: block;
+      width: 80px;
       margin: 1em;
    }
 
    #skills1 {
-      margin: 0;
+      margin: 1em 0 0 1em;
       padding:0;
+      font-size: 30px
    }
    
    #skills2 {
-      margin-top: -1.75em;
+      margin: -1em 0 0 1em;
+      font-size: 30px
    }
 
-   #strip {
-      grid-column: 1 / 5;
-      grid-row: 1 / span 4;
-   }
-
-   #img { 
+   #img, 
+   #overlay { 
       grid-column: 3 / 4;
-      grid-row: 3 / span 1;
+      grid-row: 2 / span 1;
       align-self: start;
+      margin: 1em 2em;
    }
 
-   #overlay {
-      opacity: 0;
-      grid-column: 3 / 4;
-      grid-row: 3 / span 1;
-      align-self: start;
-      z-index: 3;
-      transition: opacity 300ms linear;
-   }
-
+   #strip,
    #youtube_wrapper {
       grid-column: 1 / 5;
-      grid-row: 1 / span 4;
-      background: #000;
-      opacity: 0.9;
-      z-index: 3;
+      grid-row: 1 / span 5;
    }
-   
+
    #youtube {
       grid-column: 2 / 4;
-      grid-row: 2 / span 2; 
+      grid-row: 1 / span 2; 
       z-index: 4;
-      text-align: center;
+      align-self: center;
    }
 
    #projectNo {
       display: none;
+   }
+}
+
+@media only screen and (max-width: 750px) and (orientation: portrait){
+   #desc {
+      grid-column: 2 / 4;
+      grid-row: 1 / span 2;
+   }
+
+   #blurb {
+      font-size: 20px;
+   }
+
+   #github a{
+      font-size: 30px;
+   }
+   
+   .skillBox {
+      width: 55px;
+      padding: 0 1em;
+      margin: 1em .25em;
+   }
+
+   #skills1 {
+      font-size: 18px;
+   }
+   
+   #skills2 {
+      font-size: 18px;
+   }
+
+   #img, 
+   #overlay { 
+      align-self: start;
+      margin: 0em;
+   }
+}
+
+@media only screen and (max-width: 320px) and (orientation: portrait){
+   #blurb {
+      font-size: 14px;
+   }
+
+   #skills1 {
+      font-size: 14px;
+   }
+   
+   #skills2 {
+      font-size: 14px;
    }
 }
 

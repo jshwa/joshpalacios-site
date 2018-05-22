@@ -56,10 +56,18 @@
       top: -4px;
       left: -4px;
       box-shadow: 2px 2px white, 4px 4px black;
+      margin: 3em;
    }
 
    #contact {
       grid-row: 3 / span 1;
+   }
+}
+
+@media only screen and (max-width: 770px) and (orientation: portrait) {
+   #button {
+      margin: .5em;
+      font-size: 17px;
    }
 }
 

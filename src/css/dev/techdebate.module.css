@@ -60,24 +60,25 @@
    #wrapper {
       height: 100%;
       background: #181840;
-      grid-template-rows: 30% 1fr 30% 1fr 20%;
+      grid-template-rows: 15% 10% 30% 35% 10%;
    }
 
    #poly {
       grid-column: 1 / 6;
-      grid-row: 1 / span 2;
+      grid-row: 1 / span 3;
       transform: skewY(0deg);
       transform-origin: 0%;
-      align-self: end;
+      align-self: center;
    }
 
    #desc {
-      padding: 10px;
+      padding: 1em 1.75em 1em 1em;
       grid-column: 1 / 6;
-      grid-row: 3 / span 1;
+      grid-row: 4 / span 1;
       color: white;
-      align-self: end;
+      align-self: start;
       text-align: center;
+      font-size: 28px;
    }
    
    #poly img {
@@ -98,6 +99,20 @@
       grid-row: 5 / span 1;
       align-self: end;
       font-family: "HelveticaNeue-CondensedBold";
+   }
+}
+
+@media only screen and (max-width: 420px) and (orientation: portrait){
+   #desc {
+      font-size: 20px;
+      align-self: end;
+   }
+}
+
+@media only screen and (max-width: 360px) and (orientation: portrait){
+   #desc {
+      font-size: 16px;
+      padding-right: 2em;
    }
 }
 

@@ -27,6 +27,8 @@
 #github {
    order: 2;
    text-align: center;
+   color: #FFF;
+   font-size: 30px;
 }
 
 #github a {
@@ -163,20 +165,37 @@
    #desc {
       grid-column: 2 / 4;
       grid-row: 1 / span 2;
+      justify-content: center;
+   }
+
+   #blurb {
+      padding-right: 1em;
+      font-size: 32px;
+   }
+
+   #github a {
+      font-size: 40px;
+   }
+
+   #github {
+      margin: .5em 0;
    }
 
    .skillBox {
       display: block;
+      width: 80px;
       margin: 1em;
    }
 
    #skills1 {
-      margin: 0;
+      margin: 1em 0 0 1em;
       padding:0;
+      font-size: 30px
    }
    
    #skills2 {
-      margin-top: -2em;
+      margin: -1em 0 0 1em;
+      font-size: 30px
    }
 
    #img, 
@@ -184,6 +203,7 @@
       grid-column: 3 / 4;
       grid-row: 2 / span 1;
       align-self: start;
+      margin: 1em 2em;
    }
 
    #strip,
@@ -201,6 +221,55 @@
 
    #projectNo {
       display: none;
+   }
+}
+
+@media only screen and (max-width: 750px) and (orientation: portrait){
+   #desc {
+      grid-column: 2 / 4;
+      grid-row: 1 / span 2;
+   }
+
+   #blurb {
+      font-size: 20px;
+   }
+
+   #github a{
+      font-size: 30px;
+   }
+   
+   .skillBox {
+      width: 55px;
+      padding: 0 1em;
+      margin: 1em .25em;
+   }
+
+   #skills1 {
+      font-size: 18px;
+   }
+   
+   #skills2 {
+      font-size: 18px;
+   }
+
+   #img, 
+   #overlay { 
+      align-self: center;
+      margin: 0em;
+   }
+}
+
+@media only screen and (max-width: 320px) and (orientation: portrait){
+   #blurb {
+      font-size: 14px;
+   }
+
+   #skills1 {
+      font-size: 14px;
+   }
+   
+   #skills2 {
+      font-size: 14px;
    }
 }
 
