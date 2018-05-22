@@ -18,7 +18,7 @@
    align-self: center;
    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
    font-size: 36px;
-   z-index: 4;
+   z-index: 2;
 }
 
 #devnav {
@@ -30,7 +30,7 @@
    align-self: center;
    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
    font-size: 36px;
-   z-index: 4;
+   z-index: 2;
 }
 
 #img {
