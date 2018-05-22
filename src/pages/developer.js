@@ -26,6 +26,7 @@ class Developer extends React.Component {
          anchors:              ['about', 'tellme', 'giftfor', 'incoming', 'techanddebate', 'blog', 'contact'],
          scrollBar:            false,
          navigation:           true,
+         navigationClass:      styles.nav,
          verticalAlign:        false,
          sectionPaddingTop:    '0px',
          sectionPaddingBottom: '0px',
