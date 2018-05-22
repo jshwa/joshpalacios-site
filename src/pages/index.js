@@ -26,16 +26,16 @@ class IndexPage extends React.Component {
 
   mouseOverDebate = () => {
    this.state.active != 'Debater' &&
-      this.setState({
-         active: 'Debater',
-      });
+      setTimeout(() => {
+         this.setState({ active: 'Debater' });
+      }, 100)
   }
 
    mouseOverDev = () => {
     this.state.active != 'Developer' &&
-      this.setState({
-         active: 'Developer',
-      });
+      setTimeout(() => {
+         this.setState({ active: 'Developer' });
+      }, 100)
    } 
 
    handleWheel = e => {
