@@ -39,7 +39,11 @@ class Incoming extends React.Component {
                   </svg>
                </div>
                <div id={styles.github}>
-                  <a href="https://github.com/jshwa/shipping-tracker" target="_blank">Github</a>
+                  <span>
+                     <a href="https://github.com/jshwa/shipping-tracker" target="_blank">Github</a>
+                     &nbsp;|&nbsp;
+                     <a href="#" onClick={this.vidOn}>Demo</a>
+                  </span>
                </div>
                <div id={styles.blurb}>
                   Centralized tracking solution for shipments from multiple vendors using various shipping methods

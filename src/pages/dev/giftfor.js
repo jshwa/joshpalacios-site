@@ -39,10 +39,14 @@ class Giftfor extends React.Component {
                   </svg>
                </div>
                <div id={styles.github}>
-                  <a href="https://github.com/jshwa/wishlist" target="_blank">Github</a>
+                  <span>
+                     <a href="https://github.com/jshwa/wishlist" target="_blank">Github</a> 
+                     &nbsp;|&nbsp;
+                     <a href="#" onClick={this.vidOn}>Demo</a>
+                  </span>
                </div>
                <div id={styles.blurb}>
-                  A Ruby on Rails web app to cultivate crowd-sourced gift guides  
+                  A Ruby on Rails web app with Facebook Authentication designed to cultivate crowd-sourced gift guides using the Amazon API. 
                </div>
                <div id={styles.skills1}>
                   <span className={styles.skillBox}>Ruby</span>
