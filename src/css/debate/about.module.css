@@ -52,8 +52,13 @@
 
    #wrapper {
       height: 100%;
-      grid-template-rows: 40% 60%;
+      grid-template-rows: 55% 45%;
    }
+
+   #headshot {
+      width: 35vw; 
+   }
+   
 
    #bgimg {
       width: 100%;
@@ -62,22 +67,50 @@
    }
 
    .firstname {
-      font-size: 62px;
+      font-size: 15vw;
    }
 
    .lastname {
-      font-size: 62px;
+      font-size: 15vw;
    }
 
    #desc {
-      margin: 0 3em;
-      font-size: 18px;
-      align-self: center;
+      margin: 0 2em;
+      font-size: 2em;
+      align-self: start;
    }
 
    .imageWrapper {
       height: 100vh;
    }
+}
+
+@media only screen and (max-width: 770px) and (orientation: portrait) {
+   #desc {
+      font-size: 1.75em;
+   }
+}
+
+@media only screen and (max-width: 420px) and (orientation: portrait) {
+   #wrapper {
+      grid-template-rows: 40% 60%;
+   }
+
+   #desc {
+      font-size: 1.25em;
+   }
+
+}
+
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+   #wrapper {
+      grid-template-rows: 40% 60%;
+   }
+
+   #desc {
+      font-size: 1em;
+   }
+
 }
 
 @media only screen and (max-width: 920px) and (orientation: landscape) {
