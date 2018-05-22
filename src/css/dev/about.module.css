@@ -125,13 +125,18 @@
    }
 
    #img { 
-      display: none;
+      grid-column: 3 / 5;
+      grid-row: 3 / span 1;
+      margin: 0;
    }
 
    #about {
       padding: .5em;
-      grid-column: 1 / 5;
+      grid-column: 1 / 4;
       grid-row: 2 / span 3;
+      line-height: 2em;
+      font-size: 24px;
+      z-index: 2;
    }
 
    #strip {
@@ -139,6 +144,33 @@
       grid-row: 1 / span 5;
    }
 }
+
+@media only screen and (max-width: 770px) and (orientation: portrait) {
+   #img { 
+      display: none;
+   }
+
+   #about {
+      padding: 1em;
+      grid-column: 1 / 5;
+      grid-row: 2 / span 3;
+   }
+}
+
+@media only screen and (max-width: 420px) and (orientation: portrait) {
+   #about {
+      padding: 0 1.5em 0 .5em;
+      font-size: 16px;
+   }
+}
+
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+   #about {
+      font-size: 13px;
+   }
+}
+
+
 
 @media only screen and (max-width: 920px) and (orientation: landscape) {
    #wrapper {
