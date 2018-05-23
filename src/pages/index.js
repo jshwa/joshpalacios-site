@@ -28,14 +28,14 @@ class IndexPage extends React.Component {
    this.state.active != 'Debater' &&
       setTimeout(() => {
          this.setState({ active: 'Debater' });
-      }, 100)
+      }, 2)
   }
 
    mouseOverDev = () => {
     this.state.active != 'Developer' &&
       setTimeout(() => {
          this.setState({ active: 'Developer' });
-      }, 100)
+      }, 2)
    } 
 
    handleWheel = e => {
@@ -91,7 +91,7 @@ export const query = graphql`
   query GatsbyImageQuery {
     josh: imageSharp(id: { regex: "/JoshLogoCircle.png/"}) {
       sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes_noBase64
+       ...GatsbyImageSharpSizes_tracedSVG
       }
     }
     joshFlipped: imageSharp(id: {regex: "/JoshLogoCircleFlipped.png/"}) {
