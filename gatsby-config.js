@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Josh Palacios | Full Stack Web Developer / Debate Coach',
+    siteUrl: `https://joshpalacios.com`,
   },
   plugins: [
      {
@@ -20,6 +21,12 @@ module.exports = {
          theme_color: "#121212",
          display: "standalone",
          icon: "src/img/favicons/favicon.png",
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+         output: `/sitemap.xml`,
       }
     },
      'gatsby-plugin-react-helmet',
